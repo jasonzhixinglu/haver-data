@@ -165,3 +165,8 @@ series:
   - {code: jpcijf@japan, frequency: monthly}
   - {code: jpcwf@japan, frequency: monthly}
   - {code: jpcwen@japan, frequency: monthly}
+  - {code: jsapgpc@japan, frequency: quarterly}
+  - {code: jsacct@japan, frequency: quarterly}
+  - {code: jsacgct@japan, frequency: quarterly}
+  - {code: jsafct@japan, frequency: quarterly}
+  - {code: jsaxnct@japan, frequency: quarterly}
