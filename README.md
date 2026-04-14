@@ -1,4 +1,4 @@
-# haver-data
+# Haver data pipeline
 
 A lightweight data pipeline that pulls macroeconomic time series from Haver Analytics and version-controls them as Parquet files on GitHub. Designed to bridge network-restricted Haver access and a portable personal analysis environment.
 
