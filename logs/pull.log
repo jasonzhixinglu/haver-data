@@ -111,3 +111,14 @@
 [2026-04-14 18:26:48] OK: japan Q — 7 series, 145 observations each
 [2026-04-14 18:26:48] Written to Z:\haver-data\data\data.parquet and Z:\haver-data\data\metadata.parquet
 [2026-04-14 18:26:48] === Pull complete ===
+[2026-04-14 18:42:02] === Pull started ===
+[2026-04-14 18:42:02] Pulling 65 M series from emergepr: ['n924d', 'n924trs', 'n924vr', 'n924fczm', 'n924ixd', 'n924imd', 's924vm', 's924vng', 'h924vcc', 'n924vfci', 'n924pcy', 'n924pcxg', 'n924pcyf', 'n924pci', 'n924pcs', 'h924pc', 'h924pcxz', 'h924pcff', 'h924pji', 'h924pjs', 'n924trs2', 'n924trsc', 'n924tsfb', 'n924tspp', 'n924tsau', 'n924tscd', 'h924d', 'n924dvgg', 'n924dvgm', 'n924dvgp', 's924vmg', 'y924vr', 'y924vr1', 'y924vr2', 'y924vr3', 'n924vvr', 'n924vrds', 'n924vrrd', 'n924fczg', 'n924fczb', 'n924fczn', 'n924iqxp', 'n924iqmp', 'n924ix', 'n924im', 'n924ixa4', 'n924ixjp', 'n924ixeu', 'n924ixus', 'h924ixd', 'h924imd', 'h924ix', 'h924im', 'n924euru', 'n924fzn9', 's924vme', 's924vnes', 's924vnec', 's924vmo', 's924vmsr', 's924vmd', 's924vngc', 's924vnoc', 's924vngs', 's924vnos']
+[2026-04-14 18:42:03] OK: emergepr M — 65 series, 435 observations each
+[2026-04-14 18:42:03] Pulling 23 M series from mktpmi: ['s924mg', 's924me', 's924se', 's924m', 's924mo', 's924s', 's924spc', 's924snb', 'm158m', 'm158s', 'm158mg', 'm158mo', 'm158se', 'm158snb', 'm158sx', 'm158me', 'm158md', 'm158mpi', 'm158mpo', 'm158mx', 'm158spi', 'm158spc', 'm158swo']
+[2026-04-14 18:42:03] OK: mktpmi M — 23 series, 435 observations each
+[2026-04-14 18:42:03] Pulling 68 M series from japan: ['jpsiip', 'jpfaral2', 'jpewfra2', 'omnn2', 'bngx2', 'ccia', 'jpcij', 'jpcij2', 'jpcijef', 'jpcijef2', 'jpcije', 'jpcije2', 'jpcit', 'jpcit2', 'jpcitef', 'jpcitef2', 'jpnce', 'jpncfxf', 'jpcijff', 'jpsir', 'jpscaic', 'jpscaidc', 'jpscaisc', 'jpsir2', 'cdai', 'cdae', 'cdad', 'jpniip', 'jpniipf', 'jpniipfi', 'jpniipct', 'jpsiipf', 'jpsiipfi', 'jpsiipct', 'jptis', 'jpstiewr', 'jptiseps', 'jptisebs', 'omnn', 'costsn', 'costs', 'cnorv', 'jpsivm', 'costsn2', 'costs2', 'cnorv2', 'fluedr2', 'flpr', 'mefac', 'mefcac', 'jpwtcei2', 'jpwccei2', 'jpitwvx', 'jpitwvm', 'jpituvx', 'jpitevx', 'jpitcvx', 'bngm2', 'jpnscx12', 'jpnsdx12', 'jpsivx', 'jpsivxcn', 'jpsivxeu', 'jpsivxna', 'jpsivxus', 'jpcijf', 'jpcwf', 'jpcwen']
+[2026-04-14 18:42:03] OK: japan M — 68 series, 444 observations each
+[2026-04-14 18:42:03] Pulling 12 Q series from japan: ['jsngpcp', 'jsnpccp', 'jsndfcp', 'jsnescp', 'saoa1a', 'saoa3a', 'saoa5a', 'jsapgpc', 'jsacct', 'jsacgct', 'jsafct', 'jsaxnct']
+[2026-04-14 18:42:03] OK: japan Q — 12 series, 145 observations each
+[2026-04-14 18:42:04] Written to Z:\haver-data\data\data.parquet and Z:\haver-data\data\metadata.parquet
+[2026-04-14 18:42:04] === Pull complete ===
