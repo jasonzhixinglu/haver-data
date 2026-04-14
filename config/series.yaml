@@ -2,7 +2,6 @@ defaults:
   startdate: "1990-01-01"
 
 series:
-  # --- CHINA (monthly) ---
   - {code: n924d@emergepr, frequency: monthly}
   - {code: n924trs@emergepr, frequency: monthly}
   - {code: n924vr@emergepr, frequency: monthly}
@@ -76,8 +75,6 @@ series:
   - {code: s924s@mktpmi, frequency: monthly}
   - {code: s924spc@mktpmi, frequency: monthly}
   - {code: s924snb@mktpmi, frequency: monthly}
-
-  # --- JAPAN (monthly) ---
   - {code: jpsiip@japan, frequency: monthly}
   - {code: jpfaral2@japan, frequency: monthly}
   - {code: jpewfra2@japan, frequency: monthly}
@@ -158,8 +155,6 @@ series:
   - {code: jpsivxeu@japan, frequency: monthly}
   - {code: jpsivxna@japan, frequency: monthly}
   - {code: jpsivxus@japan, frequency: monthly}
-
-  # --- JAPAN (quarterly) ---
   - {code: jsngpcp@japan, frequency: quarterly}
   - {code: jsnpccp@japan, frequency: quarterly}
   - {code: jsndfcp@japan, frequency: quarterly}
@@ -167,3 +162,6 @@ series:
   - {code: saoa1a@japan, frequency: quarterly}
   - {code: saoa3a@japan, frequency: quarterly}
   - {code: saoa5a@japan, frequency: quarterly}
+  - {code: jpcijf@japan, frequency: monthly}
+  - {code: jpcwf@japan, frequency: monthly}
+  - {code: jpcwen@japan, frequency: monthly}
