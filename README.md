@@ -1,4 +1,4 @@
-# Haver data pipeline
+# Haver Data Pipeline
 
 A lightweight data pipeline that pulls macroeconomic time series from Haver Analytics and version-controls them as Parquet files on GitHub. Designed to bridge network-restricted Haver access and a portable personal analysis environment.
 
@@ -41,7 +41,8 @@ haver-data/
 │   └── scheduler.log        # Windows Task Scheduler logs
 ├── src/
 │   ├── pull.py              # Pulls data from Haver, writes Parquet
-│   └── load.py              # Utility for consuming repos
+│   ├── load.py              # Utility for consuming repos
+│   └── manage.py            # CLI for managing series coverage
 ├── run_pull.bat             # Kept in repo for reference (not used by scheduler)
 ├── .gitignore
 └── README.md
@@ -96,54 +97,63 @@ Indexed by `code@database`, one row per series, 18 columns:
 
 ---
 
-## Adding or Removing Series
+## Managing Series Coverage
 
-Edit `config/series.yaml` from any machine with GitHub access, commit, and push. The server picks up changes on the next scheduled pull via `git pull` at the start of the launcher.
+Series are managed via `src/manage.py`, a CLI tool that adds, removes, lists, and searches series without editing `series.yaml` directly. Run all commands from the repo root on the server (requires Haver access for search).
 
-### series.yaml format
+### List all tracked series
+
+```powershell
+python src/manage.py list
+```
+
+Shows each series code, frequency, and descriptor from metadata. Series not yet pulled show `(not yet pulled)`.
+
+### Add a series
+
+```powershell
+python src/manage.py add jpcij@japan monthly
+```
+
+Appends to `series.yaml`. Will not add duplicates. Then commit, push, and trigger a pull:
+
+```powershell
+git add config/series.yaml
+git commit -m "Add [description]"
+git push
+```
+
+### Remove a series
+
+```powershell
+python src/manage.py remove jpcij@japan
+```
+
+Then commit and push as above. Note: this removes the series from future pulls but does not delete historical data already in `data.parquet`.
+
+### Search Haver for series by keyword
+
+```powershell
+python src/manage.py search CPI japan
+python src/manage.py search "retail sales" emergepr
+python src/manage.py search GDP usecon
+```
+
+Returns all matching series in the database with their code, frequency, and descriptor. Already-tracked series are marked `TRACKED`. Use this to discover series codes before adding them.
+
+### series.yaml format (for reference)
 
 ```yaml
 defaults:
   startdate: "1990-01-01"   # global start date for all series
 
 series:
-  - code: jpcij@japan       # FORMAT: havercode@database (lowercase)
-    frequency: monthly       # monthly, quarterly, or daily
-
-  - code: jsngpcp@japan
-    frequency: quarterly
-
-  - code: usfedfunds@usecon
-    frequency: daily
+  - {code: jpcij@japan, frequency: monthly}
+  - {code: jsngpcp@japan, frequency: quarterly}
+  - {code: usfedfunds@usecon, frequency: daily}
 ```
 
-### Finding series codes
-
-Use the Haver DLX desktop application to search for series. The code format is always `seriescode@databasename` in lowercase. You can also search metadata programmatically:
-
-```python
-import Haver as hv
-
-# search all series in a database by keyword
-hmd = hv.metadata(database='japan')
-matches = hmd[hmd.descriptor.str.contains('CPI', case=False)]
-print(matches[['code', 'descriptor', 'frequency']])
-```
-
-### Adding a series (step by step)
-
-1. Find the series code in Haver DLX or via metadata search
-2. Open `config/series.yaml` in VS Code
-3. Add a new entry under `series:`
-4. Save, commit, and push:
-
-```powershell
-git add config/series.yaml
-git commit -m "Add [series description]"
-git push
-```
-
-5. The server will pull it and include it in the next scheduled run, or trigger manually (see below)
+The code format is always `seriescode@databasename` in lowercase.
 
 ---
 
@@ -256,9 +266,9 @@ schtasks /create /tn "HaverDataPull" /tr "D:\Apps\haver_launcher.bat" /sc daily 
 |---|---|---|---|
 | China | emergepr | Monthly | 65 |
 | China + Japan | mktpmi | Monthly | 23 |
-| Japan | japan | Monthly | 65 |
+| Japan | japan | Monthly | 68 |
 | Japan | japan | Quarterly | 7 |
-| **Total** | | | **160** |
+| **Total** | | | **163** |
 
 ---
 
