@@ -4,7 +4,7 @@ A lightweight data pipeline that pulls macroeconomic time series from Haver Anal
 
 1. **Scheduled pull:** A script runs automatically every morning at 7am on the server. It pulls the latest data for a configured list of economic series from Haver and commits them to this repository.
 2. **Portable access:** Anyone with access to this GitHub repo can download the latest data with a single command (`git pull`), without needing access to the institutional network or a Haver license.
-3. **Configurable coverage:** Series are added or removed from any machine using the built-in `manage.py` CLI. The server picks up config changes automatically on the next scheduled run. To trigger an immediate refresh, run `D:\Apps\haver_launcher.bat` from Command Prompt on the server.
+3. **Configurable coverage:** Series are added or removed from any machine using the built-in `manage.py` CLI. The server picks up config changes automatically on the next scheduled run. To trigger an immediate refresh, run `D:\Apps\haver_launcher.bat` from Command Prompt on emdswn45p server.
 4. **Unrestricted analysis:** Once the data is local, it can be loaded directly into Python. Tools like Claude Code can then be used to prompt analysis on demand — running regressions, generating charts, building econometric models.
 5. **Metadata and tags:** Every series is accompanied by full Haver metadata and optional use-case tags (e.g. `monitoring`, `gdp_nowcast`), making it straightforward to filter and load exactly the data needed for a given project.
 
