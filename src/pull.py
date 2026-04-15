@@ -31,6 +31,9 @@ def pull_all():
     startdate = config['defaults']['startdate']
     series = config['series']
 
+    # build tags lookup
+    tags_map = {s['code']: s.get('tags', []) for s in series}
+
     # group by (database, frequency)
     by_db_freq = {}
     for s in series:
@@ -80,10 +83,12 @@ def pull_all():
             log(f"ERROR: {db} {freq} — {e}")
 
     if all_data:
-        # combine and write
         df_data = pd.concat(all_data, ignore_index=True)
         df_meta = pd.concat(all_meta)
-
+        
+        # add tags column
+        df_meta['tags'] = df_meta.index.map(lambda x: tags_map.get(x, []))
+        
         df_data.to_parquet(DATA_OUT)
         df_meta.to_parquet(META_OUT)
         log(f"Written to {DATA_OUT} and {META_OUT}")
