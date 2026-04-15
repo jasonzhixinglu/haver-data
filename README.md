@@ -1,4 +1,4 @@
-# Haver Data Pipeline
+# Haver data pipeline
 
 A lightweight data pipeline that pulls macroeconomic time series from Haver Analytics and version-controls them as Parquet files on GitHub. Designed to bridge network-restricted Haver access and a portable personal analysis environment.
 
@@ -94,6 +94,7 @@ Indexed by `code@database`, one row per series, 18 columns:
 | `longsource` | Full source name |
 | `database` | Haver database name |
 | `code` | Raw Haver series code |
+| `tags` | List of use-case tags e.g. `[gdp_nowcast]` |
 
 ---
 
@@ -112,7 +113,12 @@ Shows each series code, frequency, and descriptor from metadata. Series not yet 
 ### Add a series
 
 ```powershell
+# without tags
 python src/manage.py add jpcij@japan monthly
+
+# with tags
+python src/manage.py add jsapgpc@japan quarterly --tags gdp_nowcast
+python src/manage.py add jpcij@japan monthly --tags monitoring gdp_nowcast
 ```
 
 Appends to `series.yaml`. Will not add duplicates. Then commit, push, and trigger a pull:
@@ -149,11 +155,11 @@ defaults:
 
 series:
   - {code: jpcij@japan, frequency: monthly}
-  - {code: jsngpcp@japan, frequency: quarterly}
-  - {code: usfedfunds@usecon, frequency: daily}
+  - {code: jsngpcp@japan, frequency: quarterly, tags: [gdp_nowcast]}
+  - {code: usfedfunds@usecon, frequency: daily, tags: [monitoring, gdp_nowcast]}
 ```
 
-The code format is always `seriescode@databasename` in lowercase.
+Tags are optional lists. A series can have multiple tags. Tags are stored in `metadata.parquet` and used for filtering when loading data.
 
 ---
 
@@ -193,10 +199,13 @@ git pull
 ```python
 import sys
 sys.path.append(r'path\to\haver-data\src')
-from load import load_series, load_multiple, load_metadata, available_series
+from load import load_series, load_multiple, load_metadata, load_by_tag, available_series, available_tags
 
 # list all available series
 available_series()
+
+# list all tags
+available_tags()
 
 # load a single series as pd.Series indexed by date
 cpi = load_series('jpcij@japan')
@@ -208,10 +217,14 @@ df = load_multiple(['jpcij@japan', 'jpsiip@japan', 'jpcije@japan'])
 # load with date range
 df = load_multiple(['jpcij@japan', 'jpsiip@japan'], start='2000-01-01', end='2023-12-31')
 
+# load all series with a given tag
+gdp = load_by_tag('gdp_nowcast', start='2015-01-01')
+monitoring = load_by_tag('monitoring')
+
 # load metadata
 meta = load_metadata()
 meta = load_metadata(['jpcij@japan', 'jpsiip@japan'])
-print(meta[['descriptor', 'aggtype', 'shortsource']])
+print(meta[['descriptor', 'aggtype', 'shortsource', 'tags']])
 ```
 
 ### Option: Read Parquet directly (without load.py)
@@ -262,13 +275,11 @@ schtasks /create /tn "HaverDataPull" /tr "D:\Apps\haver_launcher.bat" /sc daily 
 
 ## Current Series Coverage
 
-| Country | Database | Frequency | Count |
-|---|---|---|---|
-| China | emergepr | Monthly | 65 |
-| China + Japan | mktpmi | Monthly | 23 |
-| Japan | japan | Monthly | 68 |
-| Japan | japan | Quarterly | 7 |
-| **Total** | | | **163** |
+| Tag | Databases | Series |
+|---|---|---|
+| (monitoring) | emergepr, mktpmi, japan | 168 |
+| gdp_nowcast | g10, emergepr, emergela, emergema, emergecw, japan, uk, usecon | 239 |
+| **Total** | | **407** |
 
 ---
 
