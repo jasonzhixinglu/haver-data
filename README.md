@@ -161,6 +161,8 @@ series:
 
 Tags are optional lists. A series can have multiple tags. Tags are stored in `metadata.parquet` and used for filtering when loading data.
 
+For a worked example of the full workflow including metadata search, series availability checks, and chart production, see [`examples/demo.ipynb`](examples/demo.ipynb).
+
 ---
 
 ## Triggering a Manual Pull
