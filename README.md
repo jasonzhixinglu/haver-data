@@ -2,6 +2,14 @@
 
 A lightweight data pipeline that pulls macroeconomic time series from Haver Analytics and version-controls them as Parquet files on GitHub. Designed to bridge network-restricted Haver access and a portable personal analysis environment.
 
+1. **Scheduled pull:** A script runs automatically every morning at 7am on the server. It pulls the latest data for a configured list of economic series from Haver and commits them to this repository.
+2. **Portable access:** Anyone with access to this GitHub repo can download the latest data with a single command (`git pull`), without needing access to the institutional network or a Haver license.
+3. **Configurable coverage:** Series are added or removed from any machine using the built-in `manage.py` CLI. The server picks up config changes automatically on the next scheduled run.
+4. **Unrestricted analysis:** Once the data is local, it can be loaded directly into Python. Tools like Claude Code can then be used to prompt analysis on demand — running regressions, generating charts, building econometric models.
+5. **Metadata and tags:** Every series is accompanied by full Haver metadata and optional use-case tags (e.g. `monitoring`, `gdp_nowcast`), making it straightforward to filter and load exactly the data needed for a given project.
+
+See [`examples/demo.ipynb`](examples/demo.ipynb) for two worked examples built entirely from this pipeline: a decomposition of China's CPI inflation into food, energy and core components, and a breakdown of Japan's GDP growth by expenditure category.
+
 ---
 
 ## Infrastructure Overview
@@ -160,8 +168,6 @@ series:
 ```
 
 Tags are optional lists. A series can have multiple tags. Tags are stored in `metadata.parquet` and used for filtering when loading data.
-
-For a worked example of the full workflow including metadata search, series availability checks, and chart production, see [`examples/demo.ipynb`](examples/demo.ipynb).
 
 ---
 
