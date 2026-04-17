@@ -291,6 +291,14 @@ schtasks /create /tn "HaverDataPull" /tr "D:\Apps\haver_launcher.bat" /sc daily 
 
 ---
 
+## Roadmap: Monitoring, Nowcasting, and Agentic Analysis
+
+This data pipeline is being extended to support higher-level analytics, including
+real-time monitoring dashboards, DFM-based nowcasting workflows, and AI-assisted
+charting and analysis tools.
+
+See [docs/analytics_roadmap.md](docs/analytics_roadmap.md) for details.
+
 ## Troubleshooting
 
 **Pull fails with `ImportError: pyarrow`**
