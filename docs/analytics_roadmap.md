@@ -1,4 +1,4 @@
-# Analytics Roadmap: Monitoring and Analysis Layer
+# Roadmap: Monitoring and Analysis Layer
 
 *Last updated: 2026-04-17*
 
