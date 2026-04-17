@@ -1,310 +1,83 @@
-# Analytics Roadmap: Monitoring, Nowcasting, and Agentic Analysis
+# Analytics Roadmap: Monitoring and Analysis Layer
 
 *Last updated: 2026-04-17*
 
 ## 1. Motivation
 
-The current pipeline provides reliable, portable access to Haver data via scheduled pulls and local parquet storage. This enables flexible analysis using Python and notebook workflows.
+The current pipeline provides reliable access to Haver data in a portable parquet format, making it easy to work with large sets of macroeconomic time series.
 
-The next step is to build a unified framework on top of this pipeline to support:
+The next step is to build a layer on top of this data that supports ongoing workflows such as:
+- G20 GDP nowcasting
+- Country-level monitoring (e.g., China, Japan)
+- Internal analytical products (e.g., quarterly inflation monitor)
 
-- Real-time macroeconomic monitoring (e.g., China, G20 economies)
-- Data-driven nowcasting workflows (e.g., DFM-based GDP nowcasts)
-- Rapid exploratory analysis and charting
-- AI-assisted (agentic) analysis and visualization
-
-The goal is to move from raw data to structured insights in a consistent, reproducible, and flexible way.
+The goal is to make it straightforward to move from raw data to structured analysis and charts, using a consistent and reusable framework.
 
 ---
 
-## 2. Design Principles
+## 2. Layered Structure
 
-### Separation of Concerns
-- Data ingestion and storage are handled by this repository
-- Analytics and modeling are built as a structured layer on top
-- Agentic interaction is an interface to the analytics layer
+The system can be viewed as three layers:
 
-### Flexibility over Rigid Dashboards
-The system should expose general-purpose tools and primitives, not only pre-defined dashboards or charts.
+### Data Layer (existing)
+- Haver data ingestion and storage
+- Parquet datasets and metadata
+- Tagging for organizing and retrieving series
 
-### Reproducibility
-All transformations and analytical steps should be explicit, traceable, and reusable.
+### Monitoring and Analysis Layer (in development)
+- Structured access to data by country, theme, and use case
+- Standard transformations (e.g., yoy, qoq, smoothing)
+- Reusable analytical components (e.g., grouped indicators, simple summaries, model inputs)
+- Direct support for monitoring and nowcasting workflows
 
-### Metadata-Driven Design
-Series selection and grouping should rely on metadata, tags, and standardized classifications (country, theme, frequency, use case).
-
-### Composability
-Higher-level workflows (e.g., dashboards, nowcasts) should be constructed from reusable building blocks.
-
----
-
-## 3. Proposed Architecture
-
-The extended system is organized into four layers:
-
-### 3.1 Data Layer (Existing)
-- Haver data pulled via API
-- Stored as `data.parquet` and `metadata.parquet`
-- GitHub used for synchronization and version control
-- Tagging system for grouping and discovery
+### Agentic Layer (future)
+- Flexible interface for querying data and generating charts
+- Prompt-driven analysis built on top of the monitoring and analysis layer
+- Designed to enable rapid, custom exploration without direct handling of raw data
 
 ---
 
-### 3.2 Access and Transformation Layer
+## 3. Current Focus
 
-Provides structured access to the raw data and common transformations.
+The immediate goal is to build out the **monitoring and analysis layer**.
 
-**Core functionality:**
-- Load data by:
-  - series code
-  - tag
-  - country
-  - theme
-- Join with metadata
-- Filter by date range
-- Align frequencies (monthly, quarterly)
-
-**Standard transformations:**
-- Growth rates:
-  - year-over-year (yoy)
-  - month-over-month (mom)
-  - quarter-over-quarter (qoq saar)
-- Levels and rebasing
-- Rolling averages
-- Z-scores / standardization
-
-This layer acts as the primary interface between raw data and all downstream analysis.
+This involves creating a set of reusable tools and structured datasets that sit between raw data and downstream applications, so that core workflows can be run in a consistent and scalable way.
 
 ---
 
-### 3.3 Analytics Layer
+## 4. Core Use Cases
 
-Provides reusable analytical tools and primitives.
+### G20 GDP Nowcasting
+- Construct model-ready datasets from tagged input series
+- Integrate with existing DFM nowcasting frameworks
+- Track updates and contributions as new data arrive
 
-#### Thematic Grouping
-- Group series into themes:
-  - activity
-  - inflation
-  - PMIs
-  - trade
-  - labor
-  - financial conditions
+### Country Monitoring Dashboards (China, Japan)
+- Organize indicators into themes (activity, inflation, PMIs, etc.)
+- Apply consistent transformations and smoothing
+- Generate regular charts summarizing current economic conditions
 
-#### Comovement and Summaries
-- Principal component analysis (PCA)
-- Diffusion / breadth indices
-- Correlation structures
-
-#### Factor Models
-- Dynamic factor models (DFM)
-- Latent activity indices
-- Nowcasting inputs and outputs
-
-#### Monitoring Metrics
-- Momentum indicators (e.g., 3m/3m saar)
-- Surprise measures relative to:
-  - recent trends
-  - model predictions
-- Cross-series comparisons
-
-#### Data Diagnostics
-- Missing data patterns
-- Last observation tracking
-- Frequency consistency
-- (Future) revision analysis with vintages
-
-This layer should function as a **toolbox**, not a fixed dashboard.
+### Inflation Monitor (Quarterly)
+- Assemble cross-source inflation indicators
+- Produce standardized analytical summaries
+- Support recurring internal reporting with consistent data inputs
 
 ---
 
-### 3.4 Interface Layer
+## 5. Initial Build-Out
 
-Provides user-facing outputs and interaction modes.
+The first phase of development will focus on:
 
-#### Charting
-- Standard chart templates:
-  - line charts (single and multi-series)
-  - panel dashboards
-  - contribution charts
-  - heatmaps
-  - diffusion indices
-- Consistent labeling and formatting using metadata
-
-#### Monitoring Dashboards
-- Country-specific dashboards (e.g., China, Japan)
-- Theme-based panels (activity, inflation, PMIs)
-- Automatically updated with latest data
-
-#### Nowcasting Workflows
-- Dataset construction from tagged series
-- Model execution (e.g., DFM)
-- Visualization of:
-  - forecast updates
-  - contributions
-  - revisions
-
-#### Agentic Interface
-- AI-assisted tools for:
-  - custom chart generation
-  - exploratory analysis
-  - data summaries
-
-The agent interacts with the system through structured tools rather than raw data access.
+- Extending data access to support loading by tag, country, and theme
+- Implementing a small set of standard transformations (yoy, qoq, rolling averages)
+- Defining curated indicator sets for key use cases
+- Connecting these datasets to existing nowcasting and monitoring workflows
+- Adding simple, reusable charting functions for quick visualization
 
 ---
 
-## 4. Example Workflows
+## 6. Summary
 
-### 4.1 Monitoring Dashboard (China)
+This roadmap focuses on building a monitoring and analysis layer that bridges raw Haver data and applied macroeconomic workflows.
 
-1. Load activity-related series using tags
-2. Apply yoy transformations and smoothing
-3. Compute a PCA-based activity index
-4. Generate a multi-panel chart with key indicators
-
----
-
-### 4.2 G20 Nowcasting
-
-1. Load series tagged for nowcasting inputs
-2. Construct a model-ready dataset
-3. Run DFM update
-4. Visualize forecast changes and contributions
-
----
-
-### 4.3 Exploratory Analysis
-
-User query:
-"Compare recent inflation dynamics in China and Korea"
-
-System:
-1. Retrieve relevant inflation series via tags
-2. Apply transformations (yoy, rolling averages)
-3. Generate comparison chart
-4. Summarize recent trends
-
----
-
-### 4.4 Agentic Charting
-
-User query:
-"Show a summary of China activity indicators over the past 2 years"
-
-System:
-1. Load China activity theme
-2. Standardize and aggregate indicators
-3. Generate panel chart
-4. Provide brief narrative summary
-
----
-
-## 5. Tagging System
-
-Tags are central to enabling flexible data access and analysis.
-
-### Current Use
-- Tagging for nowcasting inputs (e.g., `gdp_nowcast`)
-
-### Proposed Extensions
-- Country:
-  - `country:china`, `country:japan`
-- Theme:
-  - `theme:activity`, `theme:inflation`, `theme:pmi`, `theme:trade`
-- Use case:
-  - `use:monitoring`, `use:nowcast`, `use:chartbook`
-- Frequency:
-  - `freq:monthly`, `freq:quarterly`
-
-### Benefits
-- Dynamic dataset construction
-- Consistent grouping across workflows
-- Efficient agent-driven retrieval
-
----
-
-## 6. Vintage Data (Future Extension)
-
-For real-time analysis and nowcasting evaluation, the system may be extended to store historical vintages.
-
-### Options
-- Snapshot-based storage:
-  - `data/snapshots/YYYY-MM-DD/`
-- Long format with pull date:
-  - `date, code, value, pull_date`
-
-### Applications
-- Revision analysis
-- Pseudo-real-time nowcasting
-- Release impact tracking
-
----
-
-## 7. Future Extensions
-
-- Automated data quality checks and alerts
-- Config-driven dashboards and chartbooks
-- Integration with external data (e.g., consensus forecasts)
-- Narrative generation for monitoring reports
-- Cross-country comparative frameworks
-
----
-
-## 8. Phase 1 Implementation Plan
-
-The first phase focuses on building a minimal but scalable analytics layer on top of the existing data pipeline.
-
-### 8.1 Access Layer
-- Extend `load.py` into a cached access module
-- Add helpers for:
-  - loading by tag, country, and theme
-  - metadata joins
-  - date filtering and frequency alignment
-
-### 8.2 Transformation Utilities
-- Implement standard transformations:
-  - yoy, mom, qoq saar
-  - rolling means
-  - rebasing and z-scores
-- Ensure consistent handling of missing data and frequencies
-
-### 8.3 Tagging Expansion
-- Extend the tag system to include:
-  - country
-  - theme
-  - use case
-  - frequency
-- Update configuration to reflect structured tagging
-
-### 8.4 Monitoring Packs
-- Define curated indicator sets for:
-  - China monitoring (activity, inflation, PMIs)
-  - G20 nowcasting inputs
-- Store as code or config-based definitions
-
-### 8.5 Chart Templates
-- Implement a small set of reusable chart templates:
-  - multi-series line charts
-  - panel dashboards
-  - simple heatmaps or summary tables
-
-### 8.6 Basic Agent Tools (Optional Initial Step)
-- Define a minimal set of callable functions:
-  - data retrieval
-  - transformation
-  - chart generation
-- Enable simple prompt-driven chart creation
-
----
-
-## 9. Summary
-
-This roadmap extends the current Haver data pipeline into a flexible and scalable analytics framework.
-
-The key objective is to combine:
-- reliable data access
-- reusable analytical tools
-- structured workflows
-- and flexible, agent-assisted interaction
-
-into a unified system for macroeconomic monitoring, analysis, and forecasting.
+The emphasis is on supporting real use cases with a small set of reusable tools, while leaving room for more flexible, agent-assisted analysis in a later stage.
