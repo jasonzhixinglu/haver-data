@@ -1,5 +1,7 @@
 # Analytics Roadmap: Monitoring, Nowcasting, and Agentic Analysis
 
+*Last updated: 2026-04-17*
+
 ## 1. Motivation
 
 The current pipeline provides reliable, portable access to Haver data via scheduled pulls and local parquet storage. This enables flexible analysis using Python and notebook workflows.
