@@ -342,3 +342,36 @@
 [2026-04-18 07:00:13] OK: usecon M — 1 series, 434 observations each
 [2026-04-18 07:00:13] Written to Z:\haver-data\data\data.parquet and Z:\haver-data\data\metadata.parquet
 [2026-04-18 07:00:13] === Pull complete ===
+[2026-04-19 07:00:09] === Pull started ===
+[2026-04-19 07:00:09] Pulling 94 M series from emergepr: ['n924d', 'n924trs', 'n924vr', 'n924fczm', 'n924ixd', 'n924imd', 's924vm', 's924vng', 'h924vcc', 'n924vfci', 'n924pcy', 'n924pcxg', 'n924pcyf', 'n924pci', 'n924pcs', 'h924pc', 'h924pcxz', 'h924pcff', 'h924pji', 'h924pjs', 'n924trs2', 'n924trsc', 'n924tsfb', 'n924tspp', 'n924tsau', 'n924tscd', 'h924d', 'n924dvgg', 'n924dvgm', 'n924dvgp', 's924vmg', 'y924vr', 'y924vr1', 'y924vr2', 'y924vr3', 'n924vvr', 'n924vrds', 'n924vrrd', 'n924fczg', 'n924fczb', 'n924fczn', 'n924iqxp', 'n924iqmp', 'n924ix', 'n924im', 'n924ixa4', 'n924ixjp', 'n924ixeu', 'n924ixus', 'h924ixd', 'h924imd', 'h924ix', 'h924im', 'n924euru', 'n924fzn9', 's924vme', 's924vnes', 's924vnec', 's924vmo', 's924vmsr', 's924vmd', 's924vngc', 's924vnoc', 's924vngs', 's924vnos', 's924trsp', 's924gp', 'n924oa', 'n924zd', 'h924cvl', 's924cbmi', 'n924vld', 's924vpmi', 'h536trs', 'n536oau', 'h536cvls', 'h536vcc', 'h534d', 'n534vbr', 'n534cvl', 'h534vi', 's542ts', 's542ti', 'h542vld', 'h542vlcc', 'h542vlag', 'n542ves', 'n542cvrt', 'h542tom', 's542diqx', 's542diqv', 'n542cum', 's542dum', 'n542dopv']
+[2026-04-19 07:00:09] OK: emergepr M — 94 series, 435 observations each
+[2026-04-19 07:00:09] Pulling 26 M series from mktpmi: ['s924mg', 's924me', 's924se', 's924m', 's924mo', 's924s', 's924spc', 's924snb', 'm158m', 'm158s', 'm158mg', 'm158mo', 'm158se', 'm158snb', 'm158sx', 'm158me', 'm158md', 'm158mpi', 'm158mpo', 'm158mx', 'm158spi', 'm158spc', 'm158swo', 'm534s', 'm534mg', 's273mg']
+[2026-04-19 07:00:09] OK: mktpmi M — 26 series, 435 observations each
+[2026-04-19 07:00:09] Pulling 68 M series from japan: ['jpsiip', 'jpfaral2', 'jpewfra2', 'omnn2', 'bngx2', 'ccia', 'jpcij', 'jpcij2', 'jpcijef', 'jpcijef2', 'jpcije', 'jpcije2', 'jpcit', 'jpcit2', 'jpcitef', 'jpcitef2', 'jpnce', 'jpncfxf', 'jpcijff', 'jpsir', 'jpscaic', 'jpscaidc', 'jpscaisc', 'jpsir2', 'cdai', 'cdae', 'cdad', 'jpniip', 'jpniipf', 'jpniipfi', 'jpniipct', 'jpsiipf', 'jpsiipfi', 'jpsiipct', 'jptis', 'jpstiewr', 'jptiseps', 'jptisebs', 'omnn', 'costsn', 'costs', 'cnorv', 'jpsivm', 'costsn2', 'costs2', 'cnorv2', 'fluedr2', 'flpr', 'mefac', 'mefcac', 'jpwtcei2', 'jpwccei2', 'jpitwvx', 'jpitwvm', 'jpituvx', 'jpitevx', 'jpitcvx', 'bngm2', 'jpnscx12', 'jpnsdx12', 'jpsivx', 'jpsivxcn', 'jpsivxeu', 'jpsivxna', 'jpsivxus', 'jpcijf', 'jpcwf', 'jpcwen']
+[2026-04-19 07:00:10] OK: japan M — 68 series, 444 observations each
+[2026-04-19 07:00:10] Pulling 12 Q series from japan: ['jsngpcp', 'jsnpccp', 'jsndfcp', 'jsnescp', 'saoa1a', 'saoa3a', 'saoa5a', 'jsapgpc', 'jsacct', 'jsacgct', 'jsafct', 'jsaxnct']
+[2026-04-19 07:00:10] OK: japan Q — 12 series, 145 observations each
+[2026-04-19 07:00:10] Pulling 18 M series from emergela: ['s213gvi', 's213if', 'n213vld', 'h213vcc', 's223gvi', 's223srv', 's223d', 's223siaq', 'n223vbc', 's273gvi', 's273dw', 's273trs', 's273vma', 's273vmna', 's273vpmi', 's273coin', 's273lead', 'h273epae']
+[2026-04-19 07:00:10] OK: emergela M — 18 series, 436 observations each
+[2026-04-19 07:00:10] Pulling 12 Q series from emergela: ['s213ngpc', 's213ncpc', 's213nfc', 's213ndfc', 's223ngpc', 's223gac', 's223ginc', 's223gsc', 's273ngpc', 's273gafc', 's273gic', 's273gsc']
+[2026-04-19 07:00:10] OK: emergela Q — 12 series, 144 observations each
+[2026-04-19 07:00:10] Pulling 72 M series from g10: ['n193vkco', 's193trs', 'h193cvr', 'h193cvrt', 's193ele', 's193vpt', 's156d', 's156ti', 's156to', 'h156cvr', 'n156vkco', 's156ele', 's156trs', 's156ts', 's134dw', 's134ts', 's134to', 's134trb', 'h134cvrt', 'h134vcc', 's134vbi', 'n134vkco', 'h134oau', 'h184d', 'h184oau', 's184trs', 's184ts', 'h184cvrt', 'n184vcc', 'n184vkco', 's132d', 's132dm', 's132trsc', 's132cvrt', 's132vcc', 'n132vkco', 's112ele', 's112trs', 's112d', 'h112oau', 'n112vkco', 'h112cvrt', 's136trs', 'h136cvrt', 's136vb', 'n136vcc', 'n136vce', 'n136vkco', 'n136oau', 's136ele', 'h158otu', 'h158oau', 's158d', 's158dum', 'h158trs', 'h158cvr', 's158to', 's158ts', 'h158vcc', 'n158vkco', 's158ele', 's111trs', 's111vm', 's111vcc', 's111vce', 'n111vkco', 's111d', 's111cvrt', 's111ts', 's111ti', 's111to', 's111elrc']
+[2026-04-19 07:00:11] OK: g10 M — 72 series, 436 observations each
+[2026-04-19 07:00:11] Pulling 44 Q series from g10: ['s193ngpc', 's193nfc', 's193ndfc', 's193d', 's193du', 's193vb', 's156ngpc', 's156nfc', 's156ndfc', 's156du', 's156ncc', 's134ngpc', 's134nfc', 's134ndtc', 's134ncpc', 's134duh', 's184ngpc', 's184ncc', 's184nfc', 's184ncpc', 's184duh', 'h184ele', 'n184vb', 's132ngpc', 's132nfc', 's132ncc', 's132elen', 's112ngpc', 's112nfc', 's112ndtc', 's112elpm', 's112elpi', 's136ngpc', 's136nfc', 's136ncc', 's136duh', 's158ngpc', 's158nfc', 's158ndtc', 's158ncpc', 's111ngpc', 's111nfc', 's111ndtc', 's111ncc']
+[2026-04-19 07:00:11] OK: g10 Q — 44 series, 146 observations each
+[2026-04-19 07:00:11] Pulling 22 Q series from emergepr: ['s924ngcp', 'h924ngpc', 'h536ngpc', 'n536ele', 'n536vbc', 'n536vhr', 'h536ncpc', 'h536nfc', 'h536ndtc', 'h536ndfc', 'h534ngpc', 'h534ncpc', 'h534nfc', 'n534vmsa', 'h534vbi', 'n534vbc', 's542ngpc', 's542ncc', 's542nfc', 's542ilwr', 's542ilrt', 'h542ndtc']
+[2026-04-19 07:00:11] OK: emergepr Q — 22 series, 145 observations each
+[2026-04-19 07:00:11] Pulling 1 M series from uk: ['ecy24']
+[2026-04-19 07:00:11] OK: uk M — 1 series, 434 observations each
+[2026-04-19 07:00:11] Pulling 8 M series from emergecw: ['s922d', 'n922dum2', 'n922otu', 'n922oau', 'h922gvi', 'h922ele', 'h922tr', 'n922cvlf']
+[2026-04-19 07:00:11] OK: emergecw M — 8 series, 435 observations each
+[2026-04-19 07:00:11] Pulling 3 Q series from emergecw: ['h922ngpc', 'h922ncc', 'h922nfc']
+[2026-04-19 07:00:11] OK: emergecw Q — 3 series, 144 observations each
+[2026-04-19 07:00:11] Pulling 18 M series from emergema: ['s186d', 's186dk', 's186dm', 's186dum2', 'n186omvu', 's186trs', 'h186cvl', 'n186vldt', 's186vcb', 's199dm', 's199trs', 's199t8vt', 's199two', 's199cvli', 's199vld', 's199vlc', 's199vlag', 's199vp']
+[2026-04-19 07:00:11] OK: emergema M — 18 series, 435 observations each
+[2026-04-19 07:00:11] Pulling 8 Q series from emergema: ['s186ngpc', 's186nfc', 's199ngpc', 's199nfc', 's199ndtc', 's199ndfc', 's199dum', 'h199ele']
+[2026-04-19 07:00:11] OK: emergema Q — 8 series, 144 observations each
+[2026-04-19 07:00:11] Pulling 1 M series from usecon: ['cbm']
+[2026-04-19 07:00:11] OK: usecon M — 1 series, 434 observations each
+[2026-04-19 07:00:12] Written to Z:\haver-data\data\data.parquet and Z:\haver-data\data\metadata.parquet
+[2026-04-19 07:00:12] === Pull complete ===
