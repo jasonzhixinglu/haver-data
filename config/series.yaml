@@ -1,811 +1,4267 @@
 defaults:
-  startdate: "1990-01-01"
-
+  startdate: '1990-01-01'
 series:
-  - {code: n924d@emergepr, frequency: monthly}
-  - {code: n924trs@emergepr, frequency: monthly, tags: [activity, headline, monitoring, old_monitoring]}
-  - {code: n924vr@emergepr, frequency: monthly, tags: [activity, headline, monitoring, old_monitoring]}
-  - {code: n924fczm@emergepr, frequency: monthly}
-  - {code: n924ixd@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924imd@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: s924vm@emergepr, frequency: monthly, tags: [activity, headline, monitoring, old_monitoring, pmi]}
-  - {code: s924vng@emergepr, frequency: monthly, tags: [headline, monitoring, old_monitoring, pmi]}
-  - {code: h924vcc@emergepr, frequency: monthly}
-  - {code: n924vfci@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924pcy@emergepr, frequency: monthly, tags: [activity, headline, inflation, monitoring, old_monitoring]}
-  - {code: n924pcxg@emergepr, frequency: monthly, tags: [activity, headline, inflation, monitoring, old_monitoring]}
-  - {code: n924pcyf@emergepr, frequency: monthly, tags: [headline, inflation, monitoring, old_monitoring]}
-  - {code: n924pci@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924pcs@emergepr, frequency: monthly, tags: [activity, headline, monitoring, old_monitoring]}
-  - {code: h924pc@emergepr, frequency: monthly, tags: [activity, headline, inflation, old_monitoring]}
-  - {code: h924pcxz@emergepr, frequency: monthly, tags: [activity, headline, inflation, old_monitoring]}
-  - {code: h924pcff@emergepr, frequency: monthly, tags: [activity, detail, inflation, old_monitoring]}
-  - {code: h924pji@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: h924pjs@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924trs2@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924trsc@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924tsfb@emergepr, frequency: monthly}
-  - {code: n924tspp@emergepr, frequency: monthly}
-  - {code: n924tsau@emergepr, frequency: monthly}
-  - {code: n924tscd@emergepr, frequency: monthly}
-  - {code: h924d@emergepr, frequency: monthly, tags: [activity, headline, monitoring, old_monitoring]}
-  - {code: n924dvgg@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924dvgm@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924dvgp@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: s924vmg@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring, pmi]}
-  - {code: s924mg@mktpmi, frequency: monthly, tags: [activity, headline, old_monitoring, pmi]}
-  - {code: y924vr@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: y924vr1@emergepr, frequency: monthly}
-  - {code: y924vr2@emergepr, frequency: monthly}
-  - {code: y924vr3@emergepr, frequency: monthly}
-  - {code: n924vvr@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924vrds@emergepr, frequency: monthly}
-  - {code: n924vrrd@emergepr, frequency: monthly, tags: [headline, monitoring]}
-  - {code: n924fczg@emergepr, frequency: monthly}
-  - {code: n924fczb@emergepr, frequency: monthly}
-  - {code: n924fczn@emergepr, frequency: monthly}
-  - {code: n924iqxp@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924iqmp@emergepr, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: n924ix@emergepr, frequency: monthly}
-  - {code: n924im@emergepr, frequency: monthly}
-  - {code: n924ixa4@emergepr, frequency: monthly}
-  - {code: n924ixjp@emergepr, frequency: monthly}
-  - {code: n924ixeu@emergepr, frequency: monthly}
-  - {code: n924ixus@emergepr, frequency: monthly}
-  - {code: h924ixd@emergepr, frequency: monthly, tags: [activity, headline, monitoring, old_monitoring]}
-  - {code: h924imd@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: h924ix@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: h924im@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924euru@emergepr, frequency: monthly, tags: [headline, monitoring]}
-  - {code: n924fzn9@emergepr, frequency: monthly}
-  - {code: s924vme@emergepr, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924vnes@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vnec@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924me@mktpmi, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924se@mktpmi, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924vmo@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vmsr@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vmd@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924m@mktpmi, frequency: monthly, tags: [activity, headline, monitoring, old_monitoring, pmi]}
-  - {code: s924mo@mktpmi, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vngc@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring, pmi]}
-  - {code: s924vnoc@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vngs@emergepr, frequency: monthly, tags: [activity, detail, old_monitoring, pmi]}
-  - {code: s924vnos@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924s@mktpmi, frequency: monthly, tags: [activity, headline, monitoring, old_monitoring, pmi]}
-  - {code: s924spc@mktpmi, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924snb@mktpmi, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: jpsiip@japan, frequency: monthly, tags: [activity, headline, monitoring, old_monitoring]}
-  - {code: jpfaral2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpewfra2@japan, frequency: monthly, tags: [activity, headline, monitoring, old_monitoring]}
-  - {code: omnn2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: bngx2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: m158m@mktpmi, frequency: monthly, tags: [activity, headline, monitoring, old_monitoring]}
-  - {code: m158s@mktpmi, frequency: monthly, tags: [activity, headline, monitoring, old_monitoring]}
-  - {code: ccia@japan, frequency: monthly}
-  - {code: jpcij@japan, frequency: monthly, tags: [activity, headline, inflation, monitoring, old_monitoring]}
-  - {code: jpcij2@japan, frequency: monthly, tags: [activity, headline, inflation, old_monitoring]}
-  - {code: jpcijef@japan, frequency: monthly, tags: [activity, headline, inflation, monitoring, old_monitoring]}
-  - {code: jpcijef2@japan, frequency: monthly, tags: [activity, headline, inflation, old_monitoring]}
-  - {code: jpcije@japan, frequency: monthly, tags: [headline, monitoring]}
-  - {code: jpcije2@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpcit@japan, frequency: monthly}
-  - {code: jpcit2@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpcitef@japan, frequency: monthly}
-  - {code: jpcitef2@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpnce@japan, frequency: monthly, tags: [activity, headline, inflation, monitoring, old_monitoring]}
-  - {code: jpncfxf@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpcijff@japan, frequency: monthly, tags: [activity, detail, inflation, old_monitoring]}
-  - {code: jpsir@japan, frequency: monthly}
-  - {code: jpscaic@japan, frequency: monthly, tags: [activity, headline, monitoring, old_monitoring]}
-  - {code: jpscaidc@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpscaisc@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsir2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: cdai@japan, frequency: monthly}
-  - {code: cdae@japan, frequency: monthly}
-  - {code: cdad@japan, frequency: monthly}
-  - {code: jpniip@japan, frequency: monthly}
-  - {code: jpniipf@japan, frequency: monthly}
-  - {code: jpniipfi@japan, frequency: monthly}
-  - {code: jpniipct@japan, frequency: monthly}
-  - {code: jpsiipf@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsiipfi@japan, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: jpsiipct@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: m158mg@mktpmi, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: m158mo@mktpmi, frequency: monthly, tags: [activity, headline, monitoring, old_monitoring]}
-  - {code: jptis@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpstiewr@japan, frequency: monthly}
-  - {code: jptiseps@japan, frequency: monthly}
-  - {code: jptisebs@japan, frequency: monthly}
-  - {code: m158se@mktpmi, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: m158snb@mktpmi, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: m158sx@mktpmi, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: omnn@japan, frequency: monthly}
-  - {code: costsn@japan, frequency: monthly}
-  - {code: costs@japan, frequency: monthly}
-  - {code: cnorv@japan, frequency: monthly}
-  - {code: jpsivm@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: costsn2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: costs2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: cnorv2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: fluedr2@japan, frequency: monthly, tags: [activity, headline, monitoring, old_monitoring]}
-  - {code: flpr@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: mefac@japan, frequency: monthly}
-  - {code: mefcac@japan, frequency: monthly}
-  - {code: jpwtcei2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpwccei2@japan, frequency: monthly}
-  - {code: m158me@mktpmi, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: m158md@mktpmi, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: m158mpi@mktpmi, frequency: monthly, tags: [activity, headline, monitoring, old_monitoring]}
-  - {code: m158mpo@mktpmi, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: m158mx@mktpmi, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: m158spi@mktpmi, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: m158spc@mktpmi, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: m158swo@mktpmi, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpitwvx@japan, frequency: monthly}
-  - {code: jpitwvm@japan, frequency: monthly}
-  - {code: jpituvx@japan, frequency: monthly}
-  - {code: jpitevx@japan, frequency: monthly}
-  - {code: jpitcvx@japan, frequency: monthly}
-  - {code: bngm2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpnscx12@japan, frequency: monthly}
-  - {code: jpnsdx12@japan, frequency: monthly}
-  - {code: jpsivx@japan, frequency: monthly, tags: [activity, headline, monitoring, old_monitoring]}
-  - {code: jpsivxcn@japan, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: jpsivxeu@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsivxna@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsivxus@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jsngpcp@japan, frequency: quarterly}
-  - {code: jsnpccp@japan, frequency: quarterly}
-  - {code: jsndfcp@japan, frequency: quarterly}
-  - {code: jsnescp@japan, frequency: quarterly}
-  - {code: saoa1a@japan, frequency: quarterly}
-  - {code: saoa3a@japan, frequency: quarterly}
-  - {code: saoa5a@japan, frequency: quarterly}
-  - {code: jpcijf@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpcwf@japan, frequency: monthly}
-  - {code: jpcwen@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jsapgpc@japan, frequency: quarterly}
-  - {code: jsacct@japan, frequency: quarterly}
-  - {code: jsacgct@japan, frequency: quarterly}
-  - {code: jsafct@japan, frequency: quarterly}
-  - {code: jsaxnct@japan, frequency: quarterly}
-  - {code: s213gvi@emergela, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s213if@emergela, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n213vld@emergela, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h213vcc@emergela, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s213ngpc@emergela, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s213ncpc@emergela, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s213nfc@emergela, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s213ndfc@emergela, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: n193vkco@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s193trs@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h193cvr@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h193cvrt@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s193ele@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s193vpt@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s193ngpc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s193nfc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s193ndfc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s193d@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s193du@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s193vb@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s223gvi@emergela, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s223srv@emergela, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s223d@emergela, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s223siaq@emergela, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n223vbc@emergela, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s223ngpc@emergela, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s223gac@emergela, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s223ginc@emergela, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s223gsc@emergela, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s156d@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s156ti@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s156to@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h156cvr@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n156vkco@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s156ele@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s156trs@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s156ts@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s156ngpc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s156nfc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s156ndfc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s156du@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s156ncc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s924trsp@emergepr, frequency: monthly, tags: [activity, detail, gdp_nowcast, old_monitoring]}
-  - {code: s924gp@emergepr, frequency: monthly, tags: [activity, gdp_nowcast, headline, old_monitoring]}
-  - {code: n924oa@emergepr, frequency: monthly, tags: [activity, gdp_nowcast, headline, old_monitoring]}
-  - {code: n924zd@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h924cvl@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s924cbmi@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n924vld@emergepr, frequency: monthly, tags: [activity, gdp_nowcast, headline, old_monitoring]}
-  - {code: s924vpmi@emergepr, frequency: monthly, tags: [activity, gdp_nowcast, headline, old_monitoring, pmi]}
-  - {code: s134dw@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s134ts@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s134to@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s134trb@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h134cvrt@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h134vcc@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s134vbi@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n134vkco@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h134oau@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s134ngpc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s134nfc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s134ndtc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s134ncpc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s134duh@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: h184d@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h184oau@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s184trs@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s184ts@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h184cvrt@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n184vcc@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n184vkco@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s184ngpc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s184ncc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s184nfc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s184ncpc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s184duh@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: h184ele@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: n184vb@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s132d@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s132dm@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s132trsc@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s132cvrt@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s132vcc@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n132vkco@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s132ngpc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s132nfc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s132ncc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s132elen@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s112ele@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s112trs@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s112d@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h112oau@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n112vkco@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h112cvrt@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: ecy24@uk, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s112ngpc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s112nfc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s112ndtc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s112elpm@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s112elpi@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: h536trs@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n536oau@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h536cvls@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h536vcc@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h534d@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n534vbr@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n534cvl@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h534vi@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: m534s@mktpmi, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: m534mg@mktpmi, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s136trs@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h136cvrt@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s136vb@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n136vcc@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n136vce@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n136vkco@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n136oau@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s136ele@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s136ngpc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s136nfc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s136ncc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s136duh@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: h158otu@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h158oau@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s158d@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s158dum@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h158trs@g10, frequency: monthly, tags: [gdp_nowcast, headline, monitoring]}
-  - {code: h158cvr@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s158to@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s158ts@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h158vcc@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n158vkco@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s158ele@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s158ngpc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s158nfc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s158ndtc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s158ncpc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s542ts@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s542ti@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h542vld@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h542vlcc@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h542vlag@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n542ves@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n542cvrt@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h542tom@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s542diqx@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s542diqv@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n542cum@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s542dum@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n542dopv@emergepr, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s273gvi@emergela, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s273dw@emergela, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s273trs@emergela, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s273vma@emergela, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s273vmna@emergela, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s273mg@mktpmi, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s273vpmi@emergela, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s273coin@emergela, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s273lead@emergela, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h273epae@emergela, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s273ngpc@emergela, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s273gafc@emergela, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s273gic@emergela, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s273gsc@emergela, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s922d@emergecw, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n922dum2@emergecw, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n922otu@emergecw, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n922oau@emergecw, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h922gvi@emergecw, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h922ele@emergecw, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h922tr@emergecw, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n922cvlf@emergecw, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h922ngpc@emergecw, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: h922ncc@emergecw, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: h922nfc@emergecw, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s186d@emergema, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s186dk@emergema, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s186dm@emergema, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s186dum2@emergema, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n186omvu@emergema, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s186trs@emergema, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: h186cvl@emergema, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n186vldt@emergema, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s186vcb@emergema, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s186ngpc@emergema, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s186nfc@emergema, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s111trs@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s111vm@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s111vcc@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s111vce@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: n111vkco@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s111d@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s111cvrt@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s111ts@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s111ti@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s111to@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s111elrc@g10, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: cbm@usecon, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s111ngpc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s111nfc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s111ndtc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s111ncc@g10, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s199dm@emergema, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s199trs@emergema, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s199t8vt@emergema, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s199two@emergema, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s199cvli@emergema, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s199vld@emergema, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s199vlc@emergema, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s199vlag@emergema, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s199vp@emergema, frequency: monthly, tags: [gdp_nowcast]}
-  - {code: s199ngpc@emergema, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s199nfc@emergema, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s199ndtc@emergema, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s199ndfc@emergema, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: s199dum@emergema, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: h199ele@emergema, frequency: quarterly, tags: [gdp_nowcast]}
-  - {code: a924ce@emergepr, frequency: annual, tags: [activity, detail, old_monitoring]}
-  - {code: a924cect@emergepr, frequency: annual, tags: [activity, headline, old_monitoring]}
-  - {code: a924cegt@emergepr, frequency: annual, tags: [activity, headline, old_monitoring]}
-  - {code: a924celt@emergepr, frequency: annual, tags: [activity, headline, old_monitoring]}
-  - {code: a924cent@emergepr, frequency: annual, tags: [activity, headline, old_monitoring]}
-  - {code: a924nb@emergepr, frequency: annual, tags: [activity, detail, old_monitoring]}
-  - {code: a924nc@emergepr, frequency: annual, tags: [activity, detail, old_monitoring]}
-  - {code: a924ncg@emergepr, frequency: annual, tags: [activity, headline, old_monitoring]}
-  - {code: a924ncp@emergepr, frequency: annual, tags: [activity, detail, old_monitoring]}
-  - {code: a924nf@emergepr, frequency: annual, tags: [activity, detail, old_monitoring]}
-  - {code: a924nfb@emergepr, frequency: annual, tags: [activity, detail, old_monitoring]}
-  - {code: a924ngcy@emergepr, frequency: annual, tags: [activity, headline, old_monitoring]}
-  - {code: a924ngdp@emergepr, frequency: annual, tags: [activity, headline, old_monitoring]}
-  - {code: a924ngpj@emergepr, frequency: annual, tags: [activity, headline, old_monitoring]}
-  - {code: a924nxn@emergepr, frequency: annual, tags: [activity, headline, old_monitoring]}
-  - {code: bnsc@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: bnsd@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: ccit2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: fanwm2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: farac2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: farae2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: faraf2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: farah2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: faram2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: farao2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: farar2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: farat2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: farau2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: faraw2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: fiaac@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: fiaaf@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: fiaah@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: fiaahf@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: fiaal@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: fiaamib@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: fiaamie@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: fiaamil@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: fiaamimm@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: fiaamimo@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: fiaamis@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: h924fczb@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: h924fczg@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: h924fczm@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: h924hd@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: h924hdt@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: h924pca@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: h924pcer@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: h924pcg@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: h924pch@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: h924pcm@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: h924pctc@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: h924pfmi@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: h924pfxi@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: h924pjfb@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: h924pjos@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: h924pjxf@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: h924pp@emergepr, frequency: monthly, tags: [activity, detail, inflation, old_monitoring]}
-  - {code: h924ppc@emergepr, frequency: monthly, tags: [activity, headline, inflation, old_monitoring]}
-  - {code: h924ppp@emergepr, frequency: monthly, tags: [activity, detail, inflation, old_monitoring]}
-  - {code: h924trs@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jfaral@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpavmcp@japan, frequency: monthly, tags: [activity, detail, inflation, old_monitoring]}
-  - {code: jpbcig@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: jpbgdpg@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: jpblig@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: jpcisjc2@japan, frequency: monthly, tags: [activity, headline, inflation, old_monitoring]}
-  - {code: jpcisjc@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpcisje@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpcisjs2@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpcisjs@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpcisjse@japan, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: jpcite2@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpcw7430@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpcw9300@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpcwedf@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpcwef@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpcwefe@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpcwff@japan, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: jpcwfxf@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpcxij@japan, frequency: monthly, tags: [activity, headline, inflation, old_monitoring]}
-  - {code: jpcxijef@japan, frequency: monthly, tags: [activity, headline, inflation, old_monitoring]}
-  - {code: jpdcgc@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpfanw2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpfanwc2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpfanwd2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpgdpg@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: jpipca@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpipya@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpnc139@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpnc7430@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpncedf@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpncicn@japan, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: jpncijef@japan, frequency: monthly, tags: [activity, headline, inflation, old_monitoring]}
-  - {code: jpncild@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpnfa@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: jpnfan@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: jpnfap@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: jpnfar@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: jpniic@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpnpcm@japan, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: jpnpct@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpnpcw@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpnsp@japan, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: jpscainc@japan, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: jpscws@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpsgvc@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsiio@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsiipca@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsiipco@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsiipdc@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsiipfc@japan, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: jpsiipnd@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsiipp@japan, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: jpsiippm@japan, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: jpsiippo@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsiirbm@japan, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: jpsiircc@japan, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: jpsiirch@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsiircx@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsiired@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsiirei@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsiirfe@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsiirfm@japan, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: jpsiirft@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsiirm@japan, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: jpsiirom@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsiirpc@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsiirpl@japan, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: jpsiirpp@japan, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: jpsiirpr@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsiirtr@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsirc2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsire2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsirf2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsirfu2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsirm2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsiro2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsirt2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsivxi@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsivxig@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsivxk@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsivxmv@japan, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: jpsivxo@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpsivxoh@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpwiip@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpwiipca@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpwiipco@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpwiipct@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpwiipdc@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpwiipf@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpwiipfc@japan, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: jpwiipfi@japan, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: jpwiipnd@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpwiipp@japan, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: jpwiippm@japan, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: jpwiippo@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: jpxcijef@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jpxrsdv@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jsnh9sr@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: jycije@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jycit@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jycite@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: jycitef@japan, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: lsdpf@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: m158mb@mktpmi, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: m158mqp@mktpmi, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: m158msf@mktpmi, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: m158msp@mktpmi, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: m158tg@mktpmi, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: n924cel@emergepr, frequency: annual, tags: [activity, headline, old_monitoring]}
-  - {code: n924cpa@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cpac@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cpar@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cpas@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cpba@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cpbt@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cpcq@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cpcs@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924cpdh@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cper@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cpes@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cpfb@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924cpfc@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924cpff@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924cpfi@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924cpg@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cpgr@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cph@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cphr@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cpi@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cplh@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cpm@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924cpmh@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924cpmm@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cpms@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cpos@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cppt@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924cps@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cptc@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cptf@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cptm@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924cptp@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cptq@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cpxf@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cpxg@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cpxv@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924cpyc@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924cpye@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924cpyj@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924cpyl@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924cpyu@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924cpyv@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924cvla@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924dvgf@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924dvgi@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924dvgk@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924dvgs@emergepr, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: n924dvgx@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924gdxy@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924hd@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924hdt@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924imdy@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924ixdy@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924ngpc@emergepr, frequency: annual, tags: [activity, headline, old_monitoring]}
-  - {code: n924nvcg@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924nvci@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924nvcm@emergepr, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: n924nvcx@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924oaup@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924omvu@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924otu@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924pc@emergepr, frequency: monthly, tags: [activity, headline, inflation, old_monitoring]}
-  - {code: n924pcf2@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924pcfb@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924pcff@emergepr, frequency: monthly, tags: [activity, detail, inflation, old_monitoring]}
-  - {code: n924pcos@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924pcp@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924pcxz@emergepr, frequency: monthly, tags: [activity, headline, inflation, old_monitoring]}
-  - {code: n924pcya@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924pcyg@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924pcyh@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924pcym@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924pcyr@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924pcyt@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924pji@emergepr, frequency: monthly, tags: [activity, headline, inflation, old_monitoring]}
-  - {code: n924pjs@emergepr, frequency: monthly, tags: [activity, headline, inflation, old_monitoring]}
-  - {code: n924pjxf@emergepr, frequency: monthly, tags: [activity, headline, inflation, old_monitoring]}
-  - {code: n924pm@emergepr, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: n924pp@emergepr, frequency: monthly, tags: [activity, detail, inflation, old_monitoring]}
-  - {code: n924ppbm@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppc@emergepr, frequency: monthly, tags: [activity, headline, inflation, old_monitoring]}
-  - {code: n924ppcc@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppcd@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924ppce@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppcf@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppcm@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppcn@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppcp@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppd@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924ppee@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924ppf@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924ppfm@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppfp@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppfr@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924ppin@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppm@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppme@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppmh@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppmp@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppmv@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppmw@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppmz@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppn@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924ppnc@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppnf@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppng@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppnn@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppno@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppnp@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppns@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppnx@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppom@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924ppp@emergepr, frequency: monthly, tags: [activity, detail, inflation, old_monitoring]}
-  - {code: n924pppm@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppr@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924pprm@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924pprr@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppse@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppsf@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppsp@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppt@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924pptg@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924pptl@emergepr, frequency: monthly, tags: [headline, inflation, old_monitoring]}
-  - {code: n924pptm@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppts@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppue@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppug@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppuw@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924ppwp@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924pry@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924py@emergepr, frequency: monthly, tags: [activity, headline, inflation, old_monitoring]}
-  - {code: n924pzbm@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924pzcc@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924pzce@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924pzcf@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924pzcm@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924pzcn@emergepr, frequency: monthly, tags: [detail, inflation, old_monitoring]}
-  - {code: n924vrs@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924vy@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924vyai@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924vyco@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924vyd@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924vydp@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924vyfi@emergepr, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: n924vyi@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924vyk@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924vym@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924vyp@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924vyrd@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924vys@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: n924wdn@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: ommnn2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: omndn2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: omnfn2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: omnnmn2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: omnpeen2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: omnprn2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: omnpun2@japan, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: redfc2@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: redfdc2@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: redfoc2@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: redgpc2@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: redpc2@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: redsc2@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: regcc2@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: repcc2@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: resec2@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: resesc2@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: resic2@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: resisc2@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: s924mb@mktpmi, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924md@mktpmi, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924mpi@mktpmi, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924mpo@mktpmi, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924mqp@mktpmi, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924msf@mktpmi, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924msp@mktpmi, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924mx@mktpmi, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924mxc@mktpmi, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924oi@mktpmi, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924spi@mktpmi, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924swo@mktpmi, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924sx@mktpmi, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924tg@mktpmi, frequency: monthly, tags: [activity, detail, old_monitoring, pmi]}
-  - {code: s924ved@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vee@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924veg@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924veip@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vem@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924veo@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vepi@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924veqp@emergepr, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924verd@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924ves@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vese@emergepr, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924vesf@emergepr, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924vesp@emergepr, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924vex@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vml@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vmm@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vmme@emergepr, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924vmpf@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vmpi@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vmqp@emergepr, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924vms@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vmse@emergepr, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924vmsf@emergepr, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924vmsp@emergepr, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924vmx@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vnbc@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vnbe@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vnbs@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vncc@emergepr, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924vncs@emergepr, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924vne@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vnic@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vnis@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vno@emergepr, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924vnpc@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vnpi@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vnsd@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vnst@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vnuo@emergepr, frequency: monthly, tags: [headline, old_monitoring, pmi]}
-  - {code: s924vnx@emergepr, frequency: monthly, tags: [detail, old_monitoring, pmi]}
-  - {code: s924vp@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: saga1a@japan, frequency: quarterly, tags: [headline, inflation, old_monitoring]}
-  - {code: saga3a@japan, frequency: quarterly, tags: [headline, inflation, old_monitoring]}
-  - {code: saga5a@japan, frequency: quarterly, tags: [headline, inflation, old_monitoring]}
-  - {code: sajbca@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: sajbcaf@japan, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: v924cel@emergepr, frequency: annual, tags: [activity, headline, old_monitoring]}
-  - {code: v924trsv@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: y924dvgf@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: y924dvgk@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: y924dvgp@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: y924dvgs@emergepr, frequency: monthly, tags: [activity, detail, old_monitoring]}
-  - {code: y924hlac@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: y924imdy@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: y924ixdy@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: y924ndyw@emergepr, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: y924ndyy@emergepr, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: y924pc@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: y924sial@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: y924siop@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: y924sior@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: y924vjy@emergepr, frequency: quarterly, tags: [activity, headline, old_monitoring]}
-  - {code: y924vrco@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: y924vri@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: y924vrm1@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: y924vrrd@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: y924vvr@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
-  - {code: y924vvy@emergepr, frequency: monthly, tags: [activity, headline, old_monitoring]}
+- code: n924d@emergepr
+  frequency: monthly
+- code: n924trs@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - monitoring
+  - old_monitoring
+- code: n924vr@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - monitoring
+  - old_monitoring
+- code: n924fczm@emergepr
+  frequency: monthly
+- code: n924ixd@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924imd@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: s924vm@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - monitoring
+  - old_monitoring
+  - pmi
+- code: s924vng@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - monitoring
+  - old_monitoring
+  - pmi
+- code: h924vcc@emergepr
+  frequency: monthly
+- code: n924vfci@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924pcy@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - monitoring
+  - old_monitoring
+- code: n924pcxg@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - monitoring
+  - old_monitoring
+- code: n924pcyf@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - monitoring
+  - old_monitoring
+- code: n924pci@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924pcs@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - monitoring
+  - old_monitoring
+- code: h924pc@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - old_monitoring
+- code: h924pcxz@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - old_monitoring
+- code: h924pcff@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - inflation
+  - old_monitoring
+- code: h924pji@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: h924pjs@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924trs2@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924trsc@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924tsfb@emergepr
+  frequency: monthly
+- code: n924tspp@emergepr
+  frequency: monthly
+- code: n924tsau@emergepr
+  frequency: monthly
+- code: n924tscd@emergepr
+  frequency: monthly
+- code: h924d@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - monitoring
+  - old_monitoring
+- code: n924dvgg@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924dvgm@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924dvgp@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: s924vmg@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924mg@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+  - pmi
+- code: y924vr@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924vr1@emergepr
+  frequency: monthly
+- code: y924vr2@emergepr
+  frequency: monthly
+- code: y924vr3@emergepr
+  frequency: monthly
+- code: n924vvr@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924vrds@emergepr
+  frequency: monthly
+- code: n924vrrd@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - monitoring
+- code: n924fczg@emergepr
+  frequency: monthly
+- code: n924fczb@emergepr
+  frequency: monthly
+- code: n924fczn@emergepr
+  frequency: monthly
+- code: n924iqxp@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924iqmp@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: n924ix@emergepr
+  frequency: monthly
+- code: n924im@emergepr
+  frequency: monthly
+- code: n924ixa4@emergepr
+  frequency: monthly
+- code: n924ixjp@emergepr
+  frequency: monthly
+- code: n924ixeu@emergepr
+  frequency: monthly
+- code: n924ixus@emergepr
+  frequency: monthly
+- code: h924ixd@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - monitoring
+  - old_monitoring
+- code: h924imd@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: h924ix@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: h924im@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924euru@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - monitoring
+- code: n924fzn9@emergepr
+  frequency: monthly
+- code: s924vme@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924vnes@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vnec@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924me@mktpmi
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924se@mktpmi
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924vmo@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vmsr@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vmd@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924m@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - monitoring
+  - old_monitoring
+  - pmi
+- code: s924mo@mktpmi
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vngc@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vnoc@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vngs@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924vnos@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924s@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - monitoring
+  - old_monitoring
+  - pmi
+- code: s924spc@mktpmi
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924snb@mktpmi
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: jpsiip@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - monitoring
+  - old_monitoring
+- code: jpfaral2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpewfra2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - monitoring
+  - old_monitoring
+- code: omnn2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: bngx2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: m158m@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - monitoring
+  - old_monitoring
+- code: m158s@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - monitoring
+  - old_monitoring
+- code: ccia@japan
+  frequency: monthly
+- code: jpcij@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - monitoring
+  - old_monitoring
+- code: jpcij2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcijef@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - monitoring
+  - old_monitoring
+- code: jpcijef2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcije@japan
+  frequency: monthly
+  tags:
+  - headline
+  - monitoring
+- code: jpcije2@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcit@japan
+  frequency: monthly
+- code: jpcit2@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcitef@japan
+  frequency: monthly
+- code: jpcitef2@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpnce@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - monitoring
+  - old_monitoring
+- code: jpncfxf@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcijff@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - inflation
+  - old_monitoring
+- code: jpsir@japan
+  frequency: monthly
+- code: jpscaic@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - monitoring
+  - old_monitoring
+- code: jpscaidc@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpscaisc@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsir2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: cdai@japan
+  frequency: monthly
+- code: cdae@japan
+  frequency: monthly
+- code: cdad@japan
+  frequency: monthly
+- code: jpniip@japan
+  frequency: monthly
+- code: jpniipf@japan
+  frequency: monthly
+- code: jpniipfi@japan
+  frequency: monthly
+- code: jpniipct@japan
+  frequency: monthly
+- code: jpsiipf@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsiipfi@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: jpsiipct@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: m158mg@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: m158mo@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - monitoring
+  - old_monitoring
+- code: jptis@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpstiewr@japan
+  frequency: monthly
+- code: jptiseps@japan
+  frequency: monthly
+- code: jptisebs@japan
+  frequency: monthly
+- code: m158se@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: m158snb@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: m158sx@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: omnn@japan
+  frequency: monthly
+- code: costsn@japan
+  frequency: monthly
+- code: costs@japan
+  frequency: monthly
+- code: cnorv@japan
+  frequency: monthly
+- code: jpsivm@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: costsn2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: costs2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: cnorv2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: fluedr2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - monitoring
+  - old_monitoring
+- code: flpr@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: mefac@japan
+  frequency: monthly
+- code: mefcac@japan
+  frequency: monthly
+- code: jpwtcei2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpwccei2@japan
+  frequency: monthly
+- code: m158me@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: m158md@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: m158mpi@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - monitoring
+  - old_monitoring
+- code: m158mpo@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: m158mx@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: m158spi@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: m158spc@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: m158swo@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpitwvx@japan
+  frequency: monthly
+- code: jpitwvm@japan
+  frequency: monthly
+- code: jpituvx@japan
+  frequency: monthly
+- code: jpitevx@japan
+  frequency: monthly
+- code: jpitcvx@japan
+  frequency: monthly
+- code: bngm2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpnscx12@japan
+  frequency: monthly
+- code: jpnsdx12@japan
+  frequency: monthly
+- code: jpsivx@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - monitoring
+  - old_monitoring
+- code: jpsivxcn@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: jpsivxeu@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsivxna@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsivxus@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jsngpcp@japan
+  frequency: quarterly
+- code: jsnpccp@japan
+  frequency: quarterly
+- code: jsndfcp@japan
+  frequency: quarterly
+- code: jsnescp@japan
+  frequency: quarterly
+- code: saoa1a@japan
+  frequency: quarterly
+- code: saoa3a@japan
+  frequency: quarterly
+- code: saoa5a@japan
+  frequency: quarterly
+- code: jpcijf@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcwf@japan
+  frequency: monthly
+- code: jpcwen@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jsapgpc@japan
+  frequency: quarterly
+- code: jsacct@japan
+  frequency: quarterly
+- code: jsacgct@japan
+  frequency: quarterly
+- code: jsafct@japan
+  frequency: quarterly
+- code: jsaxnct@japan
+  frequency: quarterly
+- code: s213gvi@emergela
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s213if@emergela
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n213vld@emergela
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h213vcc@emergela
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s213ngpc@emergela
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s213ncpc@emergela
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s213nfc@emergela
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s213ndfc@emergela
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: n193vkco@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s193trs@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h193cvr@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h193cvrt@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s193ele@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s193vpt@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s193ngpc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s193nfc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s193ndfc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s193d@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s193du@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s193vb@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s223gvi@emergela
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s223srv@emergela
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s223d@emergela
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s223siaq@emergela
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n223vbc@emergela
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s223ngpc@emergela
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s223gac@emergela
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s223ginc@emergela
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s223gsc@emergela
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s156d@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s156ti@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s156to@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h156cvr@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n156vkco@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s156ele@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s156trs@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s156ts@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s156ngpc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s156nfc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s156ndfc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s156du@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s156ncc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s924trsp@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - gdp_nowcast
+  - old_monitoring
+- code: s924gp@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - gdp_nowcast
+  - headline
+  - old_monitoring
+- code: n924oa@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - gdp_nowcast
+  - headline
+  - old_monitoring
+- code: n924zd@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h924cvl@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s924cbmi@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n924vld@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - gdp_nowcast
+  - headline
+  - old_monitoring
+- code: s924vpmi@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - gdp_nowcast
+  - headline
+  - old_monitoring
+  - pmi
+- code: s134dw@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s134ts@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s134to@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s134trb@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h134cvrt@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h134vcc@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s134vbi@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n134vkco@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h134oau@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s134ngpc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s134nfc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s134ndtc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s134ncpc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s134duh@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: h184d@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h184oau@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s184trs@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s184ts@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h184cvrt@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n184vcc@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n184vkco@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s184ngpc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s184ncc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s184nfc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s184ncpc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s184duh@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: h184ele@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: n184vb@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s132d@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s132dm@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s132trsc@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s132cvrt@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s132vcc@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n132vkco@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s132ngpc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s132nfc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s132ncc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s132elen@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s112ele@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s112trs@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s112d@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h112oau@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n112vkco@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h112cvrt@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: ecy24@uk
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s112ngpc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s112nfc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s112ndtc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s112elpm@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s112elpi@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: h536trs@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n536oau@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h536cvls@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h536vcc@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h534d@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n534vbr@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n534cvl@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h534vi@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: m534s@mktpmi
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: m534mg@mktpmi
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s136trs@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h136cvrt@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s136vb@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n136vcc@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n136vce@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n136vkco@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n136oau@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s136ele@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s136ngpc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s136nfc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s136ncc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s136duh@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: h158otu@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h158oau@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s158d@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s158dum@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h158trs@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+  - headline
+  - monitoring
+- code: h158cvr@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s158to@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s158ts@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h158vcc@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n158vkco@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s158ele@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s158ngpc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s158nfc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s158ndtc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s158ncpc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s542ts@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s542ti@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h542vld@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h542vlcc@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h542vlag@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n542ves@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n542cvrt@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h542tom@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s542diqx@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s542diqv@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n542cum@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s542dum@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n542dopv@emergepr
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s273gvi@emergela
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s273dw@emergela
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s273trs@emergela
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s273vma@emergela
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s273vmna@emergela
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s273mg@mktpmi
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s273vpmi@emergela
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s273coin@emergela
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s273lead@emergela
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h273epae@emergela
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s273ngpc@emergela
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s273gafc@emergela
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s273gic@emergela
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s273gsc@emergela
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s922d@emergecw
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n922dum2@emergecw
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n922otu@emergecw
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n922oau@emergecw
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h922gvi@emergecw
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h922ele@emergecw
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h922tr@emergecw
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n922cvlf@emergecw
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h922ngpc@emergecw
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: h922ncc@emergecw
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: h922nfc@emergecw
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s186d@emergema
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s186dk@emergema
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s186dm@emergema
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s186dum2@emergema
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n186omvu@emergema
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s186trs@emergema
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: h186cvl@emergema
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n186vldt@emergema
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s186vcb@emergema
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s186ngpc@emergema
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s186nfc@emergema
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s111trs@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s111vm@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s111vcc@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s111vce@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: n111vkco@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s111d@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s111cvrt@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s111ts@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s111ti@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s111to@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s111elrc@g10
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: cbm@usecon
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s111ngpc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s111nfc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s111ndtc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s111ncc@g10
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s199dm@emergema
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s199trs@emergema
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s199t8vt@emergema
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s199two@emergema
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s199cvli@emergema
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s199vld@emergema
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s199vlc@emergema
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s199vlag@emergema
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s199vp@emergema
+  frequency: monthly
+  tags:
+  - gdp_nowcast
+- code: s199ngpc@emergema
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s199nfc@emergema
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s199ndtc@emergema
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s199ndfc@emergema
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: s199dum@emergema
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: h199ele@emergema
+  frequency: quarterly
+  tags:
+  - gdp_nowcast
+- code: a924ce@emergepr
+  frequency: annual
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: a924cect@emergepr
+  frequency: annual
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: a924cegt@emergepr
+  frequency: annual
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: a924celt@emergepr
+  frequency: annual
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: a924cent@emergepr
+  frequency: annual
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: a924nb@emergepr
+  frequency: annual
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: a924nc@emergepr
+  frequency: annual
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: a924ncg@emergepr
+  frequency: annual
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: a924ncp@emergepr
+  frequency: annual
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: a924nf@emergepr
+  frequency: annual
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: a924nfb@emergepr
+  frequency: annual
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: a924ngcy@emergepr
+  frequency: annual
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: a924ngdp@emergepr
+  frequency: annual
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: a924ngpj@emergepr
+  frequency: annual
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: a924nxn@emergepr
+  frequency: annual
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: bnsc@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: bnsd@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: ccit2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: fanwm2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: farac2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: farae2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: faraf2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: farah2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: faram2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: farao2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: farar2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: farat2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: farau2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: faraw2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: fiaac@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: fiaaf@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: fiaah@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: fiaahf@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: fiaal@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: fiaamib@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: fiaamie@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: fiaamil@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: fiaamimm@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: fiaamimo@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: fiaamis@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: h924fczb@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: h924fczg@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: h924fczm@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: h924hd@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: h924hdt@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: h924pca@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: h924pcer@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: h924pcg@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: h924pch@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: h924pcm@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: h924pctc@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: h924pfmi@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: h924pfxi@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: h924pjfb@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: h924pjos@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: h924pjxf@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: h924pp@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - inflation
+  - old_monitoring
+- code: h924ppc@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - old_monitoring
+- code: h924ppp@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - inflation
+  - old_monitoring
+- code: h924trs@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jfaral@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpavmcp@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - inflation
+  - old_monitoring
+- code: jpbcig@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpbgdpg@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpblig@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpcisjc2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcisjc@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcisje@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcisjs2@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcisjs@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcisjse@japan
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: jpcite2@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcw7430@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcw9300@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcwedf@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcwef@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcwefe@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcwff@japan
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: jpcwfxf@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcxij@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpcxijef@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpdcgc@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpfanw2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpfanwc2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpfanwd2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpgdpg@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpipca@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpipya@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpnc139@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpnc7430@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpncedf@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpncicn@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: jpncijef@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpncild@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpnfa@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpnfan@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpnfap@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpnfar@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpniic@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpnpcm@japan
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: jpnpct@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpnpcw@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpnsp@japan
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: jpscainc@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: jpscws@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpsgvc@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsiio@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsiipca@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsiipco@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsiipdc@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsiipfc@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: jpsiipnd@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsiipp@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: jpsiippm@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: jpsiippo@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsiirbm@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: jpsiircc@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: jpsiirch@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsiircx@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsiired@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsiirei@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsiirfe@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsiirfm@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: jpsiirft@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsiirm@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: jpsiirom@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsiirpc@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsiirpl@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: jpsiirpp@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: jpsiirpr@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsiirtr@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsirc2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsire2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsirf2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsirfu2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsirm2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsiro2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsirt2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsivxi@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsivxig@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsivxk@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsivxmv@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: jpsivxo@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpsivxoh@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpwiip@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpwiipca@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpwiipco@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpwiipct@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpwiipdc@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpwiipf@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpwiipfc@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: jpwiipfi@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: jpwiipnd@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpwiipp@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: jpwiippm@japan
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: jpwiippo@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jpxcijef@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jpxrsdv@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jsnh9sr@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: jycije@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jycit@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jycite@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: jycitef@japan
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: lsdpf@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: m158mb@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: m158mqp@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: m158msf@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: m158msp@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: m158tg@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: n924cel@emergepr
+  frequency: annual
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924cpa@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cpac@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cpar@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cpas@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cpba@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cpbt@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cpcq@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cpcs@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924cpdh@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cper@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cpes@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cpfb@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924cpfc@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924cpff@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924cpfi@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924cpg@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cpgr@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cph@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cphr@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cpi@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cplh@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cpm@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924cpmh@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924cpmm@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cpms@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cpos@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cppt@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924cps@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cptc@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cptf@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cptm@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924cptp@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cptq@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cpxf@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cpxg@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cpxv@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924cpyc@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924cpye@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924cpyj@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924cpyl@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924cpyu@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924cpyv@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924cvla@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924dvgf@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924dvgi@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924dvgk@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924dvgs@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: n924dvgx@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924gdxy@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924hd@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924hdt@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924imdy@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924ixdy@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924ngpc@emergepr
+  frequency: annual
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924nvcg@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924nvci@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924nvcm@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: n924nvcx@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924oaup@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924omvu@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924otu@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924pc@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924pcf2@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924pcfb@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924pcff@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924pcos@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924pcp@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924pcxz@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924pcya@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924pcyg@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924pcyh@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924pcym@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924pcyr@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924pcyt@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924pji@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924pjs@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924pjxf@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924pm@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: n924pp@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppbm@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppc@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924ppcc@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppcd@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924ppce@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppcf@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppcm@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppcn@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppcp@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppd@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924ppee@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924ppf@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924ppfm@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppfp@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppfr@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924ppin@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppm@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppme@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppmh@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppmp@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppmv@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppmw@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppmz@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppn@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924ppnc@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppnf@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppng@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppnn@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppno@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppnp@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppns@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppnx@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppom@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924ppp@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924pppm@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppr@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924pprm@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924pprr@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppse@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppsf@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppsp@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppt@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924pptg@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924pptl@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924pptm@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppts@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppue@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppug@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppuw@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924ppwp@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924pry@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924py@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - inflation
+  - old_monitoring
+- code: n924pzbm@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924pzcc@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924pzce@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924pzcf@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924pzcm@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924pzcn@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - inflation
+  - old_monitoring
+- code: n924vrs@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924vy@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924vyai@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924vyco@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924vyd@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924vydp@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924vyfi@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: n924vyi@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924vyk@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924vym@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924vyp@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924vyrd@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924vys@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: n924wdn@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: ommnn2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: omndn2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: omnfn2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: omnnmn2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: omnpeen2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: omnprn2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: omnpun2@japan
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: redfc2@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: redfdc2@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: redfoc2@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: redgpc2@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: redpc2@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: redsc2@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: regcc2@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: repcc2@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: resec2@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: resesc2@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: resic2@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: resisc2@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: s924mb@mktpmi
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924md@mktpmi
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924mpi@mktpmi
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924mpo@mktpmi
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924mqp@mktpmi
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924msf@mktpmi
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924msp@mktpmi
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924mx@mktpmi
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924mxc@mktpmi
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924oi@mktpmi
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924spi@mktpmi
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924swo@mktpmi
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924sx@mktpmi
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924tg@mktpmi
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924ved@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vee@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924veg@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924veip@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vem@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924veo@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vepi@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924veqp@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924verd@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924ves@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vese@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924vesf@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924vesp@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924vex@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vml@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vmm@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vmme@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924vmpf@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vmpi@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vmqp@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924vms@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vmse@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924vmsf@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924vmsp@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924vmx@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vnbc@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vnbe@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vnbs@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vncc@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924vncs@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924vne@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vnic@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vnis@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vno@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924vnpc@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vnpi@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vnsd@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vnst@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vnuo@emergepr
+  frequency: monthly
+  tags:
+  - headline
+  - old_monitoring
+  - pmi
+- code: s924vnx@emergepr
+  frequency: monthly
+  tags:
+  - detail
+  - old_monitoring
+  - pmi
+- code: s924vp@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: saga1a@japan
+  frequency: quarterly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: saga3a@japan
+  frequency: quarterly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: saga5a@japan
+  frequency: quarterly
+  tags:
+  - headline
+  - inflation
+  - old_monitoring
+- code: sajbca@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: sajbcaf@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: v924cel@emergepr
+  frequency: annual
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: v924trsv@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924dvgf@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924dvgk@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924dvgp@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924dvgs@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - detail
+  - old_monitoring
+- code: y924hlac@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924imdy@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924ixdy@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924ndyw@emergepr
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924ndyy@emergepr
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924pc@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924sial@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924siop@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924sior@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924vjy@emergepr
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924vrco@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924vri@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924vrm1@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924vrrd@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924vvr@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: y924vvy@emergepr
+  frequency: monthly
+  tags:
+  - activity
+  - headline
+  - old_monitoring
+- code: s924sno@mktpmi
+  frequency: monthly
+  tags:
+  - china
+  - pmi
+  - detail
+  - old_monitoring
+- code: s924sb@mktpmi
+  frequency: monthly
+  tags:
+  - china
+  - pmi
+  - detail
+  - old_monitoring
+- code: m158sno@mktpmi
+  frequency: monthly
+  tags:
+  - japan
+  - pmi
+  - detail
+  - old_monitoring
+- code: m158sb@mktpmi
+  frequency: monthly
+  tags:
+  - japan
+  - pmi
+  - detail
+  - old_monitoring
