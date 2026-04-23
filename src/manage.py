@@ -107,7 +107,7 @@ def main():
     # add
     p_add = subparsers.add_parser('add', help='Add a series to tracking')
     p_add.add_argument('code', help='Series code in code@database format e.g. jpcij@japan')
-    p_add.add_argument('frequency', choices=['daily', 'monthly', 'quarterly'], help='Frequency')
+    p_add.add_argument('frequency', choices=['daily', 'monthly', 'quarterly', 'annual'], help='Frequency')
     p_add.set_defaults(func=cmd_add)
     p_add.add_argument('--tags', nargs='+', help='Optional tags e.g. --tags monitoring gdp_nowcast')
 

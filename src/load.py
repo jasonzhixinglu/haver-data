@@ -12,12 +12,18 @@ def load_series(code: str, start: str = None, end: str = None) -> pd.Series:
     if end:   s = s[s.index <= end]
     return s
 
-def load_multiple(codes: list = None, tag: str = None, start: str = None, end: str = None) -> pd.DataFrame:
-    """Load multiple series as wide DataFrame. Filter by codes or tag."""
+def load_multiple(codes: list = None, tag: str = None, start: str = None, end: str = None, frequency: str = None) -> pd.DataFrame:
+    """Load multiple series as wide DataFrame. Filter by codes or tag.
+
+    frequency: optional 'M', 'Q', or 'A' to restrict to one frequency bucket,
+               avoiding misaligned pivots when mixing annual and monthly data.
+    """
     if tag is not None:
-        return load_by_tag(tag, start=start, end=end)
+        return load_by_tag(tag, start=start, end=end, frequency=frequency)
     df = pd.read_parquet(DATA_PATH)
     df = df[df["code"].isin(codes)]
+    if frequency:
+        df = df[df["frequency"] == frequency.upper()]
     wide = df.pivot(index="date", columns="code", values="value").dropna(how="all")
     if start: wide = wide[wide.index >= start]
     if end:   wide = wide[wide.index <= end]
@@ -30,14 +36,18 @@ def load_metadata(codes: list = None) -> pd.DataFrame:
         meta = meta[meta.index.isin(codes)]
     return meta
 
-def load_by_tag(tag: str, start: str = None, end: str = None) -> pd.DataFrame:
-    """Load all series with a given tag as a wide DataFrame."""
+def load_by_tag(tag: str, start: str = None, end: str = None, frequency: str = None) -> pd.DataFrame:
+    """Load all series with a given tag as a wide DataFrame.
+
+    frequency: optional 'M', 'Q', or 'A' — filters to one frequency so the
+               resulting pivot has a consistent time axis.
+    """
     meta = pd.read_parquet(META_PATH)
     codes = [code for code, tags in meta['tags'].items() if tag in tags]
     if not codes:
         print(f"No series found with tag: {tag}")
         return pd.DataFrame()
-    return load_multiple(codes, start=start, end=end)
+    return load_multiple(codes, start=start, end=end, frequency=frequency)
 
 def available_tags() -> list:
     """List all unique tags across tracked series."""
