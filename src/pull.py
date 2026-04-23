@@ -150,56 +150,60 @@ def pull_all():
     all_data = []
     all_meta = []
 
+    BATCH_SIZE = 50  # Haver API limit per request
+
     for (db, freq), codes in by_db_freq.items():
-        log(f"Pulling {len(codes)} {freq} series from {db}: {codes}")
-        try:
-            data, metadata, info = hv.data(
-                codes,
-                database=db,
-                frequency=freq,
-                startdate=startdate,
-                rtype='3tuple'
-            )
-
-            # check for missing series
-            noobs = info['codelists'].get('noobs', [])
-            if noobs:
-                log(f"WARNING: no observations returned for {noobs}")
-
-            # melt to long format and tag with code@database
-            data_long = data.reset_index().melt(
-                id_vars='index',
-                var_name='code',
-                value_name='value'
-            ).rename(columns={'index': 'date'})
-            data_long['code'] = data_long['code'] + '@' + db
-            data_long['frequency'] = freq
-            data_long['date'] = data_long['date'].dt.to_timestamp()
-            all_data.append(data_long)
-
-            # tag metadata with code@database as index
-            metadata['id'] = metadata['code'] + '@' + metadata['database']
-            metadata = metadata.set_index('id')
-
-            # merge manual tags (series.yaml) with auto-derived tags (Tier 1)
-            def merged_tags(row):
-                full_id = row.name  # code@database
-                manual = tags_map.get(full_id, [])
-                auto = _auto_tags(
-                    code=row.get('code', ''),
-                    db=db,
-                    freq_char=freq,
-                    descriptor=str(row.get('descriptor', '')),
+        batches = [codes[i:i + BATCH_SIZE] for i in range(0, len(codes), BATCH_SIZE)]
+        log(f"Pulling {len(codes)} {freq} series from {db} in {len(batches)} batch(es)")
+        for batch in batches:
+            try:
+                data, metadata, info = hv.data(
+                    batch,
+                    database=db,
+                    frequency=freq,
+                    startdate=startdate,
+                    rtype='3tuple'
                 )
-                return sorted(set(manual) | set(auto))
 
-            metadata['tags'] = metadata.apply(merged_tags, axis=1)
-            all_meta.append(metadata)
+                # check for missing series
+                noobs = info['codelists'].get('noobs', []) if info else []
+                if noobs:
+                    log(f"WARNING: no observations returned for {noobs}")
 
-            log(f"OK: {db} {freq} — {len(codes)} series, {len(data)} observations each")
+                # melt to long format and tag with code@database
+                data_long = data.reset_index().melt(
+                    id_vars='index',
+                    var_name='code',
+                    value_name='value'
+                ).rename(columns={'index': 'date'})
+                data_long['code'] = data_long['code'] + '@' + db
+                data_long['frequency'] = freq
+                data_long['date'] = data_long['date'].dt.to_timestamp()
+                all_data.append(data_long)
 
-        except Exception as e:
-            log(f"ERROR: {db} {freq} — {e}")
+                # tag metadata with code@database as index
+                metadata['id'] = metadata['code'] + '@' + metadata['database']
+                metadata = metadata.set_index('id')
+
+                # merge manual tags (series.yaml) with auto-derived tags (Tier 1)
+                def merged_tags(row):
+                    full_id = row.name  # code@database
+                    manual = tags_map.get(full_id, [])
+                    auto = _auto_tags(
+                        code=row.get('code', ''),
+                        db=db,
+                        freq_char=freq,
+                        descriptor=str(row.get('descriptor', '')),
+                    )
+                    return sorted(set(manual) | set(auto))
+
+                metadata['tags'] = metadata.apply(merged_tags, axis=1)
+                all_meta.append(metadata)
+
+                log(f"OK: {db} {freq} batch of {len(batch)}")
+
+            except Exception as e:
+                log(f"ERROR: {db} {freq} batch {batch[:3]}... — {e}")
 
     if all_data:
         df_data = pd.concat(all_data, ignore_index=True)
