@@ -170,6 +170,11 @@ def pull_all():
                 if noobs:
                     log(f"WARNING: no observations returned for {noobs}")
 
+                # guard: Haver returns a dict (not DataFrame) when no codes exist
+                if not isinstance(data, pd.DataFrame):
+                    log(f"WARNING: {db} {freq} batch returned no data — codes may not exist in Haver: {batch}")
+                    continue
+
                 # melt to long format and tag with code@database
                 data_long = data.reset_index().melt(
                     id_vars='index',
