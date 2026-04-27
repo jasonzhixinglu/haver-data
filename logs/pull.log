@@ -747,3 +747,48 @@
 [2026-04-24 07:00:13] OK: emergepr Q batch of 3
 [2026-04-24 07:00:14] Written to Z:\haver-data\data\data.parquet and Z:\haver-data\data\metadata.parquet
 [2026-04-24 07:00:14] === Pull complete ===
+[2026-04-25 07:00:08] === Pull started ===
+[2026-04-25 07:00:08] Pulling 323 M series from emergepr in 7 batch(es)
+[2026-04-25 07:00:08] OK: emergepr M batch of 50
+[2026-04-25 07:00:09] OK: emergepr M batch of 50
+[2026-04-25 07:00:09] OK: emergepr M batch of 50
+[2026-04-25 07:00:09] OK: emergepr M batch of 50
+[2026-04-25 07:00:09] OK: emergepr M batch of 50
+[2026-04-25 07:00:09] OK: emergepr M batch of 50
+[2026-04-25 07:00:09] OK: emergepr M batch of 23
+[2026-04-25 07:00:09] Pulling 45 M series from mktpmi in 1 batch(es)
+[2026-04-25 07:00:10] OK: mktpmi M batch of 45
+[2026-04-25 07:00:10] Pulling 194 M series from japan in 4 batch(es)
+[2026-04-25 07:00:10] OK: japan M batch of 50
+[2026-04-25 07:00:10] OK: japan M batch of 50
+[2026-04-25 07:00:10] OK: japan M batch of 50
+[2026-04-25 07:00:11] OK: japan M batch of 44
+[2026-04-25 07:00:11] Pulling 39 Q series from japan in 1 batch(es)
+[2026-04-25 07:00:11] OK: japan Q batch of 39
+[2026-04-25 07:00:11] Pulling 18 M series from emergela in 1 batch(es)
+[2026-04-25 07:00:11] OK: emergela M batch of 18
+[2026-04-25 07:00:11] Pulling 12 Q series from emergela in 1 batch(es)
+[2026-04-25 07:00:11] OK: emergela Q batch of 12
+[2026-04-25 07:00:11] Pulling 72 M series from g10 in 2 batch(es)
+[2026-04-25 07:00:11] OK: g10 M batch of 50
+[2026-04-25 07:00:11] OK: g10 M batch of 22
+[2026-04-25 07:00:11] Pulling 44 Q series from g10 in 1 batch(es)
+[2026-04-25 07:00:11] OK: g10 Q batch of 44
+[2026-04-25 07:00:11] Pulling 1 M series from uk in 1 batch(es)
+[2026-04-25 07:00:12] OK: uk M batch of 1
+[2026-04-25 07:00:12] Pulling 8 M series from emergecw in 1 batch(es)
+[2026-04-25 07:00:12] OK: emergecw M batch of 8
+[2026-04-25 07:00:12] Pulling 3 Q series from emergecw in 1 batch(es)
+[2026-04-25 07:00:12] OK: emergecw Q batch of 3
+[2026-04-25 07:00:12] Pulling 18 M series from emergema in 1 batch(es)
+[2026-04-25 07:00:12] OK: emergema M batch of 18
+[2026-04-25 07:00:12] Pulling 8 Q series from emergema in 1 batch(es)
+[2026-04-25 07:00:12] OK: emergema Q batch of 8
+[2026-04-25 07:00:12] Pulling 1 M series from usecon in 1 batch(es)
+[2026-04-25 07:00:12] OK: usecon M batch of 1
+[2026-04-25 07:00:12] Pulling 18 A series from emergepr in 1 batch(es)
+[2026-04-25 07:00:12] OK: emergepr A batch of 18
+[2026-04-25 07:00:12] Pulling 3 Q series from emergepr in 1 batch(es)
+[2026-04-25 07:00:12] OK: emergepr Q batch of 3
+[2026-04-25 07:00:13] Written to Z:\haver-data\data\data.parquet and Z:\haver-data\data\metadata.parquet
+[2026-04-25 07:00:13] === Pull complete ===
