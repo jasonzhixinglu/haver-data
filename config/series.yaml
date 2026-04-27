@@ -409,6 +409,11 @@ series:
   - activity
   - headline
   - old_monitoring
+- code: veattl2@japan
+  frequency: monthly
+  tags:
+  - external
+  - headline
 - code: m158m@mktpmi
   frequency: monthly
   tags:
@@ -727,6 +732,11 @@ series:
   - activity
   - headline
   - old_monitoring
+- code: viattl2@japan
+  frequency: monthly
+  tags:
+  - external
+  - headline
 - code: jpnscx12@japan
   frequency: monthly
 - code: jpnsdx12@japan
