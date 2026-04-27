@@ -136,6 +136,10 @@ def pull_all():
     startdate = config['defaults']['startdate']
     series = config['series']
 
+    # Load existing parquets upfront so we can fall back to them if a batch fails
+    existing_data = pd.read_parquet(DATA_OUT) if DATA_OUT.exists() else None
+    existing_meta = pd.read_parquet(META_OUT) if META_OUT.exists() else None
+
     # build tags lookup
     tags_map = {s['code']: s.get('tags', []) for s in series}
 
@@ -213,6 +217,28 @@ def pull_all():
     if all_data:
         df_data = pd.concat(all_data, ignore_index=True)
         df_meta = pd.concat(all_meta)
+
+        # Carry forward any series that were expected but missing from this pull
+        expected_codes = set(s['code'] for s in series)
+        pulled_codes   = set(df_data['code'].unique())
+        missing_codes  = expected_codes - pulled_codes
+
+        if missing_codes:
+            if existing_data is not None:
+                log(f"FALLBACK: {len(missing_codes)} series absent from pull — "
+                    f"carrying forward from previous snapshot: {sorted(missing_codes)}")
+                prev_rows = existing_data[existing_data['code'].isin(missing_codes)]
+                if not prev_rows.empty:
+                    df_data = pd.concat([df_data, prev_rows], ignore_index=True)
+                if existing_meta is not None:
+                    prev_meta = existing_meta[existing_meta.index.isin(missing_codes)]
+                    if not prev_meta.empty:
+                        df_meta = pd.concat([df_meta, prev_meta])
+                        df_meta = df_meta[~df_meta.index.duplicated(keep='first')]
+            else:
+                log(f"WARNING: {len(missing_codes)} series missing from pull and "
+                    f"no existing snapshot to fall back to: {sorted(missing_codes)}")
+
         df_data.to_parquet(DATA_OUT)
         df_meta.to_parquet(META_OUT)
         log(f"Written to {DATA_OUT} and {META_OUT}")
