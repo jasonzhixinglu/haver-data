@@ -4350,3 +4350,165 @@ series:
   - headline
   - nsicx
   - realized_cpi
+
+# IFS headline CPI — G20 economies (i{IMF_code}pc@ifs)
+- code: i111pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i112pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i132pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i134pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i136pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i156pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i158pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i163pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i186pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i193pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i199pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i213pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i223pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i273pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i456pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i534pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i536pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i542pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i922pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+- code: i924pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
