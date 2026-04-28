@@ -1270,3 +1270,143 @@
 [2026-04-28 16:51:53] FALLBACK: 69 series absent from pull — carrying forward from previous snapshot: ['i111pc@ifs', 'i112pc@ifs', 'i132pc@ifs', 'i134pc@ifs', 'i136pc@ifs', 'i156pc@ifs', 'i158pc@ifs', 'i163pc@ifs', 'i186pc@ifs', 'i193pc@ifs', 'i199pc@ifs', 'i213pc@ifs', 'i223pc@ifs', 'i273pc@ifs', 'i456pc@ifs', 'i534pc@ifs', 'i536pc@ifs', 'i542pc@ifs', 'i922pc@ifs', 'i924pc@ifs', 'm158m@mktpmi', 'm158mb@mktpmi', 'm158md@mktpmi', 'm158me@mktpmi', 'm158mg@mktpmi', 'm158mo@mktpmi', 'm158mpi@mktpmi', 'm158mpo@mktpmi', 'm158mqp@mktpmi', 'm158msf@mktpmi', 'm158msp@mktpmi', 'm158mx@mktpmi', 'm158s@mktpmi', 'm158sb@mktpmi', 'm158se@mktpmi', 'm158snb@mktpmi', 'm158sno@mktpmi', 'm158spc@mktpmi', 'm158spi@mktpmi', 'm158swo@mktpmi', 'm158sx@mktpmi', 'm158tg@mktpmi', 'm534mg@mktpmi', 'm534s@mktpmi', 's273mg@mktpmi', 's924m@mktpmi', 's924mb@mktpmi', 's924md@mktpmi', 's924me@mktpmi', 's924mg@mktpmi', 's924mo@mktpmi', 's924mpi@mktpmi', 's924mpo@mktpmi', 's924mqp@mktpmi', 's924msf@mktpmi', 's924msp@mktpmi', 's924mx@mktpmi', 's924mxc@mktpmi', 's924oi@mktpmi', 's924s@mktpmi', 's924sb@mktpmi', 's924se@mktpmi', 's924snb@mktpmi', 's924sno@mktpmi', 's924spc@mktpmi', 's924spi@mktpmi', 's924swo@mktpmi', 's924sx@mktpmi', 's924tg@mktpmi']
 [2026-04-28 16:51:53] Written to Z:\haver-data\data\data.parquet and Z:\haver-data\data\metadata.parquet
 [2026-04-28 16:51:53] === Pull complete ===
+[2026-04-28 16:52:35] === Pull started ===
+[2026-04-28 16:53:32] === Pull started ===
+[2026-04-28 16:53:33] Pulling 323 M series from emergepr in 7 batch(es)
+[2026-04-28 16:53:33] OK: emergepr M batch of 50
+[2026-04-28 16:53:33] OK: emergepr M batch of 50
+[2026-04-28 16:53:33] OK: emergepr M batch of 50
+[2026-04-28 16:53:33] OK: emergepr M batch of 50
+[2026-04-28 16:53:34] OK: emergepr M batch of 50
+[2026-04-28 16:53:34] OK: emergepr M batch of 50
+[2026-04-28 16:53:34] OK: emergepr M batch of 23
+[2026-04-28 16:53:34] Pulling 49 M series from mktpmi in 1 batch(es)
+[2026-04-28 16:53:34] WARNING: mktpmi M batch returned no data — codes may not exist in Haver: ['s924mg', 's924me', 's924se', 's924m', 's924mo', 's924s', 's924spc', 's924snb', 'm158m', 'm158s', 'm158mg', 'm158mo', 'm158se', 'm158snb', 'm158sx', 'm158me', 'm158md', 'm158mpi', 'm158mpo', 'm158mx', 'm158spi', 'm158spc', 'm158swo', 'm534s', 'm534mg', 's273mg', 'm158mb', 'm158mqp', 'm158msf', 'm158msp', 'm158tg', 's924mb', 's924md', 's924mpi', 's924mpo', 's924mqp', 's924msf', 's924msp', 's924mx', 's924mxc', 's924oi', 's924spi', 's924swo', 's924sx', 's924tg', 's924sno', 's924sb', 'm158sno', 'm158sb']
+[2026-04-28 16:53:34] Pulling 198 M series from japan in 4 batch(es)
+[2026-04-28 16:53:34] OK: japan M batch of 50
+[2026-04-28 16:53:34] OK: japan M batch of 50
+[2026-04-28 16:53:35] OK: japan M batch of 50
+[2026-04-28 16:53:35] OK: japan M batch of 48
+[2026-04-28 16:53:35] Pulling 39 Q series from japan in 1 batch(es)
+[2026-04-28 16:53:35] OK: japan Q batch of 39
+[2026-04-28 16:53:35] Pulling 18 M series from emergela in 1 batch(es)
+[2026-04-28 16:53:35] OK: emergela M batch of 18
+[2026-04-28 16:53:35] Pulling 12 Q series from emergela in 1 batch(es)
+[2026-04-28 16:53:35] OK: emergela Q batch of 12
+[2026-04-28 16:53:35] Pulling 72 M series from g10 in 2 batch(es)
+[2026-04-28 16:53:35] OK: g10 M batch of 50
+[2026-04-28 16:53:35] OK: g10 M batch of 22
+[2026-04-28 16:53:35] Pulling 44 Q series from g10 in 1 batch(es)
+[2026-04-28 16:53:36] OK: g10 Q batch of 44
+[2026-04-28 16:53:36] Pulling 1 M series from uk in 1 batch(es)
+[2026-04-28 16:53:36] OK: uk M batch of 1
+[2026-04-28 16:53:36] Pulling 8 M series from emergecw in 1 batch(es)
+[2026-04-28 16:53:36] OK: emergecw M batch of 8
+[2026-04-28 16:53:36] Pulling 3 Q series from emergecw in 1 batch(es)
+[2026-04-28 16:53:36] OK: emergecw Q batch of 3
+[2026-04-28 16:53:36] Pulling 18 M series from emergema in 1 batch(es)
+[2026-04-28 16:53:36] OK: emergema M batch of 18
+[2026-04-28 16:53:36] Pulling 8 Q series from emergema in 1 batch(es)
+[2026-04-28 16:53:36] OK: emergema Q batch of 8
+[2026-04-28 16:53:36] Pulling 1 M series from usecon in 1 batch(es)
+[2026-04-28 16:53:36] OK: usecon M batch of 1
+[2026-04-28 16:53:36] Pulling 18 A series from emergepr in 1 batch(es)
+[2026-04-28 16:53:36] OK: emergepr A batch of 18
+[2026-04-28 16:53:36] Pulling 3 Q series from emergepr in 1 batch(es)
+[2026-04-28 16:53:36] OK: emergepr Q batch of 3
+[2026-04-28 16:53:36] Pulling 20 M series from ifs in 1 batch(es)
+[2026-04-28 16:53:36] WARNING: ifs M batch returned no data — codes may not exist in Haver: ['i111pc', 'i112pc', 'i132pc', 'i134pc', 'i136pc', 'i156pc', 'i158pc', 'i163pc', 'i186pc', 'i193pc', 'i199pc', 'i213pc', 'i223pc', 'i273pc', 'i456pc', 'i534pc', 'i536pc', 'i542pc', 'i922pc', 'i924pc']
+[2026-04-28 16:53:36] FALLBACK: 69 series absent from pull — carrying forward from previous snapshot: ['i111pc@ifs', 'i112pc@ifs', 'i132pc@ifs', 'i134pc@ifs', 'i136pc@ifs', 'i156pc@ifs', 'i158pc@ifs', 'i163pc@ifs', 'i186pc@ifs', 'i193pc@ifs', 'i199pc@ifs', 'i213pc@ifs', 'i223pc@ifs', 'i273pc@ifs', 'i456pc@ifs', 'i534pc@ifs', 'i536pc@ifs', 'i542pc@ifs', 'i922pc@ifs', 'i924pc@ifs', 'm158m@mktpmi', 'm158mb@mktpmi', 'm158md@mktpmi', 'm158me@mktpmi', 'm158mg@mktpmi', 'm158mo@mktpmi', 'm158mpi@mktpmi', 'm158mpo@mktpmi', 'm158mqp@mktpmi', 'm158msf@mktpmi', 'm158msp@mktpmi', 'm158mx@mktpmi', 'm158s@mktpmi', 'm158sb@mktpmi', 'm158se@mktpmi', 'm158snb@mktpmi', 'm158sno@mktpmi', 'm158spc@mktpmi', 'm158spi@mktpmi', 'm158swo@mktpmi', 'm158sx@mktpmi', 'm158tg@mktpmi', 'm534mg@mktpmi', 'm534s@mktpmi', 's273mg@mktpmi', 's924m@mktpmi', 's924mb@mktpmi', 's924md@mktpmi', 's924me@mktpmi', 's924mg@mktpmi', 's924mo@mktpmi', 's924mpi@mktpmi', 's924mpo@mktpmi', 's924mqp@mktpmi', 's924msf@mktpmi', 's924msp@mktpmi', 's924mx@mktpmi', 's924mxc@mktpmi', 's924oi@mktpmi', 's924s@mktpmi', 's924sb@mktpmi', 's924se@mktpmi', 's924snb@mktpmi', 's924sno@mktpmi', 's924spc@mktpmi', 's924spi@mktpmi', 's924swo@mktpmi', 's924sx@mktpmi', 's924tg@mktpmi']
+[2026-04-28 16:53:37] Written to Z:\haver-data\data\data.parquet and Z:\haver-data\data\metadata.parquet
+[2026-04-28 16:53:37] === Pull complete ===
+[2026-04-28 16:53:49] === Pull started ===
+[2026-04-28 16:53:49] Pulling 323 M series from emergepr in 7 batch(es)
+[2026-04-28 16:53:50] OK: emergepr M batch of 50
+[2026-04-28 16:53:50] OK: emergepr M batch of 50
+[2026-04-28 16:53:50] OK: emergepr M batch of 50
+[2026-04-28 16:53:50] OK: emergepr M batch of 50
+[2026-04-28 16:53:50] OK: emergepr M batch of 50
+[2026-04-28 16:53:50] OK: emergepr M batch of 50
+[2026-04-28 16:53:50] OK: emergepr M batch of 23
+[2026-04-28 16:53:50] Pulling 49 M series from mktpmi in 1 batch(es)
+[2026-04-28 16:53:51] WARNING: mktpmi M batch returned no data — codes may not exist in Haver: ['s924mg', 's924me', 's924se', 's924m', 's924mo', 's924s', 's924spc', 's924snb', 'm158m', 'm158s', 'm158mg', 'm158mo', 'm158se', 'm158snb', 'm158sx', 'm158me', 'm158md', 'm158mpi', 'm158mpo', 'm158mx', 'm158spi', 'm158spc', 'm158swo', 'm534s', 'm534mg', 's273mg', 'm158mb', 'm158mqp', 'm158msf', 'm158msp', 'm158tg', 's924mb', 's924md', 's924mpi', 's924mpo', 's924mqp', 's924msf', 's924msp', 's924mx', 's924mxc', 's924oi', 's924spi', 's924swo', 's924sx', 's924tg', 's924sno', 's924sb', 'm158sno', 'm158sb']
+[2026-04-28 16:53:51] Pulling 198 M series from japan in 4 batch(es)
+[2026-04-28 16:53:51] OK: japan M batch of 50
+[2026-04-28 16:53:51] OK: japan M batch of 50
+[2026-04-28 16:53:51] OK: japan M batch of 50
+[2026-04-28 16:53:51] OK: japan M batch of 48
+[2026-04-28 16:53:51] Pulling 39 Q series from japan in 1 batch(es)
+[2026-04-28 16:53:51] OK: japan Q batch of 39
+[2026-04-28 16:53:51] Pulling 18 M series from emergela in 1 batch(es)
+[2026-04-28 16:53:51] OK: emergela M batch of 18
+[2026-04-28 16:53:52] Pulling 12 Q series from emergela in 1 batch(es)
+[2026-04-28 16:53:52] OK: emergela Q batch of 12
+[2026-04-28 16:53:52] Pulling 72 M series from g10 in 2 batch(es)
+[2026-04-28 16:53:52] OK: g10 M batch of 50
+[2026-04-28 16:53:52] OK: g10 M batch of 22
+[2026-04-28 16:53:52] Pulling 44 Q series from g10 in 1 batch(es)
+[2026-04-28 16:53:52] OK: g10 Q batch of 44
+[2026-04-28 16:53:52] Pulling 1 M series from uk in 1 batch(es)
+[2026-04-28 16:58:10] === Pull started ===
+[2026-04-28 16:58:10] Pulling 323 M series from emergepr in 7 batch(es)
+[2026-04-28 16:58:10] OK: emergepr M batch of 50
+[2026-04-28 16:58:11] OK: emergepr M batch of 50
+[2026-04-28 16:58:11] OK: emergepr M batch of 50
+[2026-04-28 16:58:11] OK: emergepr M batch of 50
+[2026-04-28 16:58:11] OK: emergepr M batch of 50
+[2026-04-28 16:58:11] OK: emergepr M batch of 50
+[2026-04-28 16:58:11] OK: emergepr M batch of 23
+[2026-04-28 16:58:11] Pulling 49 M series from mktpmi in 1 batch(es)
+[2026-04-28 16:58:12] WARNING: mktpmi M batch returned no data — codes may not exist in Haver: ['s924mg', 's924me', 's924se', 's924m', 's924mo', 's924s', 's924spc', 's924snb', 'm158m', 'm158s', 'm158mg', 'm158mo', 'm158se', 'm158snb', 'm158sx', 'm158me', 'm158md', 'm158mpi', 'm158mpo', 'm158mx', 'm158spi', 'm158spc', 'm158swo', 'm534s', 'm534mg', 's273mg', 'm158mb', 'm158mqp', 'm158msf', 'm158msp', 'm158tg', 's924mb', 's924md', 's924mpi', 's924mpo', 's924mqp', 's924msf', 's924msp', 's924mx', 's924mxc', 's924oi', 's924spi', 's924swo', 's924sx', 's924tg', 's924sno', 's924sb', 'm158sno', 'm158sb']
+[2026-04-28 16:58:12] Pulling 198 M series from japan in 4 batch(es)
+[2026-04-28 16:58:12] OK: japan M batch of 50
+[2026-04-28 16:58:12] OK: japan M batch of 50
+[2026-04-28 16:58:12] OK: japan M batch of 50
+[2026-04-28 16:58:12] OK: japan M batch of 48
+[2026-04-28 16:58:13] Pulling 39 Q series from japan in 1 batch(es)
+[2026-04-28 16:58:22] === Pull started ===
+[2026-04-28 16:58:23] Pulling 323 M series from emergepr in 7 batch(es)
+[2026-04-28 16:58:23] OK: emergepr M batch of 50
+[2026-04-28 16:58:23] OK: emergepr M batch of 50
+[2026-04-28 16:58:23] OK: emergepr M batch of 50
+[2026-04-28 16:58:23] OK: emergepr M batch of 50
+[2026-04-28 16:58:23] OK: emergepr M batch of 50
+[2026-04-28 16:58:24] OK: emergepr M batch of 50
+[2026-04-28 16:58:24] OK: emergepr M batch of 23
+[2026-04-28 16:58:24] Pulling 49 M series from mktpmi in 1 batch(es)
+[2026-04-28 16:58:24] WARNING: mktpmi M batch returned no data — codes may not exist in Haver: ['s924mg', 's924me', 's924se', 's924m', 's924mo', 's924s', 's924spc', 's924snb', 'm158m', 'm158s', 'm158mg', 'm158mo', 'm158se', 'm158snb', 'm158sx', 'm158me', 'm158md', 'm158mpi', 'm158mpo', 'm158mx', 'm158spi', 'm158spc', 'm158swo', 'm534s', 'm534mg', 's273mg', 'm158mb', 'm158mqp', 'm158msf', 'm158msp', 'm158tg', 's924mb', 's924md', 's924mpi', 's924mpo', 's924mqp', 's924msf', 's924msp', 's924mx', 's924mxc', 's924oi', 's924spi', 's924swo', 's924sx', 's924tg', 's924sno', 's924sb', 'm158sno', 'm158sb']
+[2026-04-28 16:58:24] Pulling 198 M series from japan in 4 batch(es)
+[2026-04-28 16:58:24] OK: japan M batch of 50
+[2026-04-28 16:58:24] OK: japan M batch of 50
+[2026-04-28 16:58:24] OK: japan M batch of 50
+[2026-04-28 16:58:24] OK: japan M batch of 48
+[2026-04-28 16:58:24] Pulling 39 Q series from japan in 1 batch(es)
+[2026-04-28 16:58:24] OK: japan Q batch of 39
+[2026-04-28 16:58:24] Pulling 18 M series from emergela in 1 batch(es)
+[2026-04-28 16:58:25] OK: emergela M batch of 18
+[2026-04-28 16:58:25] Pulling 12 Q series from emergela in 1 batch(es)
+[2026-04-28 16:58:25] OK: emergela Q batch of 12
+[2026-04-28 16:58:25] Pulling 81 M series from g10 in 2 batch(es)
+[2026-04-28 16:58:25] OK: g10 M batch of 50
+[2026-04-28 16:58:25] WARNING: g10 M batch returned no data — codes may not exist in Haver: ['h158otu', 'h158oau', 's158d', 's158dum', 'h158trs', 'h158cvr', 's158to', 's158ts', 'h158vcc', 'n158vkco', 's158ele', 's111trs', 's111vm', 's111vcc', 's111vce', 'n111vkco', 's111d', 's111cvrt', 's111ts', 's111ti', 's111to', 's111elrc', 's111pc', 's112pc', 's132pc', 's134pc', 's136pc', 's156pc', 's158pc', 's184pc', 's193pc']
+[2026-04-28 16:58:25] Pulling 44 Q series from g10 in 1 batch(es)
+[2026-04-28 16:58:25] OK: g10 Q batch of 44
+[2026-04-28 16:58:25] Pulling 1 M series from uk in 1 batch(es)
+[2026-04-28 16:58:25] OK: uk M batch of 1
+[2026-04-28 16:58:25] Pulling 8 M series from emergecw in 1 batch(es)
+[2026-04-28 16:58:25] OK: emergecw M batch of 8
+[2026-04-28 16:58:25] Pulling 3 Q series from emergecw in 1 batch(es)
+[2026-04-28 16:58:25] OK: emergecw Q batch of 3
+[2026-04-28 16:58:25] Pulling 18 M series from emergema in 1 batch(es)
+[2026-04-28 16:58:26] OK: emergema M batch of 18
+[2026-04-28 16:58:26] Pulling 8 Q series from emergema in 1 batch(es)
+[2026-04-28 16:58:26] OK: emergema Q batch of 8
+[2026-04-28 16:58:26] Pulling 1 M series from usecon in 1 batch(es)
+[2026-04-28 16:58:26] OK: usecon M batch of 1
+[2026-04-28 16:58:26] Pulling 18 A series from emergepr in 1 batch(es)
+[2026-04-28 16:58:26] OK: emergepr A batch of 18
+[2026-04-28 16:58:26] Pulling 3 Q series from emergepr in 1 batch(es)
+[2026-04-28 16:58:26] OK: emergepr Q batch of 3
+[2026-04-28 16:58:26] FALLBACK: 80 series absent from pull — carrying forward from previous snapshot: ['h158cvr@g10', 'h158oau@g10', 'h158otu@g10', 'h158trs@g10', 'h158vcc@g10', 'm158m@mktpmi', 'm158mb@mktpmi', 'm158md@mktpmi', 'm158me@mktpmi', 'm158mg@mktpmi', 'm158mo@mktpmi', 'm158mpi@mktpmi', 'm158mpo@mktpmi', 'm158mqp@mktpmi', 'm158msf@mktpmi', 'm158msp@mktpmi', 'm158mx@mktpmi', 'm158s@mktpmi', 'm158sb@mktpmi', 'm158se@mktpmi', 'm158snb@mktpmi', 'm158sno@mktpmi', 'm158spc@mktpmi', 'm158spi@mktpmi', 'm158swo@mktpmi', 'm158sx@mktpmi', 'm158tg@mktpmi', 'm534mg@mktpmi', 'm534s@mktpmi', 'n111vkco@g10', 'n158vkco@g10', 's111cvrt@g10', 's111d@g10', 's111elrc@g10', 's111pc@g10', 's111ti@g10', 's111to@g10', 's111trs@g10', 's111ts@g10', 's111vcc@g10', 's111vce@g10', 's111vm@g10', 's112pc@g10', 's132pc@g10', 's134pc@g10', 's136pc@g10', 's156pc@g10', 's158d@g10', 's158dum@g10', 's158ele@g10', 's158pc@g10', 's158to@g10', 's158ts@g10', 's184pc@g10', 's193pc@g10', 's273mg@mktpmi', 's924m@mktpmi', 's924mb@mktpmi', 's924md@mktpmi', 's924me@mktpmi', 's924mg@mktpmi', 's924mo@mktpmi', 's924mpi@mktpmi', 's924mpo@mktpmi', 's924mqp@mktpmi', 's924msf@mktpmi', 's924msp@mktpmi', 's924mx@mktpmi', 's924mxc@mktpmi', 's924oi@mktpmi', 's924s@mktpmi', 's924sb@mktpmi', 's924se@mktpmi', 's924snb@mktpmi', 's924sno@mktpmi', 's924spc@mktpmi', 's924spi@mktpmi', 's924swo@mktpmi', 's924sx@mktpmi', 's924tg@mktpmi']
+[2026-04-28 16:58:26] Written to Z:\haver-data\data\data.parquet and Z:\haver-data\data\metadata.parquet
+[2026-04-28 16:58:26] === Pull complete ===
