@@ -141,7 +141,7 @@ def _auto_tags(code: str, db: str, freq_char: str, descriptor: str) -> list[str]
     tags.extend(_transformation_tags(descriptor))
     return tags
 
-def _process_batch(data, metadata, db, freq, batch, tags_map, all_data, all_meta):
+def _process_batch(data, metadata, db, freq, tags_map, all_data, all_meta):
     """Melt and tag a successful Haver batch response, appending to all_data/all_meta."""
     data_long = data.reset_index().melt(
         id_vars='index',
@@ -271,6 +271,8 @@ def pull_all():
                 noobs = info['codelists'].get('noobs', []) if info else []
                 if noobs:
                     log(f"WARNING: no observations returned for {noobs}")
+                    for code in noobs:
+                        quarantine_code(code, db, 'noobs', quarantine)
 
                 if not isinstance(data, pd.DataFrame):
                     # Batch failed — retry individually to isolate bad codes
@@ -281,8 +283,18 @@ def pull_all():
                         log(f"ERROR: {db} {freq} batch fully failed, all codes quarantined")
                         continue
                     batch = good_codes
+                else:
+                    # Batch succeeded but some codes may be silently absent from the DataFrame
+                    missing_in_df = [c for c in batch if c not in data.columns]
+                    if missing_in_df:
+                        log(f"WARNING: {db} {freq} — {len(missing_in_df)} codes absent from returned data: {missing_in_df}")
+                        for code in missing_in_df:
+                            quarantine_code(code, db, 'not_in_returned_dataframe', quarantine)
+                        batch = [c for c in batch if c not in missing_in_df]
+                        if not batch:
+                            continue
 
-                _process_batch(data, metadata, db, freq, batch, tags_map, all_data, all_meta)
+                _process_batch(data, metadata, db, freq, tags_map, all_data, all_meta)
                 log(f"OK: {db} {freq} batch of {len(batch)}")
 
             except Exception as e:

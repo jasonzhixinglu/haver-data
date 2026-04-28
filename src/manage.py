@@ -25,6 +25,41 @@ def save_config(config):
             else:
                 f.write(f"  - {{code: {s['code']}, frequency: {s['frequency']}}}\n")
 
+def _append_series(entry: dict):
+    """Append a new series block to series.yaml in block style, preserving all existing content."""
+    lines = [f"- code: {entry['code']}\n",
+             f"  frequency: {entry['frequency']}\n"]
+    if entry.get('tags'):
+        lines.append("  tags:\n")
+        for tag in entry['tags']:
+            lines.append(f"  - {tag}\n")
+    with open(CONFIG, 'a') as f:
+        f.writelines(lines)
+
+def _remove_series(code: str) -> bool:
+    """Remove a series block from series.yaml by exact code match. Returns True if found.
+    Preserves all comments, formatting, and other entries."""
+    with open(CONFIG) as f:
+        lines = f.readlines()
+    target = f'- code: {code}\n'
+    result = []
+    i = 0
+    found = False
+    while i < len(lines):
+        if lines[i] == target:
+            found = True
+            i += 1
+            # Skip all continuation lines (indented block content)
+            while i < len(lines) and lines[i].startswith(' '):
+                i += 1
+        else:
+            result.append(lines[i])
+            i += 1
+    if found:
+        with open(CONFIG, 'w') as f:
+            f.writelines(result)
+    return found
+
 def load_quarantine() -> dict:
     """Load quarantine list as a dict keyed by code@database."""
     if not QUARANTINE.exists():
@@ -60,21 +95,13 @@ def cmd_add(args):
     if args.tags:
         entry['tags'] = args.tags
 
-    config['series'].append(entry)
-    save_config(config)
+    _append_series(entry)
     print(f"Added: {args.code} ({args.frequency}){' tags: ' + str(args.tags) if args.tags else ''}")
 
 def cmd_remove(args):
-    config = load_config()
-    before = len(config['series'])
-    config['series'] = [s for s in config['series'] if s['code'] != args.code]
-    after = len(config['series'])
-
-    if before == after:
+    if not _remove_series(args.code):
         print(f"Not found: {args.code}")
         return
-
-    save_config(config)
     print(f"Removed: {args.code}")
 
 def cmd_list(args):
@@ -126,11 +153,6 @@ def cmd_unquarantine(args):
 
 def cmd_search(args):
     print(f"Searching '{args.keyword}' in database '{args.database}'...")
-    try:
-        hv.path('r')
-    except Exception:
-        pass
-
     meta = hv.metadata(database=args.database)
     matches = meta[meta['descriptor'].str.contains(args.keyword, case=False, na=False)]
 
