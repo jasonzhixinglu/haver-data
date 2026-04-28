@@ -1735,3 +1735,58 @@
 [2026-04-28 17:51:51] FALLBACK: 6 series absent from pull — carrying forward from previous snapshot: ['i163pc@ifs', 'm158sb@mktpmi', 'm158sno@mktpmi', 'n193pc@g10', 's924sb@mktpmi', 's924sno@mktpmi']
 [2026-04-28 17:51:52] Written to Z:\haver-data\data\data.parquet and Z:\haver-data\data\metadata.parquet
 [2026-04-28 17:51:52] === Pull complete ===
+[2026-04-28 17:55:05] === Pull started ===
+[2026-04-28 17:55:05] SKIPPING quarantined series: s924sno@mktpmi (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:48)
+[2026-04-28 17:55:05] SKIPPING quarantined series: s924sb@mktpmi (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:48)
+[2026-04-28 17:55:05] SKIPPING quarantined series: m158sno@mktpmi (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:48)
+[2026-04-28 17:55:05] SKIPPING quarantined series: m158sb@mktpmi (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:48)
+[2026-04-28 17:55:05] SKIPPING quarantined series: i163pc@ifs (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:51)
+[2026-04-28 17:55:05] Pulling 323 M series from emergepr in 7 batch(es)
+[2026-04-28 17:55:05] OK: emergepr M batch of 50
+[2026-04-28 17:55:06] OK: emergepr M batch of 50
+[2026-04-28 17:55:06] OK: emergepr M batch of 50
+[2026-04-28 17:55:06] OK: emergepr M batch of 50
+[2026-04-28 17:55:06] OK: emergepr M batch of 50
+[2026-04-28 17:55:06] OK: emergepr M batch of 50
+[2026-04-28 17:55:06] OK: emergepr M batch of 23
+[2026-04-28 17:55:06] Pulling 45 M series from mktpmi in 1 batch(es)
+[2026-04-28 17:55:06] OK: mktpmi M batch of 45
+[2026-04-28 17:55:06] Pulling 198 M series from japan in 4 batch(es)
+[2026-04-28 17:55:07] OK: japan M batch of 50
+[2026-04-28 17:55:07] OK: japan M batch of 50
+[2026-04-28 17:55:07] OK: japan M batch of 50
+[2026-04-28 17:55:07] OK: japan M batch of 48
+[2026-04-28 17:55:07] Pulling 39 Q series from japan in 1 batch(es)
+[2026-04-28 17:55:07] OK: japan Q batch of 39
+[2026-04-28 17:55:07] Pulling 18 M series from emergela in 1 batch(es)
+[2026-04-28 17:55:08] OK: emergela M batch of 18
+[2026-04-28 17:55:08] Pulling 12 Q series from emergela in 1 batch(es)
+[2026-04-28 17:55:08] OK: emergela Q batch of 12
+[2026-04-28 17:55:08] Pulling 81 M series from g10 in 2 batch(es)
+[2026-04-28 17:55:08] OK: g10 M batch of 50
+[2026-04-28 17:55:08] WARNING: g10 M — 1 codes absent from returned data: ['n193pc']
+[2026-04-28 17:55:08] QUARANTINE: n193pc@g10 — not_in_returned_dataframe
+[2026-04-28 17:55:08] OK: g10 M batch of 30
+[2026-04-28 17:55:08] Pulling 44 Q series from g10 in 1 batch(es)
+[2026-04-28 17:55:08] OK: g10 Q batch of 44
+[2026-04-28 17:55:08] Pulling 1 M series from uk in 1 batch(es)
+[2026-04-28 17:55:08] OK: uk M batch of 1
+[2026-04-28 17:55:08] Pulling 8 M series from emergecw in 1 batch(es)
+[2026-04-28 17:55:09] OK: emergecw M batch of 8
+[2026-04-28 17:55:09] Pulling 3 Q series from emergecw in 1 batch(es)
+[2026-04-28 17:55:09] OK: emergecw Q batch of 3
+[2026-04-28 17:55:09] Pulling 18 M series from emergema in 1 batch(es)
+[2026-04-28 17:55:09] OK: emergema M batch of 18
+[2026-04-28 17:55:09] Pulling 8 Q series from emergema in 1 batch(es)
+[2026-04-28 17:55:09] OK: emergema Q batch of 8
+[2026-04-28 17:55:09] Pulling 1 M series from usecon in 1 batch(es)
+[2026-04-28 17:55:09] OK: usecon M batch of 1
+[2026-04-28 17:55:09] Pulling 18 A series from emergepr in 1 batch(es)
+[2026-04-28 17:55:09] OK: emergepr A batch of 18
+[2026-04-28 17:55:09] Pulling 3 Q series from emergepr in 1 batch(es)
+[2026-04-28 17:55:09] OK: emergepr Q batch of 3
+[2026-04-28 17:55:09] Pulling 19 M series from ifs in 1 batch(es)
+[2026-04-28 17:55:09] OK: ifs M batch of 19
+[2026-04-28 17:55:09] FALLBACK: 1 series absent from pull — carrying forward from previous snapshot: ['n193pc@g10']
+[2026-04-28 17:55:09] Written to Z:\haver-data\data\data.parquet and Z:\haver-data\data\metadata.parquet
+[2026-04-28 17:55:09] === Pull complete ===
