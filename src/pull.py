@@ -7,6 +7,7 @@ from datetime import datetime
 
 REPO_ROOT = Path(__file__).parents[1]
 CONFIG = REPO_ROOT / "config" / "series.yaml"
+QUARANTINE = REPO_ROOT / "config" / "quarantine.yaml"
 DATA_OUT = REPO_ROOT / "data" / "data.parquet"
 META_OUT = REPO_ROOT / "data" / "metadata.parquet"
 LOG_FILE = REPO_ROOT / "logs" / "pull.log"
@@ -22,6 +23,32 @@ def load_config():
     with open(CONFIG) as f:
         return yaml.safe_load(f)
 
+def load_quarantine() -> dict:
+    """Load quarantine list as a dict keyed by code@database."""
+    if not QUARANTINE.exists():
+        return {}
+    with open(QUARANTINE) as f:
+        entries = yaml.safe_load(f) or []
+    return {e['code']: e for e in entries}
+
+def save_quarantine(quarantine: dict):
+    """Write quarantine dict back to quarantine.yaml."""
+    entries = sorted(quarantine.values(), key=lambda e: e['code'])
+    with open(QUARANTINE, 'w') as f:
+        yaml.dump(entries, f, default_flow_style=False, sort_keys=False)
+
+def quarantine_code(code: str, db: str, reason: str, quarantine: dict):
+    """Add a code@database entry to the quarantine dict and persist."""
+    full_id = f"{code}@{db}"
+    if full_id not in quarantine:
+        log(f"QUARANTINE: {full_id} — {reason}")
+        quarantine[full_id] = {
+            'code': full_id,
+            'quarantined': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            'reason': reason,
+        }
+        save_quarantine(quarantine)
+
 def convert_code(code):
     # CODE@DATABASE -> DATABASE:CODE (Haver native format)
     c, db = code.split('@')
@@ -31,14 +58,10 @@ def convert_code(code):
 # Auto-tag derivation (Tier 1) — computed from Haver metadata at pull time
 # ---------------------------------------------------------------------------
 
-# Country lookup: (database, code_prefix) -> country tag.
-# Code prefixes use the numeric country code embedded in Haver codes.
 _COUNTRY_MAP = {
-    # database-level defaults (when prefix matching isn't needed)
     ('japan',     None): 'japan',
     ('usecon',    None): 'us',
     ('uk',        None): 'uk',
-    # emergepr: country identified by numeric prefix in the code
     ('emergepr',  '924'): 'china',
     ('emergepr',  '213'): 'brazil',
     ('emergepr',  '273'): 'mexico',
@@ -50,7 +73,6 @@ _COUNTRY_MAP = {
     ('emergepr',  '199'): 'argentina',
     ('emergepr',  '193'): 'canada',
     ('emergepr',  '223'): 'colombia',
-    # g10: country identified by numeric prefix
     ('g10',       '111'): 'us',
     ('g10',       '112'): 'uk',
     ('g10',       '132'): 'belgium',
@@ -61,7 +83,6 @@ _COUNTRY_MAP = {
     ('g10',       '184'): 'denmark',
     ('g10',       '193'): 'canada',
     ('g10',       '196'): 'sweden',
-    # mktpmi: identified by numeric prefix
     ('mktpmi',    '924'): 'china',
     ('mktpmi',    '158'): 'japan',
     ('mktpmi',    '111'): 'us',
@@ -69,24 +90,19 @@ _COUNTRY_MAP = {
     ('mktpmi',    '273'): 'mexico',
     ('mktpmi',    '534'): 'india',
     ('mktpmi',    '542'): 'korea',
-    # emergela
     ('emergela',  '213'): 'brazil',
     ('emergela',  '273'): 'mexico',
     ('emergela',  '223'): 'colombia',
     ('emergela',  '193'): 'canada',
-    # emergecw
     ('emergecw',  '922'): 'russia',
-    # emergema
     ('emergema',  '186'): 'turkey',
     ('emergema',  '199'): 'argentina',
 }
 
 def _country_tag(code: str, db: str) -> str | None:
     db = db.lower()
-    # Try database-level default first
     if (_db_tag := _COUNTRY_MAP.get((db, None))):
         return _db_tag
-    # Extract leading digits from code (strip leading letters)
     digits = re.match(r'[A-Za-z]*(\d+)', code)
     if digits:
         prefix = digits.group(1)[:3]
@@ -95,11 +111,8 @@ def _country_tag(code: str, db: str) -> str | None:
     return None
 
 def _transformation_tags(descriptor: str) -> list[str]:
-    """Parse transformation and SA status from a Haver descriptor string."""
     tags = []
     d = descriptor.upper()
-
-    # Transformation — check in order of specificity
     if re.search(r'Y/Y|YOY|YEAR.OVER.YEAR|ANNUAL.*%|%.*ANNUAL', d):
         tags.append('yoy')
     elif re.search(r'M/M|MOM|MONTH.OVER.MONTH', d):
@@ -112,13 +125,10 @@ def _transformation_tags(descriptor: str) -> list[str]:
         tags.append('index')
     else:
         tags.append('level')
-
-    # Seasonal adjustment — check NSA before SA to avoid substring match
     if 'NSA' in d or 'NOT SEASONALLY ADJUSTED' in d or 'NOT SA' in d:
         tags.append('nsa')
     elif re.search(r'\bSA\b|SEASONALLY ADJUSTED|SEAS\.? ADJ', d):
         tags.append('sa')
-
     return tags
 
 def _freq_tag(freq_char: str) -> str:
@@ -131,84 +141,148 @@ def _auto_tags(code: str, db: str, freq_char: str, descriptor: str) -> list[str]
     tags.extend(_transformation_tags(descriptor))
     return tags
 
+def _process_batch(data, metadata, db, freq, batch, tags_map, all_data, all_meta):
+    """Melt and tag a successful Haver batch response, appending to all_data/all_meta."""
+    data_long = data.reset_index().melt(
+        id_vars='index',
+        var_name='code',
+        value_name='value'
+    ).rename(columns={'index': 'date'})
+    data_long['code'] = data_long['code'] + '@' + db
+    data_long['frequency'] = freq
+    data_long['date'] = data_long['date'].dt.to_timestamp()
+    all_data.append(data_long)
+
+    metadata['id'] = metadata['code'] + '@' + metadata['database']
+    metadata = metadata.set_index('id')
+
+    def merged_tags(row):
+        full_id = row.name
+        manual = tags_map.get(full_id, [])
+        auto = _auto_tags(
+            code=row.get('code', ''),
+            db=db,
+            freq_char=freq,
+            descriptor=str(row.get('descriptor', '')),
+        )
+        return sorted(set(manual) | set(auto))
+
+    metadata['tags'] = metadata.apply(merged_tags, axis=1)
+    all_meta.append(metadata)
+
+def _pull_batch(batch, db, freq, startdate):
+    """Call hv.data for a batch. Returns (data, metadata, info)."""
+    return hv.data(
+        batch,
+        database=db,
+        frequency=freq,
+        startdate=startdate,
+        rtype='3tuple'
+    )
+
+def _retry_and_quarantine(batch, db, freq, startdate, quarantine):
+    """
+    Retry a failed batch one-by-one within the same db/freq.
+    Returns (good_codes, data, metadata) for codes that succeed,
+    and quarantines any codes that fail.
+    """
+    log(f"RETRY: {db} {freq} — testing {len(batch)} codes individually")
+    good_codes, good_data, good_meta = [], [], []
+
+    for code in batch:
+        try:
+            d, m, info = _pull_batch([code], db, freq, startdate)
+            if isinstance(d, pd.DataFrame):
+                good_codes.append(code)
+                good_data.append(d)
+                good_meta.append(m)
+            else:
+                # Extract reason from error dict if available
+                codelists = (info or {}).get('codelists', {})
+                not_found = codelists.get('codesnotfound', [])
+                reason = 'codesnotfound' if not_found else 'batch_error_no_data'
+                quarantine_code(code, db, reason, quarantine)
+        except Exception as e:
+            quarantine_code(code, db, str(e), quarantine)
+
+    if not good_codes:
+        return None, None, None
+
+    # Re-pull good codes together in one clean batch for efficiency
+    try:
+        data, metadata, info = _pull_batch(good_codes, db, freq, startdate)
+        if not isinstance(data, pd.DataFrame):
+            # Shouldn't happen, but fall back to pre-concatenated individual pulls
+            log(f"WARNING: {db} {freq} re-pull of good codes failed, using individual results")
+            data = pd.concat(good_data, axis=1)
+            metadata = pd.concat(good_meta, ignore_index=True)
+    except Exception as e:
+        log(f"WARNING: {db} {freq} re-pull of good codes raised {e}, using individual results")
+        data = pd.concat(good_data, axis=1)
+        metadata = pd.concat(good_meta, ignore_index=True)
+
+    log(f"RETRY OK: {db} {freq} — {len(good_codes)}/{len(batch)} codes recovered")
+    return good_codes, data, metadata
+
 def pull_all():
     config = load_config()
     startdate = config['defaults']['startdate']
     series = config['series']
 
-    # Load existing parquets upfront so we can fall back to them if a batch fails
+    # Load quarantine and warn about any tracked series that are quarantined
+    quarantine = load_quarantine()
+    if quarantine:
+        quarantined_tracked = [s['code'] for s in series if s['code'] in quarantine]
+        if quarantined_tracked:
+            for code in quarantined_tracked:
+                q = quarantine[code]
+                log(f"SKIPPING quarantined series: {code} "
+                    f"(reason: {q['reason']}, quarantined: {q['quarantined']})")
+
+    # Filter out quarantined series before pulling
+    series = [s for s in series if s['code'] not in quarantine]
+
+    # Load existing parquets upfront for fallback
     existing_data = pd.read_parquet(DATA_OUT) if DATA_OUT.exists() else None
     existing_meta = pd.read_parquet(META_OUT) if META_OUT.exists() else None
 
-    # build tags lookup
     tags_map = {s['code']: s.get('tags', []) for s in series}
 
-    # group by (database, frequency)
+    # Group by (database, frequency)
     by_db_freq = {}
     for s in series:
         code, db = s['code'].split('@')
-        freq = s['frequency'][0].upper()  # M, Q, A, D
+        freq = s['frequency'][0].upper()
         key = (db, freq)
         by_db_freq.setdefault(key, []).append(code)
 
     all_data = []
     all_meta = []
 
-    BATCH_SIZE = 50  # Haver API limit per request
+    BATCH_SIZE = 50
 
     for (db, freq), codes in by_db_freq.items():
         batches = [codes[i:i + BATCH_SIZE] for i in range(0, len(codes), BATCH_SIZE)]
         log(f"Pulling {len(codes)} {freq} series from {db} in {len(batches)} batch(es)")
         for batch in batches:
             try:
-                data, metadata, info = hv.data(
-                    batch,
-                    database=db,
-                    frequency=freq,
-                    startdate=startdate,
-                    rtype='3tuple'
-                )
+                data, metadata, info = _pull_batch(batch, db, freq, startdate)
 
-                # check for missing series
                 noobs = info['codelists'].get('noobs', []) if info else []
                 if noobs:
                     log(f"WARNING: no observations returned for {noobs}")
 
-                # guard: Haver returns a dict (not DataFrame) when no codes exist
                 if not isinstance(data, pd.DataFrame):
-                    log(f"WARNING: {db} {freq} batch returned no data — codes may not exist in Haver: {batch}")
-                    continue
-
-                # melt to long format and tag with code@database
-                data_long = data.reset_index().melt(
-                    id_vars='index',
-                    var_name='code',
-                    value_name='value'
-                ).rename(columns={'index': 'date'})
-                data_long['code'] = data_long['code'] + '@' + db
-                data_long['frequency'] = freq
-                data_long['date'] = data_long['date'].dt.to_timestamp()
-                all_data.append(data_long)
-
-                # tag metadata with code@database as index
-                metadata['id'] = metadata['code'] + '@' + metadata['database']
-                metadata = metadata.set_index('id')
-
-                # merge manual tags (series.yaml) with auto-derived tags (Tier 1)
-                def merged_tags(row):
-                    full_id = row.name  # code@database
-                    manual = tags_map.get(full_id, [])
-                    auto = _auto_tags(
-                        code=row.get('code', ''),
-                        db=db,
-                        freq_char=freq,
-                        descriptor=str(row.get('descriptor', '')),
+                    # Batch failed — retry individually to isolate bad codes
+                    good_codes, data, metadata = _retry_and_quarantine(
+                        batch, db, freq, startdate, quarantine
                     )
-                    return sorted(set(manual) | set(auto))
+                    if data is None:
+                        log(f"ERROR: {db} {freq} batch fully failed, all codes quarantined")
+                        continue
+                    batch = good_codes
 
-                metadata['tags'] = metadata.apply(merged_tags, axis=1)
-                all_meta.append(metadata)
-
+                _process_batch(data, metadata, db, freq, batch, tags_map, all_data, all_meta)
                 log(f"OK: {db} {freq} batch of {len(batch)}")
 
             except Exception as e:
@@ -218,7 +292,6 @@ def pull_all():
         df_data = pd.concat(all_data, ignore_index=True)
         df_meta = pd.concat(all_meta)
 
-        # Carry forward any series that were expected but missing from this pull
         expected_codes = set(s['code'] for s in series)
         pulled_codes   = set(df_data['code'].unique())
         missing_codes  = expected_codes - pulled_codes
