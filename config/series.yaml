@@ -4286,64 +4286,64 @@ series:
   - detail
   - old_monitoring
 
-# G10 headline CPI — s{IMF_code}pc@g10
-- code: s111pc@g10
+# G10 headline CPI — n{IMF_code}pc@g10
+- code: n111pc@g10
   frequency: monthly
   tags:
   - inflation
   - headline
   - nsicx
   - realized_cpi
-- code: s112pc@g10
+- code: n112pc@g10
   frequency: monthly
   tags:
   - inflation
   - headline
   - nsicx
   - realized_cpi
-- code: s132pc@g10
+- code: n132pc@g10
   frequency: monthly
   tags:
   - inflation
   - headline
   - nsicx
   - realized_cpi
-- code: s134pc@g10
+- code: n134pc@g10
   frequency: monthly
   tags:
   - inflation
   - headline
   - nsicx
   - realized_cpi
-- code: s136pc@g10
+- code: n136pc@g10
   frequency: monthly
   tags:
   - inflation
   - headline
   - nsicx
   - realized_cpi
-- code: s156pc@g10
+- code: n156pc@g10
   frequency: monthly
   tags:
   - inflation
   - headline
   - nsicx
   - realized_cpi
-- code: s158pc@g10
+- code: n158pc@g10
   frequency: monthly
   tags:
   - inflation
   - headline
   - nsicx
   - realized_cpi
-- code: s184pc@g10
+- code: n184pc@g10
   frequency: monthly
   tags:
   - inflation
   - headline
   - nsicx
   - realized_cpi
-- code: s193pc@g10
+- code: n193pc@g10
   frequency: monthly
   tags:
   - inflation
