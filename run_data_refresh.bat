@@ -15,7 +15,7 @@ exit /b
 cd /d "Z:\haver-data"
 setlocal enabledelayedexpansion
 
-echo [%date% %time%] Starting pull >> logs\scheduler.log
+call :log "Starting pull"
 
 :: Add git to PATH
 set PATH=%PATH%;D:\Apps\Git\bin
@@ -23,7 +23,7 @@ set PATH=%PATH%;D:\Apps\Git\bin
 :: Capture HEAD before pull to detect config changes
 for /f %%i in ('git rev-parse HEAD') do set OLD_HEAD=%%i
 
-:: Pull latest config from GitHub
+:: Pull latest config from GitHub (verbose output to log only)
 git pull >> logs\scheduler.log 2>&1
 
 :: Report config status: series count, new codes, or no change
@@ -37,28 +37,36 @@ if not "!OLD_HEAD!"=="!NEW_HEAD!" (
     findstr /C:"+- code:" "%TEMP%\hd_diff.txt" > "%TEMP%\hd_new.txt" 2>nul
     for %%A in ("%TEMP%\hd_new.txt") do set NEW_SIZE=%%~zA
     if !NEW_SIZE! gtr 0 (
-        echo [%date% %time%] New series added to config (total: !SERIES_COUNT!): >> logs\scheduler.log
+        call :log "New series added to config (total: !SERIES_COUNT!):"
+        type "%TEMP%\hd_new.txt"
         type "%TEMP%\hd_new.txt" >> logs\scheduler.log
     ) else (
-        echo [%date% %time%] Config updated, no new series (total: !SERIES_COUNT!) >> logs\scheduler.log
+        call :log "Config updated, no new series (total: !SERIES_COUNT!)"
     )
     del "%TEMP%\hd_diff.txt" "%TEMP%\hd_new.txt" 2>nul
 ) else (
-    echo [%date% %time%] No config changes (!SERIES_COUNT! series tracked) >> logs\scheduler.log
+    call :log "No config changes (!SERIES_COUNT! series tracked)"
 )
 
-:: Run the pull script
+:: Run the pull script (output to log only)
 D:\APPS\python\Python311\python.exe src/pull.py >> logs\scheduler.log 2>&1
 
 :: Show pull outcome: last line of pull.log + error count if any
 D:\APPS\python\Python311\python.exe -c "lines=open('logs/pull.log').readlines(); errs=sum(1 for l in lines if 'ERROR:' in l); last=next((l.strip() for l in reversed(lines) if l.strip()),''); print(last + (' | ' + str(errs) + ' error(s)' if errs else ''))" > "%TEMP%\hd_out.txt" 2>nul
 set /p PULL_OUTCOME=<"%TEMP%\hd_out.txt"
-echo [%date% %time%] !PULL_OUTCOME! >> logs\scheduler.log
+call :log "!PULL_OUTCOME!"
 del "%TEMP%\hd_out.txt" 2>nul
 
-:: Commit and push updated data
+:: Commit and push (output to log only)
 git add data\data.parquet data\metadata.parquet logs\pull.log
 git commit -m "Auto pull %date% %time%" >> logs\scheduler.log 2>&1
 git push >> logs\scheduler.log 2>&1
 
-echo [%date% %time%] Done >> logs\scheduler.log
+call :log "Done"
+goto :eof
+
+:log
+set _MSG=[%date% %time%] %~1
+echo !_MSG!
+echo !_MSG! >> logs\scheduler.log
+exit /b
