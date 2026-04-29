@@ -283,11 +283,12 @@ schtasks /create /tn "HaverDataPull" /tr "D:\Apps\haver_launcher.bat" /sc daily 
 
 ## Current Series Coverage
 
-| Tag | Databases | Series |
-|---|---|---|
-| (monitoring) | emergepr, mktpmi, japan | 168 |
-| gdp_nowcast | g10, emergepr, emergela, emergema, emergecw, japan, uk, usecon | 239 |
-| **Total** | | **407** |
+| Tag | Frequency | Databases | Series |
+|---|---|---|---|
+| monitoring | monthly | emergepr, mktpmi, japan | 28 |
+| gdp_nowcast | monthly/quarterly | g10, emergepr, emergela, emergema, emergecw, japan, uk, usecon | 217 |
+| ken | daily | intdaily, daily | 122 |
+| **Total** | | | **965** |
 
 ---
 
