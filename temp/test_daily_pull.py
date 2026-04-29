@@ -58,22 +58,23 @@ print(f"  hv version: {getattr(hv, '__version__', 'unknown')}")
 print(f"  hv attributes: {[a for a in dir(hv) if not a.startswith('_')]}")
 
 
-# ── 2. Metadata probe ─────────────────────────────────────────────────────────
+# ── 2. Per-series metadata probe ──────────────────────────────────────────────
 print(f"\n{SEP}")
-print("2. Metadata probe — does INTDAILY / DAILY exist and contain our codes?")
+print("2. Per-series metadata probe — one code at a time")
 print(SEP)
-for db in ['INTDAILY', 'intdaily', 'DAILY', 'daily']:
-    try:
-        meta = hv.metadata(database=db)
-        print(f"  hv.metadata(database='{db}'): {type(meta).__name__} shape={getattr(meta, 'shape', 'N/A')}")
-        if isinstance(meta, pd.DataFrame) and not meta.empty:
-            print(f"    columns: {list(meta.columns)}")
-            # Check if any of our test codes appear
-            if 'code' in meta.columns:
-                found = meta[meta['code'].str.upper().isin([c.upper() for c in INTDAILY_CODES + DAILY_CODES])]
-                print(f"    test codes found in metadata: {list(found['code']) if not found.empty else 'none'}")
-    except Exception as e:
-        print(f"  hv.metadata(database='{db}'): ERROR — {e}")
+for db, code in [('INTDAILY', 'R111M3M'), ('INTDAILY', 'S111SP5'), ('DAILY', 'FCM10'), ('DAILY', 'SPVIX')]:
+    for db_case in [db, db.lower()]:
+        try:
+            meta = hv.metadata(database=db_case, codes=[code])
+            print(f"  hv.metadata(database='{db_case}', codes=['{code}']): {type(meta).__name__} shape={getattr(meta, 'shape', 'N/A')}")
+            if isinstance(meta, pd.DataFrame) and not meta.empty:
+                print(f"    columns: {list(meta.columns)}")
+                print(f"    row: {meta.iloc[0].to_dict()}")
+        except TypeError:
+            # If codes= param isn't supported, try without it and note
+            print(f"  hv.metadata(database='{db_case}', codes=['{code}']): codes= param not supported — skipping full-db call")
+        except Exception as e:
+            print(f"  hv.metadata(database='{db_case}', codes=['{code}']): ERROR — {e}")
 
 
 # ── 3. hv.data() with frequency='D' (current approach) ───────────────────────
