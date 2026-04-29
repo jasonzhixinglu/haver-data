@@ -1,0 +1,18 @@
+- code: i163pc@ifs
+  quarantined: '2026-04-28 17:51:51'
+  reason: batch_error_no_data
+- code: m158sb@mktpmi
+  quarantined: '2026-04-28 17:51:48'
+  reason: batch_error_no_data
+- code: m158sno@mktpmi
+  quarantined: '2026-04-28 17:51:48'
+  reason: batch_error_no_data
+- code: n193pc@g10
+  quarantined: '2026-04-28 17:55:08'
+  reason: not_in_returned_dataframe
+- code: s924sb@mktpmi
+  quarantined: '2026-04-28 17:51:48'
+  reason: batch_error_no_data
+- code: s924sno@mktpmi
+  quarantined: '2026-04-28 17:51:48'
+  reason: batch_error_no_data
