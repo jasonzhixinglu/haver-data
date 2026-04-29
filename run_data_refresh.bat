@@ -13,6 +13,7 @@ exit /b
 
 :main
 cd /d "Z:\haver-data"
+setlocal enabledelayedexpansion
 
 echo [%date% %time%] Starting pull >> logs\scheduler.log
 
@@ -25,20 +26,35 @@ for /f %%i in ('git rev-parse HEAD') do set OLD_HEAD=%%i
 :: Pull latest config from GitHub
 git pull >> logs\scheduler.log 2>&1
 
-:: Report any new series added to config
+:: Report config status: series count, new codes, or no change
 for /f %%i in ('git rev-parse HEAD') do set NEW_HEAD=%%i
-if not "%OLD_HEAD%"=="%NEW_HEAD%" (
-    git diff %OLD_HEAD% %NEW_HEAD% -- config/series.yaml > "%TEMP%\series_diff.txt" 2>&1
-    findstr /C:"+- code:" "%TEMP%\series_diff.txt" > nul 2>&1
-    if not errorlevel 1 (
-        echo [%date% %time%] New series detected in config: >> logs\scheduler.log
-        findstr /C:"+- code:" "%TEMP%\series_diff.txt" >> logs\scheduler.log
+D:\APPS\python\Python311\python.exe -c "print(open('config/series.yaml').read().count('- code:'))" > "%TEMP%\hd_count.txt" 2>nul
+set /p SERIES_COUNT=<"%TEMP%\hd_count.txt"
+del "%TEMP%\hd_count.txt" 2>nul
+
+if not "!OLD_HEAD!"=="!NEW_HEAD!" (
+    git diff !OLD_HEAD! !NEW_HEAD! -- config/series.yaml > "%TEMP%\hd_diff.txt" 2>&1
+    findstr /C:"+- code:" "%TEMP%\hd_diff.txt" > "%TEMP%\hd_new.txt" 2>nul
+    for %%A in ("%TEMP%\hd_new.txt") do set NEW_SIZE=%%~zA
+    if !NEW_SIZE! gtr 0 (
+        echo [%date% %time%] New series added to config (total: !SERIES_COUNT!): >> logs\scheduler.log
+        type "%TEMP%\hd_new.txt" >> logs\scheduler.log
+    ) else (
+        echo [%date% %time%] Config updated, no new series (total: !SERIES_COUNT!) >> logs\scheduler.log
     )
-    del "%TEMP%\series_diff.txt" 2>nul
+    del "%TEMP%\hd_diff.txt" "%TEMP%\hd_new.txt" 2>nul
+) else (
+    echo [%date% %time%] No config changes (!SERIES_COUNT! series tracked) >> logs\scheduler.log
 )
 
 :: Run the pull script
 D:\APPS\python\Python311\python.exe src/pull.py >> logs\scheduler.log 2>&1
+
+:: Show pull outcome: last line of pull.log + error count if any
+D:\APPS\python\Python311\python.exe -c "lines=open('logs/pull.log').readlines(); errs=sum(1 for l in lines if 'ERROR:' in l); last=next((l.strip() for l in reversed(lines) if l.strip()),''); print(last + (' | ' + str(errs) + ' error(s)' if errs else ''))" > "%TEMP%\hd_out.txt" 2>nul
+set /p PULL_OUTCOME=<"%TEMP%\hd_out.txt"
+echo [%date% %time%] !PULL_OUTCOME! >> logs\scheduler.log
+del "%TEMP%\hd_out.txt" 2>nul
 
 :: Commit and push updated data
 git add data\data.parquet data\metadata.parquet logs\pull.log
