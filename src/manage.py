@@ -60,12 +60,12 @@ def _remove_series(code: str) -> bool:
     return found
 
 def load_quarantine() -> dict:
-    """Load quarantine list as a dict keyed by code@database."""
+    """Load quarantine list as a dict keyed by code@database (always lowercase)."""
     if not QUARANTINE.exists():
         return {}
     with open(QUARANTINE) as f:
         entries = yaml.safe_load(f) or []
-    return {e['code']: e for e in entries}
+    return {e['code'].lower(): e for e in entries}
 
 def save_quarantine(quarantine: dict):
     entries = sorted(quarantine.values(), key=lambda e: e['code'])
@@ -73,8 +73,9 @@ def save_quarantine(quarantine: dict):
         yaml.dump(entries, f, default_flow_style=False, sort_keys=False)
 
 def cmd_add(args):
+    args.code = args.code.lower()
     config = load_config()
-    existing = [s['code'] for s in config['series']]
+    existing = [s['code'].lower() for s in config['series']]
 
     # Check quarantine before adding
     quarantine = load_quarantine()
@@ -98,6 +99,7 @@ def cmd_add(args):
     print(f"Added: {args.code} ({args.frequency}){' tags: ' + str(args.tags) if args.tags else ''}")
 
 def cmd_remove(args):
+    args.code = args.code.lower()
     if not _remove_series(args.code):
         print(f"Not found: {args.code}")
         return
@@ -141,6 +143,7 @@ def cmd_quarantine_list(args):
 
 def cmd_unquarantine(args):
     """Remove a series from quarantine so it can be re-added and pulled."""
+    args.code = args.code.lower()
     quarantine = load_quarantine()
     if args.code not in quarantine:
         print(f"Not quarantined: {args.code}")

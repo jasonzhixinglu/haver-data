@@ -24,12 +24,12 @@ def load_config():
         return yaml.safe_load(f)
 
 def load_quarantine() -> dict:
-    """Load quarantine list as a dict keyed by code@database."""
+    """Load quarantine list as a dict keyed by code@database (always lowercase)."""
     if not QUARANTINE.exists():
         return {}
     with open(QUARANTINE) as f:
         entries = yaml.safe_load(f) or []
-    return {e['code']: e for e in entries}
+    return {e['code'].lower(): e for e in entries}
 
 def save_quarantine(quarantine: dict):
     """Write quarantine dict back to quarantine.yaml."""
@@ -39,7 +39,7 @@ def save_quarantine(quarantine: dict):
 
 def quarantine_code(code: str, db: str, reason: str, quarantine: dict):
     """Add a code@database entry to the quarantine dict and persist."""
-    full_id = f"{code}@{db}"
+    full_id = f"{code.lower()}@{db.lower()}"
     if full_id not in quarantine:
         log(f"QUARANTINE: {full_id} — {reason}")
         quarantine[full_id] = {
