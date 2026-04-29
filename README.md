@@ -51,7 +51,7 @@ haver-data/
 │   ├── pull.py              # Pulls data from Haver, writes Parquet
 │   ├── load.py              # Utility for consuming repos
 │   └── manage.py            # CLI for managing series coverage
-├── run_pull.bat             # Kept in repo for reference (not used by scheduler)
+├── run_data_refresh.bat     # Syncs config, downloads Haver data, pushes results (not used by scheduler)
 ├── .gitignore
 └── README.md
 ```
