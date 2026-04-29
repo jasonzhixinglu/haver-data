@@ -171,7 +171,15 @@ def _process_batch(data, metadata, db, freq, tags_map, all_data, all_meta):
     all_meta.append(metadata)
 
 def _pull_batch(batch, db, freq, startdate):
-    """Call hv.data for a batch. Returns (data, metadata, info)."""
+    """Call hv.data for a batch. Returns (data, metadata, info).
+
+    Daily series require native DB:CODE format — passing database= with
+    frequency='D' fails for some databases (e.g. INTDAILY) even when codes
+    exist. Native format works universally for daily.
+    """
+    if freq == 'D':
+        native = [f"{db}:{code}" for code in batch]
+        return hv.data(native, startdate=startdate, rtype='3tuple')
     return hv.data(
         batch,
         database=db,
@@ -229,8 +237,16 @@ def pull_all():
     startdate = config['defaults']['startdate']
     series = config['series']
 
-    # Load quarantine and warn about any tracked series that are quarantined
+    # Normalize all codes to lowercase so Haver's lowercase returns match config
+    # keys (e.g. 'R111M3M@INTDAILY' -> 'r111m3m@intdaily'). Also fixes any
+    # case typos in database names (e.g. 'INTDAILy' -> 'intdaily').
+    for s in series:
+        s['code'] = s['code'].lower()
+
+    # Load quarantine and normalize its keys to lowercase for consistent lookup
     quarantine = load_quarantine()
+    quarantine = {k.lower(): v for k, v in quarantine.items()}
+
     if quarantine:
         quarantined_tracked = [s['code'] for s in series if s['code'] in quarantine]
         if quarantined_tracked:
