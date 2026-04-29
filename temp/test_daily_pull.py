@@ -2,7 +2,7 @@
 Diagnostic script for daily-frequency Haver data pulling.
 
 Run this on the server to identify how hv.data() behaves for daily series.
-Results will help fix src/pull.py to handle daily frequency correctly.
+Results are written to temp/test_daily_pull.log and auto-committed to GitHub.
 
 Usage:
     python temp/test_daily_pull.py
@@ -10,6 +10,29 @@ Usage:
 
 import Haver as hv
 import pandas as pd
+import subprocess
+import sys
+from io import StringIO
+from pathlib import Path
+from datetime import datetime
+
+# Tee all output to both stdout and a log file
+REPO_ROOT = Path(__file__).parents[1]
+LOG_PATH = REPO_ROOT / "temp" / "test_daily_pull.log"
+
+class Tee:
+    def __init__(self, *streams):
+        self.streams = streams
+    def write(self, data):
+        for s in self.streams:
+            s.write(data)
+    def flush(self):
+        for s in self.streams:
+            s.flush()
+
+_log_file = open(LOG_PATH, 'w')
+sys.stdout = Tee(sys.__stdout__, _log_file)
+sys.stderr = Tee(sys.__stderr__, _log_file)
 
 # A handful of Ken's daily series spread across both databases and asset classes
 INTDAILY_CODES = ['R111M3M', 'FCM10', 'S111SP5', 'X111JPJ', 'R111RDT']
@@ -149,3 +172,18 @@ for code in ['INTDAILY:R111M3M', 'DAILY:FCM10']:
 print(f"\n{SEP}")
 print("Done.")
 print(SEP)
+
+# ── Flush and push log to GitHub ──────────────────────────────────────────────
+sys.stdout = sys.__stdout__
+sys.stderr = sys.__stderr__
+_log_file.close()
+
+print(f"Log written to {LOG_PATH}")
+print("Pushing log to GitHub...")
+try:
+    subprocess.run(['git', 'add', str(LOG_PATH)], cwd=REPO_ROOT, check=True)
+    subprocess.run(['git', 'commit', '-m', f'Daily pull diagnostic log {datetime.now().strftime("%Y-%m-%d %H:%M")}'], cwd=REPO_ROOT, check=True)
+    subprocess.run(['git', 'push'], cwd=REPO_ROOT, check=True)
+    print("Pushed.")
+except subprocess.CalledProcessError as e:
+    print(f"Git push failed: {e}")
