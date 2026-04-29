@@ -4503,12 +4503,934 @@ series:
   - headline
   - ifs
   - nsicx
-  - realized_cpi
-- code: i924pc@ifs
-  frequency: monthly
+- code: R111M3M@INTDAILY
+  frequency: daily
   tags:
-  - inflation
-  - headline
-  - ifs
-  - nsicx
-  - realized_cpi
+  - daily
+  - yields
+  - 3m
+  - united_states
+  - ken
+- code: R134E3M@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 3m
+  - germany
+  - ken
+- code: R158M3M@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 3m
+  - japan
+  - ken
+- code: T112D3M@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 3m
+  - united_kingdom
+  - ken
+- code: R136M3M@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 3m
+  - italy
+  - ken
+- code: R132M3M@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 3m
+  - france
+  - ken
+- code: T146G3M@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 3m
+  - switzerland
+  - ken
+- code: R156M3M@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 3m
+  - canada
+  - ken
+- code: R193G3M@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 3m
+  - australia
+  - ken
+- code: R542S3M@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 3m
+  - korea
+  - ken
+- code: F924M3M@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 3m
+  - china
+  - ken
+- code: R111M1Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 1y
+  - united_states
+  - ken
+- code: R134M1Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 1y
+  - germany
+  - ken
+- code: R158M1Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 1y
+  - japan
+  - ken
+- code: R112M1Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 1y
+  - united_kingdom
+  - ken
+- code: R136M1Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 1y
+  - italy
+  - ken
+- code: R132M1Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 1y
+  - france
+  - ken
+- code: R146G1Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 1y
+  - switzerland
+  - ken
+- code: R156M1Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 1y
+  - canada
+  - ken
+- code: R193M1Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 1y
+  - australia
+  - ken
+- code: R542M1Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 1y
+  - korea
+  - ken
+- code: R924M1Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 1y
+  - china
+  - ken
+- code: R111M2Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 2y
+  - united_states
+  - ken
+- code: R134M2Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 2y
+  - germany
+  - ken
+- code: R158M2Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 2y
+  - japan
+  - ken
+- code: R112M2Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 2y
+  - united_kingdom
+  - ken
+- code: R136M2Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 2y
+  - italy
+  - ken
+- code: R132M2Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 2y
+  - france
+  - ken
+- code: R146G2Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 2y
+  - switzerland
+  - ken
+- code: R156M2Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 2y
+  - canada
+  - ken
+- code: R193M2Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 2y
+  - australia
+  - ken
+- code: R542M2Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 2y
+  - korea
+  - ken
+- code: R924M2Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 2y
+  - china
+  - ken
+- code: R111M5Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 5y
+  - united_states
+  - ken
+- code: R134M5Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 5y
+  - germany
+  - ken
+- code: R158M5Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 5y
+  - japan
+  - ken
+- code: R112M5Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 5y
+  - united_kingdom
+  - ken
+- code: R136M5Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 5y
+  - italy
+  - ken
+- code: R132M5Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 5y
+  - france
+  - ken
+- code: R146G5Y@INTDAILy
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 5y
+  - switzerland
+  - ken
+- code: R156M5Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 5y
+  - canada
+  - ken
+- code: R193M5Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 5y
+  - australia
+  - ken
+- code: R542M5Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 5y
+  - korea
+  - ken
+- code: R924M5Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 5y
+  - china
+  - ken
+- code: FCM10@DAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 10y
+  - united_states
+  - ken
+- code: R134MA@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 10y
+  - germany
+  - ken
+- code: R158GA@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 10y
+  - japan
+  - ken
+- code: R112MA@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 10y
+  - united_kingdom
+  - ken
+- code: R136MA@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 10y
+  - italy
+  - ken
+- code: R132MA@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 10y
+  - france
+  - ken
+- code: T146GA@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 10y
+  - switzerland
+  - ken
+- code: R156MA@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 10y
+  - canada
+  - ken
+- code: R193MA@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 10y
+  - australia
+  - ken
+- code: R542MA@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 10y
+  - korea
+  - ken
+- code: R924MA@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 10y
+  - china
+  - ken
+- code: FCM20@DAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 20y
+  - united_states
+  - ken
+- code: R134MK@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 20y
+  - germany
+  - ken
+- code: R158GK@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 20y
+  - japan
+  - ken
+- code: R112MK@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 20y
+  - united_kingdom
+  - ken
+- code: R136MK@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 20y
+  - italy
+  - ken
+- code: R132MK@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 20y
+  - france
+  - ken
+- code: T146GK@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 20y
+  - switzerland
+  - ken
+- code: R156MK@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 20y
+  - canada
+  - ken
+- code: R193MK@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 20y
+  - australia
+  - ken
+- code: R542MK@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 20y
+  - korea
+  - ken
+- code: R924MK@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 20y
+  - china
+  - ken
+- code: FCM30@DAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 30y
+  - united_states
+  - ken
+- code: R134MT@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 30y
+  - germany
+  - ken
+- code: R158GT@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 30y
+  - japan
+  - ken
+- code: R112MT@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 30y
+  - united_kingdom
+  - ken
+- code: R136MT@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 30y
+  - italy
+  - ken
+- code: R132MT@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 30y
+  - france
+  - ken
+- code: T146GT@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 30y
+  - switzerland
+  - ken
+- code: R156MT@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 30y
+  - canada
+  - ken
+- code: R193MT@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 30y
+  - australia
+  - ken
+- code: R542MT@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 30y
+  - korea
+  - ken
+- code: R924MT@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - yields
+  - 30y
+  - china
+  - ken
+- code: X111JPJ@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - fx
+  - japan
+  - ken
+- code: X111UKJ@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - fx
+  - united_kingdom
+  - ken
+- code: X111CHJ@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - fx
+  - switzerland
+  - ken
+- code: X111CAJ@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - fx
+  - canada
+  - ken
+- code: X111AUJ@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - fx
+  - australia
+  - ken
+- code: X111KRJ@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - fx
+  - korea
+  - ken
+- code: X111CNJ@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - fx
+  - china
+  - ken
+- code: S111SP5@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - equities
+  - united_states
+  - ken
+- code: S134DAX@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - equities
+  - germany
+  - ken
+- code: S158NKA@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - equities
+  - japan
+  - ken
+- code: S112FTA@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - equities
+  - united_kingdom
+  - ken
+- code: S136MBI@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - equities
+  - italy
+  - ken
+- code: S132CAC@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - equities
+  - france
+  - ken
+- code: S156TOI@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - equities
+  - canada
+  - ken
+- code: S146SMI@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - equities
+  - switzerland
+  - ken
+- code: S193AOR@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - equities
+  - australia
+  - ken
+- code: S542CEX@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - equities
+  - korea
+  - ken
+- code: S924SH3@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - equities
+  - china
+  - ken
+- code: R111RDT@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - policy_rate
+  - united_states
+  - ken
+- code: R158TAR@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - policy_rate
+  - japan
+  - ken
+- code: R112RD@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - policy_rate
+  - united_kingdom
+  - ken
+- code: R146L3T@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - policy_rate
+  - switzerland
+  - ken
+- code: R156DTR@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - policy_rate
+  - canada
+  - ken
+- code: R193RTR@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - policy_rate
+  - australia
+  - ken
+- code: R542RD@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - policy_rate
+  - korea
+  - ken
+- code: R924D1Y@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - policy_rate
+  - china
+  - ken
+- code: R111OBR@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - overnight_rate
+  - united_states
+  - ken
+- code: R158RDU@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - overnight_rate
+  - japan
+  - ken
+- code: R112LOS@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - overnight_rate
+  - united_kingdom
+  - ken
+- code: R146SON@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - overnight_rate
+  - switzerland
+  - ken
+- code: R156RR@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - overnight_rate
+  - canada
+  - ken
+- code: R542KO@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - overnight_rate
+  - korea
+  - ken
+- code: R9247DV@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - overnight_rate
+  - china
+  - ken
+- code: S111VIX@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - volatility
+  - united_states
+  - ken
+- code: S134VDX@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - volatility
+  - germany
+  - ken
+- code: S158NKX@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - volatility
+  - japan
+  - ken
+- code: S146VMI@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - volatility
+  - switzerland
+  - ken
+- code: S156SXC@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - volatility
+  - canada
+  - ken
+- code: S542V2X@INTDAILY
+  frequency: daily
+  tags:
+  - daily
+  - volatility
+  - korea
+  - ken
+- code: SPVIX@DAILY
+  frequency: daily
+  tags:
+  - daily
+  - volatility
+  - global
+  - ken
+- code: GSCL@DAILY
+  frequency: daily
+  tags:
+  - daily
+  - commodities
+  - global
+  - ken
+- code: GSGC@DAILY
+  frequency: daily
+  tags:
+  - daily
+  - commodities
+  - global
+  - ken
+- code: SEPUIN@DAILY
+  frequency: daily
+  tags:
+  - daily
+  - uncertainty
+  - global
+  - ken
+- code: STPUI@DAILY
+  frequency: daily
+  tags:
+  - daily
+  - uncertainty
+  - global
+  - ken
+- code: FXWSJ@DAILY
+  frequency: daily
+  tags:
+  - daily
+  - fx
+  - global
+  - ken

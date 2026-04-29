@@ -1,7 +1,6 @@
 import argparse
 import yaml
 import pandas as pd
-import Haver as hv
 from pathlib import Path
 from datetime import datetime
 
@@ -152,6 +151,7 @@ def cmd_unquarantine(args):
     print(f"You can now re-add it with: python src/manage.py add {args.code} <frequency>")
 
 def cmd_search(args):
+    import Haver as hv
     print(f"Searching '{args.keyword}' in database '{args.database}'...")
     meta = hv.metadata(database=args.database)
     matches = meta[meta['descriptor'].str.contains(args.keyword, case=False, na=False)]
