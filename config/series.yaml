@@ -5434,3 +5434,73 @@ series:
   - fx
   - global
   - ken
+- code: x111euj@intdaily
+  frequency: daily
+  tags:
+  - daily
+  - fx
+  - euro_area
+  - ken
+- code: r023rm@intdaily
+  frequency: daily
+  tags:
+  - daily
+  - policy_rate
+  - euro_area
+  - ken
+- code: fin10@daily
+  frequency: daily
+  tags:
+  - daily
+  - bei
+  - united_states
+  - ken
+- code: r134fbv@intdaily
+  frequency: daily
+  tags:
+  - daily
+  - bei
+  - germany
+  - ken
+- code: r158fbv@intdaily
+  frequency: daily
+  tags:
+  - daily
+  - bei
+  - japan
+  - ken
+- code: r112yaa@intdaily
+  frequency: daily
+  tags:
+  - daily
+  - bei
+  - united_kingdom
+  - ken
+- code: r132fbv@intdaily
+  frequency: daily
+  tags:
+  - daily
+  - bei
+  - france
+  - ken
+- code: r156fbv@intdaily
+  frequency: daily
+  tags:
+  - daily
+  - bei
+  - canada
+  - ken
+- code: r193fbv@intdaily
+  frequency: daily
+  tags:
+  - daily
+  - bei
+  - australia
+  - ken
+- code: r542fbv@intdaily
+  frequency: daily
+  tags:
+  - daily
+  - bei
+  - korea
+  - ken
