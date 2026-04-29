@@ -2256,3 +2256,13 @@
 [2026-04-29 10:10:57] OK: ifs M batch of 18
 [2026-04-29 10:10:58] Written to Z:\haver-data\data\data.parquet and Z:\haver-data\data\metadata.parquet
 [2026-04-29 10:10:58] === Pull complete ===
+[2026-04-29 12:01:57] === Pull started ===
+[2026-04-29 12:01:58] SKIPPING quarantined series: s924sno@mktpmi (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:48)
+[2026-04-29 12:01:58] SKIPPING quarantined series: s924sb@mktpmi (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:48)
+[2026-04-29 12:01:58] SKIPPING quarantined series: m158sno@mktpmi (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:48)
+[2026-04-29 12:01:58] SKIPPING quarantined series: m158sb@mktpmi (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:48)
+[2026-04-29 12:01:58] SKIPPING quarantined series: n193pc@g10 (reason: not_in_returned_dataframe, quarantined: 2026-04-28 17:55:08)
+[2026-04-29 12:01:58] SKIPPING quarantined series: i163pc@ifs (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:51)
+[2026-04-29 12:01:58] SKIPPING quarantined series: R111M3M@INTDAILY (reason: not_in_returned_dataframe, quarantined: 2026-04-29 10:02:55)
+[2026-04-29 12:01:58] SKIPPING quarantined series: R134E3M@INTDAILY (reason: not_in_returned_dataframe, quarantined: 2026-04-29 10:02:55)
+[2026-04-29 12:01:58] SKIPPING quarantined series: R158M3M@INTDAILY (reason: not_in_returned_dataframe, quarantined: 2026-04-29 10:02:55)
