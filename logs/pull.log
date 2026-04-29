@@ -1896,3 +1896,187 @@
 [2026-04-29 07:00:14] OK: ifs M batch of 19
 [2026-04-29 07:00:14] Written to Z:\haver-data\data\data.parquet and Z:\haver-data\data\metadata.parquet
 [2026-04-29 07:00:14] === Pull complete ===
+[2026-04-29 10:02:49] === Pull started ===
+[2026-04-29 10:02:49] SKIPPING quarantined series: s924sno@mktpmi (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:48)
+[2026-04-29 10:02:49] SKIPPING quarantined series: s924sb@mktpmi (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:48)
+[2026-04-29 10:02:49] SKIPPING quarantined series: m158sno@mktpmi (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:48)
+[2026-04-29 10:02:49] SKIPPING quarantined series: m158sb@mktpmi (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:48)
+[2026-04-29 10:02:49] SKIPPING quarantined series: n193pc@g10 (reason: not_in_returned_dataframe, quarantined: 2026-04-28 17:55:08)
+[2026-04-29 10:02:49] SKIPPING quarantined series: i163pc@ifs (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:51)
+[2026-04-29 10:02:50] Pulling 323 M series from emergepr in 7 batch(es)
+[2026-04-29 10:02:50] OK: emergepr M batch of 50
+[2026-04-29 10:02:50] OK: emergepr M batch of 50
+[2026-04-29 10:02:51] OK: emergepr M batch of 50
+[2026-04-29 10:02:51] OK: emergepr M batch of 50
+[2026-04-29 10:02:51] OK: emergepr M batch of 50
+[2026-04-29 10:02:51] OK: emergepr M batch of 50
+[2026-04-29 10:02:51] OK: emergepr M batch of 23
+[2026-04-29 10:02:51] Pulling 45 M series from mktpmi in 1 batch(es)
+[2026-04-29 10:02:51] OK: mktpmi M batch of 45
+[2026-04-29 10:02:51] Pulling 198 M series from japan in 4 batch(es)
+[2026-04-29 10:02:52] OK: japan M batch of 50
+[2026-04-29 10:02:52] OK: japan M batch of 50
+[2026-04-29 10:02:52] OK: japan M batch of 50
+[2026-04-29 10:02:52] OK: japan M batch of 48
+[2026-04-29 10:02:52] Pulling 39 Q series from japan in 1 batch(es)
+[2026-04-29 10:02:52] OK: japan Q batch of 39
+[2026-04-29 10:02:52] Pulling 18 M series from emergela in 1 batch(es)
+[2026-04-29 10:02:53] OK: emergela M batch of 18
+[2026-04-29 10:02:53] Pulling 12 Q series from emergela in 1 batch(es)
+[2026-04-29 10:02:53] OK: emergela Q batch of 12
+[2026-04-29 10:02:53] Pulling 80 M series from g10 in 2 batch(es)
+[2026-04-29 10:02:53] OK: g10 M batch of 50
+[2026-04-29 10:02:53] OK: g10 M batch of 30
+[2026-04-29 10:02:53] Pulling 44 Q series from g10 in 1 batch(es)
+[2026-04-29 10:02:53] OK: g10 Q batch of 44
+[2026-04-29 10:02:53] Pulling 1 M series from uk in 1 batch(es)
+[2026-04-29 10:02:53] OK: uk M batch of 1
+[2026-04-29 10:02:53] Pulling 8 M series from emergecw in 1 batch(es)
+[2026-04-29 10:02:54] OK: emergecw M batch of 8
+[2026-04-29 10:02:54] Pulling 3 Q series from emergecw in 1 batch(es)
+[2026-04-29 10:02:54] OK: emergecw Q batch of 3
+[2026-04-29 10:02:54] Pulling 18 M series from emergema in 1 batch(es)
+[2026-04-29 10:02:54] OK: emergema M batch of 18
+[2026-04-29 10:02:54] Pulling 8 Q series from emergema in 1 batch(es)
+[2026-04-29 10:02:54] OK: emergema Q batch of 8
+[2026-04-29 10:02:54] Pulling 1 M series from usecon in 1 batch(es)
+[2026-04-29 10:02:54] OK: usecon M batch of 1
+[2026-04-29 10:02:54] Pulling 18 A series from emergepr in 1 batch(es)
+[2026-04-29 10:02:54] OK: emergepr A batch of 18
+[2026-04-29 10:02:54] Pulling 3 Q series from emergepr in 1 batch(es)
+[2026-04-29 10:02:54] OK: emergepr Q batch of 3
+[2026-04-29 10:02:54] Pulling 18 M series from ifs in 1 batch(es)
+[2026-04-29 10:02:54] OK: ifs M batch of 18
+[2026-04-29 10:02:54] Pulling 112 D series from INTDAILY in 3 batch(es)
+[2026-04-29 10:02:55] WARNING: INTDAILY D — 50 codes absent from returned data: ['R111M3M', 'R134E3M', 'R158M3M', 'T112D3M', 'R136M3M', 'R132M3M', 'T146G3M', 'R156M3M', 'R193G3M', 'R542S3M', 'F924M3M', 'R111M1Y', 'R134M1Y', 'R158M1Y', 'R112M1Y', 'R136M1Y', 'R132M1Y', 'R146G1Y', 'R156M1Y', 'R193M1Y', 'R542M1Y', 'R924M1Y', 'R111M2Y', 'R134M2Y', 'R158M2Y', 'R112M2Y', 'R136M2Y', 'R132M2Y', 'R146G2Y', 'R156M2Y', 'R193M2Y', 'R542M2Y', 'R924M2Y', 'R111M5Y', 'R134M5Y', 'R158M5Y', 'R112M5Y', 'R136M5Y', 'R132M5Y', 'R156M5Y', 'R193M5Y', 'R542M5Y', 'R924M5Y', 'R134MA', 'R158GA', 'R112MA', 'R136MA', 'R132MA', 'T146GA', 'R156MA']
+[2026-04-29 10:02:55] QUARANTINE: R111M3M@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:55] QUARANTINE: R134E3M@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:55] QUARANTINE: R158M3M@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:55] QUARANTINE: T112D3M@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:55] QUARANTINE: R136M3M@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:55] QUARANTINE: R132M3M@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:55] QUARANTINE: T146G3M@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:55] QUARANTINE: R156M3M@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:55] QUARANTINE: R193G3M@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:55] QUARANTINE: R542S3M@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:55] QUARANTINE: F924M3M@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:55] QUARANTINE: R111M1Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R134M1Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R158M1Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R112M1Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R136M1Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R132M1Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R146G1Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R156M1Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R193M1Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R542M1Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R924M1Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R111M2Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R134M2Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R158M2Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R112M2Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R136M2Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R132M2Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R146G2Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R156M2Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R193M2Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R542M2Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R924M2Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R111M5Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R134M5Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R158M5Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R112M5Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R136M5Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R132M5Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R156M5Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R193M5Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R542M5Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R924M5Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R134MA@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R158GA@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:56] QUARANTINE: R112MA@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:57] QUARANTINE: R136MA@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:57] QUARANTINE: R132MA@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:57] QUARANTINE: T146GA@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:57] QUARANTINE: R156MA@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] WARNING: INTDAILY D — 50 codes absent from returned data: ['R193MA', 'R542MA', 'R924MA', 'R134MK', 'R158GK', 'R112MK', 'R136MK', 'R132MK', 'T146GK', 'R156MK', 'R193MK', 'R542MK', 'R924MK', 'R134MT', 'R158GT', 'R112MT', 'R136MT', 'R132MT', 'T146GT', 'R156MT', 'R193MT', 'R542MT', 'R924MT', 'X111JPJ', 'X111UKJ', 'X111CHJ', 'X111CAJ', 'X111AUJ', 'X111KRJ', 'X111CNJ', 'S111SP5', 'S134DAX', 'S158NKA', 'S112FTA', 'S136MBI', 'S132CAC', 'S156TOI', 'S146SMI', 'S193AOR', 'S542CEX', 'S924SH3', 'R111RDT', 'R158TAR', 'R112RD', 'R146L3T', 'R156DTR', 'R193RTR', 'R542RD', 'R924D1Y', 'R111OBR']
+[2026-04-29 10:02:58] QUARANTINE: R193MA@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R542MA@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R924MA@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R134MK@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R158GK@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R112MK@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R136MK@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R132MK@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: T146GK@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R156MK@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R193MK@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R542MK@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R924MK@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R134MT@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R158GT@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R112MT@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R136MT@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R132MT@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: T146GT@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R156MT@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R193MT@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R542MT@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: R924MT@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: X111JPJ@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: X111UKJ@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:58] QUARANTINE: X111CHJ@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: X111CAJ@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: X111AUJ@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: X111KRJ@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: X111CNJ@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: S111SP5@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: S134DAX@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: S158NKA@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: S112FTA@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: S136MBI@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: S132CAC@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: S156TOI@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: S146SMI@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: S193AOR@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: S542CEX@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: S924SH3@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: R111RDT@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: R158TAR@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: R112RD@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: R146L3T@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: R156DTR@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: R193RTR@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: R542RD@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: R924D1Y@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:02:59] QUARANTINE: R111OBR@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:03:00] WARNING: INTDAILY D — 12 codes absent from returned data: ['R158RDU', 'R112LOS', 'R146SON', 'R156RR', 'R542KO', 'R9247DV', 'S111VIX', 'S134VDX', 'S158NKX', 'S146VMI', 'S156SXC', 'S542V2X']
+[2026-04-29 10:03:00] QUARANTINE: R158RDU@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:03:00] QUARANTINE: R112LOS@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:03:00] QUARANTINE: R146SON@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:03:00] QUARANTINE: R156RR@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:03:00] QUARANTINE: R542KO@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:03:00] QUARANTINE: R9247DV@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:03:00] QUARANTINE: S111VIX@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:03:00] QUARANTINE: S134VDX@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:03:00] QUARANTINE: S158NKX@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:03:00] QUARANTINE: S146VMI@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:03:00] QUARANTINE: S156SXC@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:03:00] QUARANTINE: S542V2X@INTDAILY — not_in_returned_dataframe
+[2026-04-29 10:03:00] Pulling 1 D series from INTDAILy in 1 batch(es)
+[2026-04-29 10:03:01] WARNING: INTDAILy D — 1 codes absent from returned data: ['R146G5Y']
+[2026-04-29 10:03:01] QUARANTINE: R146G5Y@INTDAILy — not_in_returned_dataframe
+[2026-04-29 10:03:01] Pulling 9 D series from DAILY in 1 batch(es)
+[2026-04-29 10:03:01] WARNING: DAILY D — 9 codes absent from returned data: ['FCM10', 'FCM20', 'FCM30', 'SPVIX', 'GSCL', 'GSGC', 'SEPUIN', 'STPUI', 'FXWSJ']
+[2026-04-29 10:03:01] QUARANTINE: FCM10@DAILY — not_in_returned_dataframe
+[2026-04-29 10:03:01] QUARANTINE: FCM20@DAILY — not_in_returned_dataframe
+[2026-04-29 10:03:01] QUARANTINE: FCM30@DAILY — not_in_returned_dataframe
+[2026-04-29 10:03:02] QUARANTINE: SPVIX@DAILY — not_in_returned_dataframe
+[2026-04-29 10:03:02] QUARANTINE: GSCL@DAILY — not_in_returned_dataframe
+[2026-04-29 10:03:02] QUARANTINE: GSGC@DAILY — not_in_returned_dataframe
+[2026-04-29 10:03:02] QUARANTINE: SEPUIN@DAILY — not_in_returned_dataframe
+[2026-04-29 10:03:02] QUARANTINE: STPUI@DAILY — not_in_returned_dataframe
+[2026-04-29 10:03:02] QUARANTINE: FXWSJ@DAILY — not_in_returned_dataframe
+[2026-04-29 10:03:02] FALLBACK: 122 series absent from pull — carrying forward from previous snapshot: ['F924M3M@INTDAILY', 'FCM10@DAILY', 'FCM20@DAILY', 'FCM30@DAILY', 'FXWSJ@DAILY', 'GSCL@DAILY', 'GSGC@DAILY', 'R111M1Y@INTDAILY', 'R111M2Y@INTDAILY', 'R111M3M@INTDAILY', 'R111M5Y@INTDAILY', 'R111OBR@INTDAILY', 'R111RDT@INTDAILY', 'R112LOS@INTDAILY', 'R112M1Y@INTDAILY', 'R112M2Y@INTDAILY', 'R112M5Y@INTDAILY', 'R112MA@INTDAILY', 'R112MK@INTDAILY', 'R112MT@INTDAILY', 'R112RD@INTDAILY', 'R132M1Y@INTDAILY', 'R132M2Y@INTDAILY', 'R132M3M@INTDAILY', 'R132M5Y@INTDAILY', 'R132MA@INTDAILY', 'R132MK@INTDAILY', 'R132MT@INTDAILY', 'R134E3M@INTDAILY', 'R134M1Y@INTDAILY', 'R134M2Y@INTDAILY', 'R134M5Y@INTDAILY', 'R134MA@INTDAILY', 'R134MK@INTDAILY', 'R134MT@INTDAILY', 'R136M1Y@INTDAILY', 'R136M2Y@INTDAILY', 'R136M3M@INTDAILY', 'R136M5Y@INTDAILY', 'R136MA@INTDAILY', 'R136MK@INTDAILY', 'R136MT@INTDAILY', 'R146G1Y@INTDAILY', 'R146G2Y@INTDAILY', 'R146G5Y@INTDAILy', 'R146L3T@INTDAILY', 'R146SON@INTDAILY', 'R156DTR@INTDAILY', 'R156M1Y@INTDAILY', 'R156M2Y@INTDAILY', 'R156M3M@INTDAILY', 'R156M5Y@INTDAILY', 'R156MA@INTDAILY', 'R156MK@INTDAILY', 'R156MT@INTDAILY', 'R156RR@INTDAILY', 'R158GA@INTDAILY', 'R158GK@INTDAILY', 'R158GT@INTDAILY', 'R158M1Y@INTDAILY', 'R158M2Y@INTDAILY', 'R158M3M@INTDAILY', 'R158M5Y@INTDAILY', 'R158RDU@INTDAILY', 'R158TAR@INTDAILY', 'R193G3M@INTDAILY', 'R193M1Y@INTDAILY', 'R193M2Y@INTDAILY', 'R193M5Y@INTDAILY', 'R193MA@INTDAILY', 'R193MK@INTDAILY', 'R193MT@INTDAILY', 'R193RTR@INTDAILY', 'R542KO@INTDAILY', 'R542M1Y@INTDAILY', 'R542M2Y@INTDAILY', 'R542M5Y@INTDAILY', 'R542MA@INTDAILY', 'R542MK@INTDAILY', 'R542MT@INTDAILY', 'R542RD@INTDAILY', 'R542S3M@INTDAILY', 'R9247DV@INTDAILY', 'R924D1Y@INTDAILY', 'R924M1Y@INTDAILY', 'R924M2Y@INTDAILY', 'R924M5Y@INTDAILY', 'R924MA@INTDAILY', 'R924MK@INTDAILY', 'R924MT@INTDAILY', 'S111SP5@INTDAILY', 'S111VIX@INTDAILY', 'S112FTA@INTDAILY', 'S132CAC@INTDAILY', 'S134DAX@INTDAILY', 'S134VDX@INTDAILY', 'S136MBI@INTDAILY', 'S146SMI@INTDAILY', 'S146VMI@INTDAILY', 'S156SXC@INTDAILY', 'S156TOI@INTDAILY', 'S158NKA@INTDAILY', 'S158NKX@INTDAILY', 'S193AOR@INTDAILY', 'S542CEX@INTDAILY', 'S542V2X@INTDAILY', 'S924SH3@INTDAILY', 'SEPUIN@DAILY', 'SPVIX@DAILY', 'STPUI@DAILY', 'T112D3M@INTDAILY', 'T146G3M@INTDAILY', 'T146GA@INTDAILY', 'T146GK@INTDAILY', 'T146GT@INTDAILY', 'X111AUJ@INTDAILY', 'X111CAJ@INTDAILY', 'X111CHJ@INTDAILY', 'X111CNJ@INTDAILY', 'X111JPJ@INTDAILY', 'X111KRJ@INTDAILY', 'X111UKJ@INTDAILY']
+[2026-04-29 10:03:02] Written to Z:\haver-data\data\data.parquet and Z:\haver-data\data\metadata.parquet
+[2026-04-29 10:03:02] === Pull complete ===
