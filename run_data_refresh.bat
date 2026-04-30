@@ -17,8 +17,10 @@ setlocal enabledelayedexpansion
 
 call :log "Starting pull"
 
-:: Add git to PATH
+:: Add git to PATH and disable interactive credential prompts
+:: (otherwise an expired PAT causes git push to hang waiting for input)
 set PATH=%PATH%;D:\Apps\Git\bin
+set GIT_TERMINAL_PROMPT=0
 
 :: Capture HEAD before pull to detect config changes
 for /f %%i in ('git rev-parse HEAD') do set OLD_HEAD=%%i
@@ -68,13 +70,13 @@ if errorlevel 1 (
     call :log "Nothing to commit (no data changes)"
 ) else (
     echo --- git push ---
-    git push 2> "%TEMP%\hd_push.txt"
+    git push < nul 2> "%TEMP%\hd_push.txt"
     set PUSH_RC=!errorlevel!
     type "%TEMP%\hd_push.txt"
     type "%TEMP%\hd_push.txt" >> logs\scheduler.log
     del "%TEMP%\hd_push.txt" 2>nul
     if !PUSH_RC! neq 0 (
-        call :log "ERROR: git push failed (rc=!PUSH_RC!) - see above"
+        call :log "ERROR: git push failed (rc=!PUSH_RC!) - likely expired PAT - see above"
     ) else (
         call :log "Pushed commit to GitHub"
     )
