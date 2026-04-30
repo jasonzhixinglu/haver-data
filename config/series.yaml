@@ -5785,3 +5785,80 @@ series:
   - pmi
   - manufacturing_pmi
   - supply_demand
+- code: napmc@usecon
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - ism
+  - supply_demand
+- code: napmni@usecon
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - ism
+  - supply_demand
+- code: napmoi@usecon
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - ism
+  - supply_demand
+- code: napmei@usecon
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - ism
+  - supply_demand
+- code: napmvdi@usecon
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - ism
+  - supply_demand
+- code: napmii@usecon
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - ism
+  - supply_demand
+- code: napmcii@usecon
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - ism
+  - supply_demand
+- code: napmpi@usecon
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - ism
+  - supply_demand
+- code: napmboi@usecon
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - ism
+  - supply_demand
+- code: napmnxi@usecon
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - ism
+  - supply_demand
+- code: napmmi@usecon
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - ism
+  - supply_demand
