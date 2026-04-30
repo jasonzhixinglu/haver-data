@@ -59,13 +59,22 @@ del "%TEMP%\hd_out.txt" 2>nul
 
 :: Commit and push updated data
 git add data\data.parquet data\metadata.parquet logs\pull.log
+echo --- git status before commit ---
+git status --short
+echo --- git status before commit --- >> logs\scheduler.log
+git status --short >> logs\scheduler.log 2>&1
 git commit -m "Auto pull %date% %time%" >> logs\scheduler.log 2>&1
 if errorlevel 1 (
     call :log "Nothing to commit (no data changes)"
 ) else (
-    git push >> logs\scheduler.log 2>&1
-    if errorlevel 1 (
-        call :log "ERROR: git push failed - check scheduler.log"
+    echo --- git push ---
+    git push 2> "%TEMP%\hd_push.txt"
+    set PUSH_RC=!errorlevel!
+    type "%TEMP%\hd_push.txt"
+    type "%TEMP%\hd_push.txt" >> logs\scheduler.log
+    del "%TEMP%\hd_push.txt" 2>nul
+    if !PUSH_RC! neq 0 (
+        call :log "ERROR: git push failed (rc=!PUSH_RC!) - see above"
     ) else (
         call :log "Pushed commit to GitHub"
     )
