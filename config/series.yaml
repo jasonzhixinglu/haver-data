@@ -5512,3 +5512,107 @@ series:
   - bei
   - korea
   - ken
+- code: s023tg@mktpmi
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - supply_demand
+  - euro_area
+- code: s023to@mktpmi
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - supply_demand
+  - euro_area
+- code: s023te@mktpmi
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - supply_demand
+  - euro_area
+- code: s023tp@mktpmi
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - supply_demand
+  - euro_area
+- code: s023tx@mktpmi
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - supply_demand
+  - euro_area
+- code: s023tpo@mktpmi
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - supply_demand
+  - euro_area
+- code: s023tb@mktpmi
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - supply_demand
+  - euro_area
+- code: n023tex@mktpmi
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - supply_demand
+  - euro_area
+- code: s111mtg@mktpmi
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - supply_demand
+- code: s111mto@mktpmi
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - supply_demand
+- code: s111mte@mktpmi
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - supply_demand
+- code: s111mtp@mktpmi
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - supply_demand
+- code: s111mtpo@mktpmi
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - supply_demand
+- code: s111mtb@mktpmi
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - supply_demand
+- code: s111mtx@mktpmi
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - supply_demand
+- code: n111mtex@mktpmi
+  frequency: monthly
+  tags:
+  - pmi
+  - manufacturing_pmi
+  - supply_demand
