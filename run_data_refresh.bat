@@ -57,10 +57,19 @@ set /p PULL_OUTCOME=<"%TEMP%\hd_out.txt"
 call :log "!PULL_OUTCOME!"
 del "%TEMP%\hd_out.txt" 2>nul
 
-:: Commit and push (output to log only)
+:: Commit and push updated data
 git add data\data.parquet data\metadata.parquet logs\pull.log
 git commit -m "Auto pull %date% %time%" >> logs\scheduler.log 2>&1
-git push >> logs\scheduler.log 2>&1
+if errorlevel 1 (
+    call :log "Nothing to commit (no data changes)"
+) else (
+    git push >> logs\scheduler.log 2>&1
+    if errorlevel 1 (
+        call :log "ERROR: git push failed - check scheduler.log"
+    ) else (
+        call :log "Pushed commit to GitHub"
+    )
+)
 
 call :log "Done"
 goto :eof
