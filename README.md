@@ -287,8 +287,8 @@ schtasks /create /tn "HaverDataPull" /tr "D:\Apps\haver_launcher.bat" /sc daily 
 |---|---|---|---|
 | monitoring | monthly | emergepr, mktpmi, japan | 28 |
 | gdp_nowcast | monthly/quarterly | g10, emergepr, emergela, emergema, emergecw, japan, uk, usecon | 217 |
-| ken | daily | intdaily, daily | 122 |
-| **Total** | | | **965** |
+| ken | daily | intdaily, daily | 132 |
+| **Total tracked** | | | **976** |
 
 ---
 
@@ -325,3 +325,15 @@ The PAT may have expired. Generate a new one at github.com -> Settings -> Develo
 ```
 git remote set-url origin https://YOUR_USERNAME:YOUR_NEW_TOKEN@github.com/jasonzhixinglu/haver-data.git
 ```
+
+**Pull runs but never pushes (parquets update locally, no auto-pull commit on GitHub)**
+
+Most likely cause: `git push` is hanging waiting for credentials at the terminal because the PAT expired. With stdout/stderr redirected to scheduler.log, the prompt is invisible and the script appears stuck. The fix is already baked into `run_data_refresh.bat` (`set GIT_TERMINAL_PROMPT=0` and `git push < nul`) — git now fails fast with a visible error rather than hanging silently.
+
+If the bat file is hanging *before* git push (e.g. log truncates at `=== Pull complete ===`), avoid these patterns inside the bat:
+
+- `set /p VAR=<file` when the file may be empty — can wait on stdin indefinitely
+- `setlocal enabledelayedexpansion` combined with `python -c` reading other files — can fail in subtle ways
+- redirecting `git push` output to a log without disabling interactive prompts
+
+Keep the script's logic between `pull.py` and `git push` as simple as possible.
