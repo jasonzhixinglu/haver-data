@@ -13,7 +13,6 @@ exit /b
 
 :main
 cd /d "Z:\haver-data"
-setlocal enabledelayedexpansion
 
 call :log "Starting pull"
 
@@ -25,68 +24,47 @@ set GIT_TERMINAL_PROMPT=0
 :: Capture HEAD before pull to detect config changes
 for /f %%i in ('git rev-parse HEAD') do set OLD_HEAD=%%i
 
-:: Pull latest config from GitHub (verbose output to log only)
+:: Pull latest config from GitHub
 git pull >> logs\scheduler.log 2>&1
 
-:: Report config status: series count, new codes, or no change
+:: Report whether config changed
 for /f %%i in ('git rev-parse HEAD') do set NEW_HEAD=%%i
-D:\APPS\python\Python311\python.exe -c "print(open('config/series.yaml').read().count('- code:'))" > "%TEMP%\hd_count.txt" 2>nul
-set /p SERIES_COUNT=<"%TEMP%\hd_count.txt"
-del "%TEMP%\hd_count.txt" 2>nul
-
-if not "!OLD_HEAD!"=="!NEW_HEAD!" (
-    git diff !OLD_HEAD! !NEW_HEAD! -- config/series.yaml > "%TEMP%\hd_diff.txt" 2>&1
-    findstr /C:"+- code:" "%TEMP%\hd_diff.txt" > "%TEMP%\hd_new.txt" 2>nul
-    for %%A in ("%TEMP%\hd_new.txt") do set NEW_SIZE=%%~zA
-    if !NEW_SIZE! gtr 0 (
-        call :log "New series added to config (total: !SERIES_COUNT!):"
-        type "%TEMP%\hd_new.txt"
-        type "%TEMP%\hd_new.txt" >> logs\scheduler.log
-    ) else (
-        call :log "Config updated, no new series (total: !SERIES_COUNT!)"
-    )
-    del "%TEMP%\hd_diff.txt" "%TEMP%\hd_new.txt" 2>nul
+if not "%OLD_HEAD%"=="%NEW_HEAD%" (
+    call :log "Config changed - see git diff for details"
+    git diff %OLD_HEAD% %NEW_HEAD% -- config/series.yaml >> logs\scheduler.log 2>&1
 ) else (
-    call :log "No config changes (!SERIES_COUNT! series tracked)"
+    call :log "No config changes"
 )
 
-:: Run the pull script (output to log only)
+:: Run the pull script
+call :log "Running pull.py..."
 D:\APPS\python\Python311\python.exe src/pull.py >> logs\scheduler.log 2>&1
+call :log "pull.py finished"
 
-:: Show pull outcome: last line of pull.log + error count if any
-D:\APPS\python\Python311\python.exe -c "lines=open('logs/pull.log').readlines(); errs=sum(1 for l in lines if 'ERROR:' in l); last=next((l.strip() for l in reversed(lines) if l.strip()),''); print(last + (' | ' + str(errs) + ' error(s)' if errs else ''))" > "%TEMP%\hd_out.txt" 2>nul
-set /p PULL_OUTCOME=<"%TEMP%\hd_out.txt"
-call :log "!PULL_OUTCOME!"
-del "%TEMP%\hd_out.txt" 2>nul
-
-:: Commit and push updated data
+:: Stage data files
 git add data\data.parquet data\metadata.parquet logs\pull.log
-echo --- git status before commit ---
-git status --short
-echo --- git status before commit --- >> logs\scheduler.log
-git status --short >> logs\scheduler.log 2>&1
+
+:: Try to commit
 git commit -m "Auto pull %date% %time%" >> logs\scheduler.log 2>&1
 if errorlevel 1 (
-    call :log "Nothing to commit (no data changes)"
-) else (
-    echo --- git push ---
-    git push < nul 2> "%TEMP%\hd_push.txt"
-    set PUSH_RC=!errorlevel!
-    type "%TEMP%\hd_push.txt"
-    type "%TEMP%\hd_push.txt" >> logs\scheduler.log
-    del "%TEMP%\hd_push.txt" 2>nul
-    if !PUSH_RC! neq 0 (
-        call :log "ERROR: git push failed (rc=!PUSH_RC!) - likely expired PAT - see above"
-    ) else (
-        call :log "Pushed commit to GitHub"
-    )
+    call :log "Nothing to commit"
+    goto :done
 )
 
+:: Push - redirect stdin from nul so git can never prompt
+call :log "Pushing to GitHub..."
+git push < nul >> logs\scheduler.log 2>&1
+if errorlevel 1 (
+    call :log "ERROR: git push failed - check scheduler.log for details"
+) else (
+    call :log "Pushed commit to GitHub"
+)
+
+:done
 call :log "Done"
 goto :eof
 
 :log
-set _MSG=[%date% %time%] %~1
-echo !_MSG!
-echo !_MSG! >> logs\scheduler.log
+echo [%date% %time%] %~1
+echo [%date% %time%] %~1 >> logs\scheduler.log
 exit /b
