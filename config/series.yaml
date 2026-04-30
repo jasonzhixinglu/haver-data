@@ -4503,6 +4503,14 @@ series:
   - headline
   - ifs
   - nsicx
+- code: i924pc@ifs
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
 - code: R111M3M@INTDAILY
   frequency: daily
   tags:
