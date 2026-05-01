@@ -5862,3 +5862,21 @@ series:
   - manufacturing_pmi
   - ism
   - supply_demand
+- code: ricuon@japan
+  frequency: monthly
+  tags:
+  - policy_rate
+  - japan
+  - gpm
+- code: n924rlpe@emergepr
+  frequency: monthly
+  tags:
+  - policy_rate
+  - china
+  - gpm
+- code: redc2@japan
+  frequency: quarterly
+  tags:
+  - activity
+  - headline
+  - gpm
