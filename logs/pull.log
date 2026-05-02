@@ -3288,3 +3288,63 @@
 [2026-05-01 07:00:23] OK: daily D batch of 10
 [2026-05-01 07:00:24] Written to Z:\haver-data\data\data.parquet and Z:\haver-data\data\metadata.parquet
 [2026-05-01 07:00:24] === Pull complete ===
+[2026-05-02 07:00:10] === Pull started ===
+[2026-05-02 07:00:10] SKIPPING quarantined series: s924sno@mktpmi (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:48)
+[2026-05-02 07:00:10] SKIPPING quarantined series: s924sb@mktpmi (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:48)
+[2026-05-02 07:00:10] SKIPPING quarantined series: m158sno@mktpmi (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:48)
+[2026-05-02 07:00:10] SKIPPING quarantined series: m158sb@mktpmi (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:48)
+[2026-05-02 07:00:10] SKIPPING quarantined series: n193pc@g10 (reason: not_in_returned_dataframe, quarantined: 2026-04-28 17:55:08)
+[2026-05-02 07:00:10] SKIPPING quarantined series: i163pc@ifs (reason: batch_error_no_data, quarantined: 2026-04-28 17:51:51)
+[2026-05-02 07:00:11] Pulling 324 M series from emergepr in 7 batch(es)
+[2026-05-02 07:00:11] OK: emergepr M batch of 50
+[2026-05-02 07:00:11] OK: emergepr M batch of 50
+[2026-05-02 07:00:11] OK: emergepr M batch of 50
+[2026-05-02 07:00:12] OK: emergepr M batch of 50
+[2026-05-02 07:00:12] OK: emergepr M batch of 50
+[2026-05-02 07:00:12] OK: emergepr M batch of 50
+[2026-05-02 07:00:12] OK: emergepr M batch of 24
+[2026-05-02 07:00:12] Pulling 87 M series from mktpmi in 2 batch(es)
+[2026-05-02 07:00:12] OK: mktpmi M batch of 50
+[2026-05-02 07:00:13] OK: mktpmi M batch of 37
+[2026-05-02 07:00:13] Pulling 199 M series from japan in 4 batch(es)
+[2026-05-02 07:00:13] OK: japan M batch of 50
+[2026-05-02 07:00:13] OK: japan M batch of 50
+[2026-05-02 07:00:13] OK: japan M batch of 50
+[2026-05-02 07:00:14] OK: japan M batch of 49
+[2026-05-02 07:00:14] Pulling 40 Q series from japan in 1 batch(es)
+[2026-05-02 07:00:14] OK: japan Q batch of 40
+[2026-05-02 07:00:14] Pulling 18 M series from emergela in 1 batch(es)
+[2026-05-02 07:00:14] OK: emergela M batch of 18
+[2026-05-02 07:00:14] Pulling 12 Q series from emergela in 1 batch(es)
+[2026-05-02 07:00:14] OK: emergela Q batch of 12
+[2026-05-02 07:00:14] Pulling 80 M series from g10 in 2 batch(es)
+[2026-05-02 07:00:14] OK: g10 M batch of 50
+[2026-05-02 07:00:15] OK: g10 M batch of 30
+[2026-05-02 07:00:15] Pulling 44 Q series from g10 in 1 batch(es)
+[2026-05-02 07:00:15] OK: g10 Q batch of 44
+[2026-05-02 07:00:15] Pulling 1 M series from uk in 1 batch(es)
+[2026-05-02 07:00:15] OK: uk M batch of 1
+[2026-05-02 07:00:15] Pulling 8 M series from emergecw in 1 batch(es)
+[2026-05-02 07:00:15] OK: emergecw M batch of 8
+[2026-05-02 07:00:15] Pulling 3 Q series from emergecw in 1 batch(es)
+[2026-05-02 07:00:15] OK: emergecw Q batch of 3
+[2026-05-02 07:00:15] Pulling 18 M series from emergema in 1 batch(es)
+[2026-05-02 07:00:15] OK: emergema M batch of 18
+[2026-05-02 07:00:15] Pulling 8 Q series from emergema in 1 batch(es)
+[2026-05-02 07:00:15] OK: emergema Q batch of 8
+[2026-05-02 07:00:15] Pulling 12 M series from usecon in 1 batch(es)
+[2026-05-02 07:00:16] OK: usecon M batch of 12
+[2026-05-02 07:00:16] Pulling 18 A series from emergepr in 1 batch(es)
+[2026-05-02 07:00:16] OK: emergepr A batch of 18
+[2026-05-02 07:00:16] Pulling 3 Q series from emergepr in 1 batch(es)
+[2026-05-02 07:00:16] OK: emergepr Q batch of 3
+[2026-05-02 07:00:16] Pulling 19 M series from ifs in 1 batch(es)
+[2026-05-02 07:00:16] OK: ifs M batch of 19
+[2026-05-02 07:00:16] Pulling 122 D series from intdaily in 3 batch(es)
+[2026-05-02 07:00:19] OK: intdaily D batch of 50
+[2026-05-02 07:00:21] OK: intdaily D batch of 50
+[2026-05-02 07:00:23] OK: intdaily D batch of 22
+[2026-05-02 07:00:23] Pulling 10 D series from daily in 1 batch(es)
+[2026-05-02 07:00:24] OK: daily D batch of 10
+[2026-05-02 07:00:24] Written to Z:\haver-data\data\data.parquet and Z:\haver-data\data\metadata.parquet
+[2026-05-02 07:00:24] === Pull complete ===
