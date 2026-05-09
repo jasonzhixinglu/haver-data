@@ -5964,3 +5964,17 @@ series:
   - real
   - nsicx
   - realized_gdp
+- code: h534ngpc@emergepr
+  frequency: quarterly
+  tags:
+  - gdp
+  - real
+  - nsicx
+  - realized_gdp
+- code: h536ngpc@emergepr
+  frequency: quarterly
+  tags:
+  - gdp
+  - real
+  - nsicx
+  - realized_gdp
