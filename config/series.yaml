@@ -5880,3 +5880,87 @@ series:
   - activity
   - headline
   - gpm
+- code: s158gdpr@ifs
+  frequency: quarterly
+  tags:
+  - gdp
+  - real
+  - nsicx
+  - realized_gdp
+- code: s112gdpr@ifs
+  frequency: quarterly
+  tags:
+  - gdp
+  - real
+  - nsicx
+  - realized_gdp
+- code: s156gdpr@ifs
+  frequency: quarterly
+  tags:
+  - gdp
+  - real
+  - nsicx
+  - realized_gdp
+- code: s111gdpr@ifs
+  frequency: quarterly
+  tags:
+  - gdp
+  - real
+  - nsicx
+  - realized_gdp
+- code: s132gdpr@ifs
+  frequency: quarterly
+  tags:
+  - gdp
+  - real
+  - nsicx
+  - realized_gdp
+- code: s134gdpr@ifs
+  frequency: quarterly
+  tags:
+  - gdp
+  - real
+  - nsicx
+  - realized_gdp
+- code: s136gdpr@ifs
+  frequency: quarterly
+  tags:
+  - gdp
+  - real
+  - nsicx
+  - realized_gdp
+- code: h924ngpc@emergepr
+  frequency: quarterly
+  tags:
+  - gdp
+  - real
+  - nsicx
+  - realized_gdp
+- code: s542gdpr@ifs
+  frequency: quarterly
+  tags:
+  - gdp
+  - real
+  - nsicx
+  - realized_gdp
+- code: s273gdpr@ifs
+  frequency: quarterly
+  tags:
+  - gdp
+  - real
+  - nsicx
+  - realized_gdp
+- code: s223gdpr@ifs
+  frequency: quarterly
+  tags:
+  - gdp
+  - real
+  - nsicx
+  - realized_gdp
+- code: s186gdpr@ifs
+  frequency: quarterly
+  tags:
+  - gdp
+  - real
+  - nsicx
+  - realized_gdp
