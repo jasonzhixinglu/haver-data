@@ -4511,6 +4511,26 @@ series:
   - ifs
   - nsicx
   - realized_cpi
+
+# Oceania CPI — Australia (ANZ monthly indicator, flat-quarterly pre-2024)
+# and New Zealand (IFS quarterly). Both are interpolated to monthly in
+# the multicountry-nsicx pipeline (linear in levels) before use.
+- code: AUCPC@ANZ
+  frequency: monthly
+  tags:
+  - inflation
+  - headline
+  - nsicx
+  - realized_cpi
+- code: c196pc@ifs
+  frequency: quarterly
+  tags:
+  - inflation
+  - headline
+  - ifs
+  - nsicx
+  - realized_cpi
+
 - code: R111M3M@INTDAILY
   frequency: daily
   tags:
